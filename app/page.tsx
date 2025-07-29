@@ -1,13 +1,14 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { format } from 'date-fns';
 import { cs } from 'date-fns/locale';
-import { RefreshCw, Utensils } from 'lucide-react';
+import { RefreshCw, Utensils, ChevronLeft, ChevronRight } from 'lucide-react';
 import { RestaurantMenu } from '@/lib/types';
 import { MenuCard } from './components/MenuCard';
 import { MenuCardSkeleton } from './components/MenuCardSkeleton';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { getCurrentCzechDayUrl } from '@/lib/utils/czech-days';
 
 interface MenuResponse {
   date: string;
@@ -20,6 +21,9 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
+  const [showLeftShadow, setShowLeftShadow] = useState(false);
+  const [showRightShadow, setShowRightShadow] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const fetchMenus = async () => {
     try {
@@ -41,16 +45,68 @@ export default function Home() {
     }
   };
 
+  const checkScroll = () => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const { scrollLeft, scrollWidth, clientWidth } = container;
+    setShowLeftShadow(scrollLeft > 0);
+    setShowRightShadow(scrollLeft < scrollWidth - clientWidth - 5);
+  };
+
+  const scrollHorizontally = (direction: 'left' | 'right') => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    
+    const scrollAmount = 300; // Scroll by roughly one card width
+    const targetScroll = direction === 'left' 
+      ? container.scrollLeft - scrollAmount 
+      : container.scrollLeft + scrollAmount;
+    
+    container.scrollTo({
+      left: targetScroll,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    // Check if the event target is inside a card
+    const target = e.target as HTMLElement;
+    const card = target.closest('.hover\\:shadow-lg'); // Cards have this class
+    
+    // If we're over a card, check if it has a scrollbar
+    if (card) {
+      const scrollableDiv = card.querySelector('div[style*="overflow-y"]') as HTMLElement;
+      if (scrollableDiv && scrollableDiv.scrollHeight > scrollableDiv.clientHeight) {
+        // Card is scrollable, don't handle horizontal scroll
+        return;
+      }
+    }
+
+    // Otherwise, convert vertical scroll to horizontal
+    e.preventDefault();
+    container.scrollLeft += e.deltaY;
+  };
+
   useEffect(() => {
     fetchMenus();
   }, []);
 
+  useEffect(() => {
+    checkScroll();
+    window.addEventListener('resize', checkScroll);
+    return () => window.removeEventListener('resize', checkScroll);
+  }, [menus]);
+
   const today = format(new Date(), 'EEEE d. MMMM', { locale: cs });
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="h-screen bg-background flex flex-col overflow-hidden">
       {/* Header */}
-      <header className="sticky top-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+      <header className="flex-shrink-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -61,39 +117,78 @@ export default function Home() {
               </div>
             </div>
             
-            <button
-              onClick={fetchMenus}
-              disabled={loading}
-              className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent hover:text-accent-foreground disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-              aria-label="Refresh menus"
-            >
-              <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
-              <span className="hidden sm:inline">Refresh</span>
-            </button>
+            <div className="flex items-center gap-4">
+              {lastUpdated && (
+                <p className="text-xs text-muted-foreground">
+                  Last updated: {format(new Date(lastUpdated), 'HH:mm')}
+                </p>
+              )}
+              <button
+                onClick={fetchMenus}
+                disabled={loading}
+                className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent hover:text-accent-foreground disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                aria-label="Refresh menus"
+              >
+                <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
+                <span className="hidden sm:inline">Refresh</span>
+              </button>
+            </div>
           </div>
-          
-          {lastUpdated && (
-            <p className="text-xs text-muted-foreground mt-2">
-              Last updated: {format(new Date(lastUpdated), 'HH:mm')}
-            </p>
-          )}
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
+      <main className="flex-1 container mx-auto px-4 py-8 overflow-hidden flex flex-col">
         {error ? (
           <Alert variant="destructive" className="max-w-2xl mx-auto">
             <AlertTitle>Error</AlertTitle>
             <AlertDescription>{error}</AlertDescription>
           </Alert>
         ) : (
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {loading
-              ? Array.from({ length: 4 }).map((_, i) => <MenuCardSkeleton key={i} />)
-              : menus.map((menu) => (
-                  <MenuCard key={menu.restaurantId} menu={menu} />
-                ))}
+          <div className="flex-1 overflow-hidden flex flex-col relative" onWheel={handleWheel}>
+            <div 
+              ref={scrollContainerRef}
+              onScroll={checkScroll}
+              className="flex items-start gap-6 overflow-x-auto pb-4 w-full"
+            >
+              {loading
+                ? Array.from({ length: 4 }).map((_, i) => <MenuCardSkeleton key={i} />)
+                : menus.map((menu) => (
+                    <MenuCard key={menu.restaurantId} menu={menu} />
+                  ))}
+            </div>
+            
+            {/* Left shadow */}
+            {showLeftShadow && (
+              <div className="absolute left-0 top-0 bottom-4 w-8 bg-gradient-to-r from-background to-transparent pointer-events-none" />
+            )}
+            
+            {/* Right shadow */}
+            {showRightShadow && (
+              <div className="absolute right-0 top-0 bottom-4 w-8 bg-gradient-to-l from-background to-transparent pointer-events-none" />
+            )}
+            
+            {/* Left arrow button */}
+            {showLeftShadow && (
+              <button
+                onClick={() => scrollHorizontally('left')}
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm border rounded-full p-2 shadow-md hover:bg-accent transition-colors"
+                aria-label="Scroll left"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+            )}
+            
+            {/* Right arrow button */}
+            {showRightShadow && (
+              <button
+                onClick={() => scrollHorizontally('right')}
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm border rounded-full p-2 shadow-md hover:bg-accent transition-colors"
+                aria-label="Scroll right"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+            )}
           </div>
         )}
 
@@ -109,6 +204,29 @@ export default function Home() {
             </pre>
           </div>
         )}
+        
+        {/* Unreadable restaurants section */}
+        <div className="mt-8 p-4 bg-muted rounded-lg flex-shrink-0">
+          <h2 className="text-xl font-semibold mb-3">Restaurants with unreadable menus 😢</h2>
+          <div className="flex flex-wrap gap-4">
+            <a 
+              href="https://www.lasadelitas.cz/denni-menu/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Las Adelitas →
+            </a>
+            <a 
+              href={`https://masaryckarestaurace.choiceqr.com/section:poledni-menu/${getCurrentCzechDayUrl()}`}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Masarycka →
+            </a>
+          </div>
+        </div>
       </main>
     </div>
   );

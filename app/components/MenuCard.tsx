@@ -1,12 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { Collapsible, CollapsibleContent } from '@/components/ui/collapsible';
 import { ExternalLink, MapPin, AlertCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { RestaurantMenu } from '@/lib/types';
 import { format } from 'date-fns';
+import { formatMenuItemName } from '@/lib/utils/text-formatting';
 
 interface MenuCardProps {
   menu: RestaurantMenu;
@@ -15,64 +16,88 @@ interface MenuCardProps {
 export function MenuCard({ menu }: MenuCardProps) {
   const hasItems = menu.items.length > 0;
   const [isOpen, setIsOpen] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
   
   // Only show collapsible on mobile when there are more than 3 items
   const showCollapsible = hasItems && menu.items.length > 3;
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const scrollTop = e.currentTarget.scrollTop;
+    setIsScrolled(scrollTop > 5);
+  };
+
+  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    const scrollableDiv = e.currentTarget;
+    // If this card has a scrollbar, stop the event from bubbling up
+    if (scrollableDiv.scrollHeight > scrollableDiv.clientHeight) {
+      e.stopPropagation();
+    }
+  };
   
   return (
-    <Card className="h-full hover:shadow-lg transition-shadow">
-      <CardHeader>
-        <div className="flex items-start justify-between">
-          <div className="space-y-1 flex-1">
-            <CardTitle className="flex items-center gap-2">
-              <MapPin className="h-4 w-4" />
-              {menu.restaurantName}
-            </CardTitle>
-            <CardDescription className="text-xs">
-              {menu.scrapedAt ? (
-                <>Last updated: {format(new Date(menu.scrapedAt), 'HH:mm')}</>
-              ) : (
-                'No data available'
-              )}
-            </CardDescription>
-          </div>
-          <div className="flex items-center gap-2">
-            <a
-              href={menu.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label={`Visit ${menu.restaurantName} website`}
-            >
-              <ExternalLink className="h-4 w-4" />
-            </a>
-            {showCollapsible && (
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="text-muted-foreground hover:text-primary transition-colors md:hidden"
-                aria-label={isOpen ? 'Collapse menu' : 'Expand menu'}
+    <Card className="hover:shadow-lg transition-shadow flex-shrink-0 w-80 overflow-hidden flex flex-col gap-0" style={{ height: 'calc(100vh - 320px)' }}>
+      {/* Fixed header */}
+      <div className={`${isScrolled ? 'shadow-md' : ''}`}>
+        <div className="px-6 pb-3 -mt-2">
+          <div className="flex items-start justify-between">
+            <div className="flex-1">
+              <h3 className="font-semibold flex items-center gap-2">
+                <MapPin className="h-4 w-4" />
+                {menu.restaurantName.replace('Restaurace ', '')}
+              </h3>
+            </div>
+            <div className="flex items-center gap-2">
+              <a
+                href={menu.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label={`Visit ${menu.restaurantName} website`}
               >
-                {isOpen ? (
-                  <ChevronUp className="h-4 w-4" />
-                ) : (
-                  <ChevronDown className="h-4 w-4" />
-                )}
-              </button>
-            )}
+                <ExternalLink className="h-4 w-4" />
+              </a>
+              {showCollapsible && (
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="text-muted-foreground hover:text-primary transition-colors md:hidden"
+                  aria-label={isOpen ? 'Collapse menu' : 'Expand menu'}
+                >
+                  {isOpen ? (
+                    <ChevronUp className="h-4 w-4" />
+                  ) : (
+                      <ChevronDown className="h-4 w-4" />
+                  )}
+                </button>
+              )}
+            </div>
           </div>
         </div>
-      </CardHeader>
-      
-      <CardContent>
+        <div className="border-b" />
+      </div>
+      <div 
+        className="flex-1 overflow-y-auto"
+        onScroll={handleScroll}
+        onWheel={handleWheel}
+      >
         {hasItems ? (
-          <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-            <CollapsibleContent>
-              <div className="space-y-3">
+          <Collapsible open={isOpen} onOpenChange={setIsOpen} className="contents">
+            <CollapsibleContent className="contents">
+              <div className="space-y-3 px-6 pb-6">
                 {menu.items.map((item, index) => (
-                  <div key={index} className="border-b last:border-b-0 pb-3 last:pb-0">
+                  <div key={index} className={`border-b last:border-b-0 pb-3 last:pb-0 ${index === 0 ? 'pt-3' : ''}`}>
                     <div className="flex items-start justify-between gap-2">
                       <div className="flex-1">
-                        <h4 className="font-medium text-sm leading-tight">{item.name}</h4>
+                        <h4 className="font-medium text-sm leading-tight">
+                          {(() => {
+                            const { bold, rest } = formatMenuItemName(item.name);
+                            return (
+                              <>
+                                <span className="font-semibold">{bold}</span>
+                                {rest && <span className="font-normal"> {rest}</span>}
+                              </>
+                            );
+                          })()}
+                        </h4>
                         {item.description && (
                           <p className="text-xs text-muted-foreground mt-1">{item.description}</p>
                         )}
@@ -86,18 +111,18 @@ export function MenuCard({ menu }: MenuCardProps) {
               </div>
             </CollapsibleContent>
             {!isOpen && (
-              <div className="text-sm text-muted-foreground">
+              <div className="text-sm text-muted-foreground px-6 py-3">
                 {menu.items.length} items available
               </div>
             )}
           </Collapsible>
         ) : (
-          <div className="flex items-center gap-2 text-muted-foreground">
+          <div className="flex items-center gap-2 text-muted-foreground px-6 py-3">
             <AlertCircle className="h-4 w-4" />
             <span className="text-sm">{menu.errorMessage || 'No menu available'}</span>
           </div>
         )}
-      </CardContent>
+      </div>
     </Card>
   );
 }

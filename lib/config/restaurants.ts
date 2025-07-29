@@ -2,6 +2,41 @@ import { Restaurant } from '../types';
 
 export const restaurants: Restaurant[] = [
   {
+    id: 'tiskarna',
+    name: 'Restaurace Tiskárna',
+    url: 'https://www.restauracetiskarna.cz/',
+    menuUrl: 'https://www.restauracetiskarna.cz/jindrisska/obedy/',
+    scrapeConfig: {
+      type: 'static',
+      selectors: {
+        daySection: '.day-menu', // We'll need to inspect the actual selectors
+        menuItem: '.menu-item',
+        itemName: '.item-name',
+        itemPrice: '.item-price'
+      }
+    }
+  },
+  {
+    id: 'magburger',
+    name: 'Meet&Greet',
+    url: 'https://www.magburgerhouse.cz/',
+    menuUrl: 'https://www.magburgerhouse.cz/poledni-menu',
+    scrapeConfig: {
+      type: 'pdf',
+      pdfUrl: 'https://www.magburgerhouse.cz/poledni-menu'
+    }
+  },
+  {
+    id: 'saporevero',
+    name: 'Sapore Vero',
+    url: 'https://saporevero.choiceqr.com/',
+    menuUrl: 'https://saporevero.choiceqr.com/delivery/section:denni-menu',
+    scrapeConfig: {
+      type: 'pdf',
+      pdfUrl: 'dynamic' // PDF URL changes daily
+    }
+  },
+  {
     id: 'hybernska',
     name: 'Restaurace Hybernská',
     url: 'https://www.restauracehybernska.cz/',
@@ -17,38 +52,21 @@ export const restaurants: Restaurant[] = [
     }
   },
   {
-    id: 'masarycka',
-    name: 'Masarycka Restaurace',
-    url: 'https://masaryckarestaurace.choiceqr.com',
-    menuUrl: 'https://masaryckarestaurace.choiceqr.com/section:poledni-menu/',
+    id: 'meatbeer',
+    name: 'Meat Beer',
+    url: 'https://www.meatbeer.cz/',
+    menuUrl: 'https://www.meatbeer.cz/menu/',
     scrapeConfig: {
-      type: 'dynamic',
-      dayUrlPattern: 'https://masaryckarestaurace.choiceqr.com/section:poledni-menu/{day}'
+      type: 'static'
     }
   },
   {
-    id: 'magburger',
-    name: 'Meet&Greet',
-    url: 'https://www.magburgerhouse.cz/',
-    menuUrl: 'https://www.magburgerhouse.cz/poledni-menu',
+    id: 'nekazanka',
+    name: 'Bistro Nekázanka',
+    url: 'https://www.bistronekazanka.cz/',
+    menuUrl: 'https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11',
     scrapeConfig: {
-      type: 'pdf',
-      pdfUrl: 'https://www.magburgerhouse.cz/poledni-menu'
-    }
-  },
-  {
-    id: 'tiskarna',
-    name: 'Restaurace Tiskárna',
-    url: 'https://www.restauracetiskarna.cz/',
-    menuUrl: 'https://www.restauracetiskarna.cz/jindrisska/obedy/',
-    scrapeConfig: {
-      type: 'static',
-      selectors: {
-        daySection: '.day-menu', // We'll need to inspect the actual selectors
-        menuItem: '.menu-item',
-        itemName: '.item-name',
-        itemPrice: '.item-price'
-      }
+      type: 'static'
     }
   }
 ];

@@ -1,0 +1,17 @@
+# Scripts (not needed for production)
+scripts/
+
+# Old data directory
+data/
+
+# Development files
+*.md
+.env.local
+.env.development
+IMPLEMENTATION_PLAN.md
+
+# GitHub
+.github/
+
+# Keep scrapers for reference but they won't run on Vercel
+# lib/scrapers/

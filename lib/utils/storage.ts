@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { RestaurantMenu } from '../types';
 
-const DATA_DIR = path.join(process.cwd(), 'data', 'menus');
+const DATA_DIR = path.join(process.cwd(), 'public', 'data', 'menus');
 
 export async function saveMenuData(date: string, menus: RestaurantMenu[]): Promise<void> {
   try {

@@ -83,9 +83,9 @@ export class HybernskaScraper extends BaseScraper {
       // Process the extracted data
       for (const item of menuData) {
         const menuItem: MenuItem = {
-          name: item.name,
+          name: this.normalizeText(item.name),
           price: this.parsePrice(item.priceText),
-          description: item.description
+          description: item.description ? this.normalizeText(item.description) : undefined
         };
         
         items.push(menuItem);

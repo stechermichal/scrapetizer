@@ -76,4 +76,14 @@ export abstract class BaseScraper {
       .replace(/\s+/g, ' ')
       .replace(/\n+/g, ' ');
   }
+  
+  protected normalizeText(text: string): string {
+    // Clean the text first
+    const cleaned = this.cleanText(text);
+    
+    // Convert to lowercase and capitalize first letter
+    if (cleaned.length === 0) return cleaned;
+    
+    return cleaned.charAt(0).toUpperCase() + cleaned.slice(1).toLowerCase();
+  }
 }

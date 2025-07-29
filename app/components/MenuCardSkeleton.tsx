@@ -3,7 +3,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 
 export function MenuCardSkeleton() {
   return (
-    <Card className="h-full">
+    <Card className="flex-shrink-0 w-80">
       <CardHeader>
         <div className="flex items-start justify-between">
           <div className="space-y-2 flex-1">
