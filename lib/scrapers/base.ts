@@ -1,6 +1,6 @@
 import { chromium, Browser, Page } from 'playwright';
 import { Restaurant, RestaurantMenu, ScraperResult, MenuItem } from '../types';
-import { getCurrentCzechDay, formatCzechDate } from '../utils/czech-days';
+import { getCurrentCzechDay } from '../utils/czech-days';
 
 export abstract class BaseScraper {
   protected browser: Browser | null = null;

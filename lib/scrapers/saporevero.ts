@@ -14,7 +14,7 @@ export class SaporeveroScraper extends BaseScraper {
       // Wait for the PDF button/link to be available
       try {
         await this.page!.waitForSelector('a[href*="/api/public/menu/open"]', { timeout: 10000 });
-      } catch (timeoutError) {
+      } catch {
         // No PDF link found - menu not posted yet
         console.log('📅 Sapore Vero menu not posted yet');
         return [{
@@ -53,7 +53,7 @@ export class SaporeveroScraper extends BaseScraper {
       
       // Parse menu items from the PDF text
       const items: MenuItem[] = [];
-      const lines = text.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+      const lines = text.split('\n').map((line: string) => line.trim()).filter((line: string) => line.length > 0);
       
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];

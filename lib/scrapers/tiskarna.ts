@@ -1,6 +1,5 @@
 import { BaseScraper } from './base';
 import { MenuItem } from '../types';
-import { getCurrentCzechDayUrl } from '../utils/czech-days';
 
 export class TiskarnaScraper extends BaseScraper {
   protected getMenuUrl(): string {

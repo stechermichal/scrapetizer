@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server';
 import { format } from 'date-fns';
 import { loadMenuData } from '@/lib/utils/storage';
 import { restaurants } from '@/lib/config/restaurants';
+import { RestaurantMenu } from '@/lib/types';
+import fs from 'fs/promises';
+import path from 'path';
 
 export async function GET(request: Request) {
   try {
@@ -10,20 +13,15 @@ export async function GET(request: Request) {
     
     // In production (Vercel), read from public directory
     // In development, use the file system
-    let menus: any[] = [];
+    let menus: RestaurantMenu[] = [];
     
-    if (process.env.NODE_ENV === 'production') {
-      try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_URL || ''}/data/menus/${date}.json`);
-        if (response.ok) {
-          menus = await response.json();
-        }
-      } catch (error) {
-        console.log('No menu data found for', date);
-      }
-    } else {
-      // Development: use file system
-      menus = await loadMenuData(date);
+    // Try to read directly from the public directory
+    try {
+      const filePath = path.join(process.cwd(), 'public', 'data', 'menus', `${date}.json`);
+      const fileContent = await fs.readFile(filePath, 'utf-8');
+      menus = JSON.parse(fileContent);
+    } catch (error) {
+      console.log('No menu data found for', date);
     }
     
     // If no menus found, return empty array with restaurant info

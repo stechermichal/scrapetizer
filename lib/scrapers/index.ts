@@ -7,8 +7,11 @@ import { SaporeveroScraper } from './saporevero';
 import { MeatbeerScraper } from './meatbeer';
 import { NekazankaScraper } from './nekazanka';
 
+// Type for concrete scraper classes
+type ScraperClass = new (restaurant: Restaurant) => BaseScraper;
+
 // Map of scraper classes by restaurant ID
-const scraperMap: Record<string, typeof BaseScraper> = {
+const scraperMap: Record<string, ScraperClass> = {
   'hybernska': HybernskaScraper,
   'magburger': MagburgerScraper,
   'tiskarna': TiskarnaScraper,

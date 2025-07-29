@@ -6,7 +6,6 @@ import { Badge } from '@/components/ui/badge';
 import { Collapsible, CollapsibleContent } from '@/components/ui/collapsible';
 import { ExternalLink, MapPin, AlertCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { RestaurantMenu } from '@/lib/types';
-import { format } from 'date-fns';
 import { formatMenuItemName } from '@/lib/utils/text-formatting';
 
 interface MenuCardProps {

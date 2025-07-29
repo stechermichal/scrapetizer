@@ -22,7 +22,7 @@ export async function loadMenuData(date: string): Promise<RestaurantMenu[]> {
     const data = await fs.readFile(filePath, 'utf-8');
     return JSON.parse(data);
   } catch (error) {
-    if ((error as any).code === 'ENOENT') {
+    if (error && typeof error === 'object' && 'code' in error && error.code === 'ENOENT') {
       console.log(`📝 No menu data found for ${date}`);
       return [];
     }
