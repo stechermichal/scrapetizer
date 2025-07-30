@@ -3,8 +3,7 @@
 import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Collapsible, CollapsibleContent } from '@/components/ui/collapsible';
-import { ExternalLink, MapPin, AlertCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { ExternalLink, MapPin, AlertCircle } from 'lucide-react';
 import { RestaurantMenu } from '@/lib/types';
 import { formatMenuItemName } from '@/lib/utils/text-formatting';
 
@@ -14,11 +13,7 @@ interface MenuCardProps {
 
 export function MenuCard({ menu }: MenuCardProps) {
   const hasItems = menu.items.length > 0;
-  const [isOpen, setIsOpen] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
-  
-  // Only show collapsible on mobile when there are more than 3 items
-  const showCollapsible = hasItems && menu.items.length > 3;
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const scrollTop = e.currentTarget.scrollTop;
@@ -34,7 +29,7 @@ export function MenuCard({ menu }: MenuCardProps) {
   };
   
   return (
-    <Card className="hover:shadow-lg transition-shadow flex-shrink-0 w-80 overflow-hidden flex flex-col gap-0" style={{ height: 'calc(100vh - 320px)' }}>
+    <Card className="hover:shadow-lg transition-shadow flex-shrink-0 w-80 overflow-hidden flex flex-col gap-0 h-fit" style={{ maxHeight: 'calc(100vh - 320px)' }}>
       {/* Fixed header */}
       <div className={`${isScrolled ? 'shadow-md' : ''}`}>
         <div className="px-6 pb-3 -mt-2">
@@ -45,30 +40,15 @@ export function MenuCard({ menu }: MenuCardProps) {
                 {menu.restaurantName.replace('Restaurace ', '')}
               </h3>
             </div>
-            <div className="flex items-center gap-2">
-              <a
-                href={menu.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label={`Visit ${menu.restaurantName} website`}
-              >
-                <ExternalLink className="h-4 w-4" />
-              </a>
-              {showCollapsible && (
-                <button
-                  onClick={() => setIsOpen(!isOpen)}
-                  className="text-muted-foreground hover:text-primary transition-colors md:hidden"
-                  aria-label={isOpen ? 'Collapse menu' : 'Expand menu'}
-                >
-                  {isOpen ? (
-                    <ChevronUp className="h-4 w-4" />
-                  ) : (
-                      <ChevronDown className="h-4 w-4" />
-                  )}
-                </button>
-              )}
-            </div>
+            <a
+              href={menu.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label={`Visit ${menu.restaurantName} website`}
+            >
+              <ExternalLink className="h-4 w-4" />
+            </a>
           </div>
         </div>
         <div className="border-b" />
@@ -79,42 +59,33 @@ export function MenuCard({ menu }: MenuCardProps) {
         onWheel={handleWheel}
       >
         {hasItems ? (
-          <Collapsible open={isOpen} onOpenChange={setIsOpen} className="contents">
-            <CollapsibleContent className="contents">
-              <div className="space-y-3 px-6 pb-6">
-                {menu.items.map((item, index) => (
-                  <div key={index} className={`border-b last:border-b-0 pb-3 last:pb-0 ${index === 0 ? 'pt-3' : ''}`}>
-                    <div className="flex items-start justify-between gap-2">
-                      <div className="flex-1">
-                        <h4 className="font-medium text-sm leading-tight">
-                          {(() => {
-                            const { bold, rest } = formatMenuItemName(item.name);
-                            return (
-                              <>
-                                <span className="font-semibold">{bold}</span>
-                                {rest && <span className="font-normal"> {rest}</span>}
-                              </>
-                            );
-                          })()}
-                        </h4>
-                        {item.description && (
-                          <p className="text-xs text-muted-foreground mt-1">{item.description}</p>
-                        )}
-                      </div>
-                      <Badge variant="secondary" className="shrink-0">
-                        {item.price} Kč
-                      </Badge>
-                    </div>
+          <div className="space-y-3 px-6 pb-6">
+            {menu.items.map((item, index) => (
+              <div key={index} className={`border-b last:border-b-0 pb-3 last:pb-0 ${index === 0 ? 'pt-3' : ''}`}>
+                <div className="flex items-start justify-between gap-2">
+                  <div className="flex-1">
+                    <h4 className="font-medium text-sm leading-tight">
+                      {(() => {
+                        const { bold, rest } = formatMenuItemName(item.name);
+                        return (
+                          <>
+                            <span className="font-semibold">{bold}</span>
+                            {rest && <span className="font-normal"> {rest}</span>}
+                          </>
+                        );
+                      })()}
+                    </h4>
+                    {item.description && (
+                      <p className="text-xs text-muted-foreground mt-1">{item.description}</p>
+                    )}
                   </div>
-                ))}
+                  <Badge variant="secondary" className="shrink-0">
+                    {item.price} Kč
+                  </Badge>
+                </div>
               </div>
-            </CollapsibleContent>
-            {!isOpen && (
-              <div className="text-sm text-muted-foreground px-6 py-3">
-                {menu.items.length} items available
-              </div>
-            )}
-          </Collapsible>
+            ))}
+          </div>
         ) : (
           <div className="flex items-center gap-2 text-muted-foreground px-6 py-3">
             <AlertCircle className="h-4 w-4" />

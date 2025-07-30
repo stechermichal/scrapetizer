@@ -2,15 +2,15 @@ name: Scrape Restaurant Menus
 
 on:
   schedule:
-    # Run at 9am, 10am, and 11am Prague time (CET/CEST)
+    # Run at 8am, 10am, and 11am Prague time (CET/CEST)
     # GitHub Actions uses UTC, so we need to adjust:
-    # 9am CET = 8am UTC (winter) or 7am UTC (summer)
+    # 8am CET = 7am UTC (winter) or 6am UTC (summer)
+    # 10am CET = 9am UTC (winter) or 8am UTC (summer)
+    # 11am CET = 10am UTC (winter) or 9am UTC (summer)
     # Using both times to handle DST changes
-    - cron: '0 7,8 * * 1-5'  # 7am & 8am UTC
-    - cron: '0 8,9 * * 1-5'  # 8am & 9am UTC  
-    - cron: '0 9,10 * * 1-5' # 9am & 10am UTC
-    # Test run at 19:45 CEST (17:45 UTC summer, 18:45 UTC winter)
-    - cron: '45 17,18 * * *' # 19:45 Prague time
+    - cron: '0 6,7 * * 1-5'   # 8am Prague time
+    - cron: '0 8,9 * * 1-5'   # 10am Prague time  
+    - cron: '0 9,10 * * 1-5'  # 11am Prague time
   workflow_dispatch: # Allow manual trigger
   push:
     branches:

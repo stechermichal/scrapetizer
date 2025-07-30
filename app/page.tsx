@@ -168,22 +168,22 @@ export default function Home() {
               <div className="absolute right-0 top-0 bottom-4 w-8 bg-gradient-to-l from-background to-transparent pointer-events-none" />
             )}
             
-            {/* Left arrow button */}
+            {/* Left arrow button - hidden on mobile */}
             {showLeftShadow && (
               <button
                 onClick={() => scrollHorizontally('left')}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm border rounded-full p-2 shadow-md hover:bg-accent transition-colors"
+                className="hidden md:block absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm border rounded-full p-2 shadow-md hover:bg-accent transition-colors"
                 aria-label="Scroll left"
               >
                 <ChevronLeft className="h-5 w-5" />
               </button>
             )}
             
-            {/* Right arrow button */}
+            {/* Right arrow button - hidden on mobile */}
             {showRightShadow && (
               <button
                 onClick={() => scrollHorizontally('right')}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm border rounded-full p-2 shadow-md hover:bg-accent transition-colors"
+                className="hidden md:block absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm border rounded-full p-2 shadow-md hover:bg-accent transition-colors"
                 aria-label="Scroll right"
               >
                 <ChevronRight className="h-5 w-5" />

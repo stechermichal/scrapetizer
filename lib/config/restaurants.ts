@@ -2,6 +2,21 @@ import { Restaurant } from '../types';
 
 export const restaurants: Restaurant[] = [
   {
+    id: 'hybernska',
+    name: 'Restaurace Hybernská',
+    url: 'https://www.restauracehybernska.cz/',
+    scrapeConfig: {
+      type: 'static',
+      selectors: {
+        menuContainer: '.menu-list', // We'll need to inspect the actual selectors
+        menuItem: '.menu-item',
+        itemName: '.item-name',
+        itemPrice: '.item-price',
+        itemDescription: '.item-description'
+      }
+    }
+  },
+  {
     id: 'tiskarna',
     name: 'Restaurace Tiskárna',
     url: 'https://www.restauracetiskarna.cz/',
@@ -14,6 +29,15 @@ export const restaurants: Restaurant[] = [
         itemName: '.item-name',
         itemPrice: '.item-price'
       }
+    }
+  },
+  {
+    id: 'meatbeer',
+    name: 'Meat Beer',
+    url: 'https://www.meatbeer.cz/',
+    menuUrl: 'https://www.meatbeer.cz/menu/',
+    scrapeConfig: {
+      type: 'static'
     }
   },
   {
@@ -34,30 +58,6 @@ export const restaurants: Restaurant[] = [
     scrapeConfig: {
       type: 'pdf',
       pdfUrl: 'dynamic' // PDF URL changes daily
-    }
-  },
-  {
-    id: 'hybernska',
-    name: 'Restaurace Hybernská',
-    url: 'https://www.restauracehybernska.cz/',
-    scrapeConfig: {
-      type: 'static',
-      selectors: {
-        menuContainer: '.menu-list', // We'll need to inspect the actual selectors
-        menuItem: '.menu-item',
-        itemName: '.item-name',
-        itemPrice: '.item-price',
-        itemDescription: '.item-description'
-      }
-    }
-  },
-  {
-    id: 'meatbeer',
-    name: 'Meat Beer',
-    url: 'https://www.meatbeer.cz/',
-    menuUrl: 'https://www.meatbeer.cz/menu/',
-    scrapeConfig: {
-      type: 'static'
     }
   },
   {
