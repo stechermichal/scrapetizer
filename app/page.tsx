@@ -3,12 +3,13 @@
 import { useEffect, useState, useRef } from 'react';
 import { format } from 'date-fns';
 import { cs } from 'date-fns/locale';
-import { RefreshCw, Utensils, ChevronLeft, ChevronRight } from 'lucide-react';
+import { RefreshCw, Utensils, ChevronLeft, ChevronRight, Sun } from 'lucide-react';
 import { RestaurantMenu } from '@/lib/types';
 import { MenuCard } from './components/MenuCard';
 import { MenuCardSkeleton } from './components/MenuCardSkeleton';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { getCurrentCzechDayUrl } from '@/lib/utils/czech-days';
+import { toast } from 'sonner';
 
 interface MenuResponse {
   date: string;
@@ -23,6 +24,8 @@ export default function Home() {
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
   const [showLeftShadow, setShowLeftShadow] = useState(false);
   const [showRightShadow, setShowRightShadow] = useState(false);
+  const [friedLevel, setFriedLevel] = useState(0);
+  const [isScraping, setIsScraping] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const fetchMenus = async () => {
@@ -42,6 +45,47 @@ export default function Home() {
       setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
       setLoading(false);
+    }
+  };
+
+  const triggerScrape = async () => {
+    try {
+      setIsScraping(true);
+      
+      const response = await fetch('/api/scrape', {
+        method: 'POST',
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        if (response.status === 429) {
+          toast.error(data.error);
+        } else {
+          toast.error('Failed to start scraping');
+        }
+        return;
+      }
+      
+      toast.success('Scraping started! This might take up to 4 minutes.', {
+        duration: 6000,
+      });
+      
+      // Poll for updates every 30 seconds
+      const pollInterval = setInterval(async () => {
+        await fetchMenus();
+      }, 30000);
+      
+      // Stop polling after 5 minutes
+      setTimeout(() => {
+        clearInterval(pollInterval);
+        setIsScraping(false);
+        toast.info('Scraping should be complete. Refresh the page if needed.');
+      }, 5 * 60 * 1000);
+      
+    } catch (err) {
+      toast.error('Failed to trigger scraping');
+      setIsScraping(false);
     }
   };
 
@@ -67,6 +111,67 @@ export default function Home() {
       left: targetScroll,
       behavior: 'smooth'
     });
+  };
+
+  const getFriedStyles = () => {
+    const filters = [];
+    
+    // Level 1: Slight brightness boost
+    if (friedLevel >= 1) filters.push('brightness(1.15)');
+    
+    // Level 2: More brightness + slight saturation
+    if (friedLevel >= 2) {
+      filters[0] = 'brightness(1.3)';
+      filters.push('saturate(1.2)');
+    }
+    
+    // Level 3: Even more brightness + more saturation
+    if (friedLevel >= 3) {
+      filters[0] = 'brightness(1.5)';
+      filters[1] = 'saturate(1.4)';
+      filters.push('contrast(1.1)');
+    }
+    
+    // Level 4: Getting bright
+    if (friedLevel >= 4) {
+      filters[0] = 'brightness(1.8)';
+      filters[1] = 'saturate(1.7)';
+      filters[2] = 'contrast(1.2)';
+    }
+    
+    // Level 5: Very bright
+    if (friedLevel >= 5) {
+      filters[0] = 'brightness(2.2)';
+      filters[1] = 'saturate(2)';
+      filters[2] = 'contrast(1.3)';
+    }
+    
+    // Level 6: Super bright
+    if (friedLevel >= 6) {
+      filters[0] = 'brightness(2.6)';
+      filters[1] = 'saturate(2.5)';
+      filters[2] = 'contrast(1.4)';
+    }
+    
+    // Level 7: Ultra bright
+    if (friedLevel >= 7) {
+      filters[0] = 'brightness(3)';
+      filters[1] = 'saturate(3)';
+      filters[2] = 'contrast(1.5)';
+    }
+    
+    // Level 8+: Maximum overdrive
+    if (friedLevel >= 8) {
+      const extraLevels = friedLevel - 7;
+      filters[0] = `brightness(${3 + extraLevels * 0.5})`;
+      filters[1] = `saturate(${3 + extraLevels * 0.5})`;
+      filters[2] = `contrast(${1.5 + extraLevels * 0.1})`;
+    }
+    
+    return {
+      filter: filters.join(' '),
+      transition: 'filter 0.3s ease-in-out'
+    };
   };
 
   const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
@@ -104,7 +209,7 @@ export default function Home() {
   const today = format(new Date(), 'EEEE d. MMMM', { locale: cs });
 
   return (
-    <div className="h-screen bg-background flex flex-col overflow-hidden">
+    <div className="h-screen bg-background flex flex-col overflow-hidden" style={getFriedStyles()}>
       {/* Header */}
       <header className="flex-shrink-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
         <div className="container mx-auto px-4 py-4">
@@ -124,13 +229,21 @@ export default function Home() {
                 </p>
               )}
               <button
-                onClick={fetchMenus}
-                disabled={loading}
+                onClick={() => setFriedLevel(prev => prev + 1)}
+                className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                aria-label="Toggle brightness mode"
+                title={friedLevel > 0 ? `Brightness: ${friedLevel}` : 'Toggle brightness'}
+              >
+                <Sun className="h-4 w-4" />
+              </button>
+              <button
+                onClick={triggerScrape}
+                disabled={loading || isScraping}
                 className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent hover:text-accent-foreground disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                 aria-label="Refresh menus"
               >
-                <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
-                <span className="hidden sm:inline">Refresh</span>
+                <RefreshCw className={`h-4 w-4 ${loading || isScraping ? 'animate-spin' : ''}`} />
+                <span className="hidden sm:inline">{isScraping ? 'Scraping...' : 'Refresh'}</span>
               </button>
             </div>
           </div>

@@ -1,80 +1,5 @@
 [
   {
-    "restaurantId": "tiskarna",
-    "restaurantName": "Restaurace Tiskárna",
-    "date": "2025-07-30",
-    "dayOfWeek": "středa",
-    "items": [
-      {
-        "name": "Rajská polévka s těstovinami",
-        "price": 59
-      },
-      {
-        "name": "Hovězí brisket s pepřovou omáčkou, listový špenát na másle, krémová polenta s bylinkami",
-        "price": 249
-      },
-      {
-        "name": "Kuřecí řízečky v parmazánové strouhance, bramborová kaše, mesclun",
-        "price": 189
-      },
-      {
-        "name": "Halušky s uzeným masem a kysaným zelím, vídeňská cibulka",
-        "price": 189
-      },
-      {
-        "name": "Salát s tuňákem, sušenými rajčaty, vejcem a medovým dresinkem",
-        "price": 179
-      }
-    ],
-    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-07-30T18:14:43.500Z",
-    "isAvailable": true
-  },
-  {
-    "restaurantId": "magburger",
-    "restaurantName": "Meet&Greet",
-    "date": "2025-07-30",
-    "dayOfWeek": "středa",
-    "items": [
-      {
-        "name": "Rajčatová polévka s bazalkou, krutonem a parmazánem",
-        "price": 50,
-        "description": "Polévka"
-      },
-      {
-        "name": "Telecí saltimbocca s batátovým pyré",
-        "price": 179
-      },
-      {
-        "name": "Penne all´amatraciana s cherry rajčaty a parmazánem",
-        "price": 165
-      },
-      {
-        "name": "Hovězí burger s gorgonzolou, slaninou, portskou majonézou a baby špenátem podávaný s coleslawem",
-        "price": 249
-      }
-    ],
-    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-07-30T18:14:51.273Z",
-    "isAvailable": true
-  },
-  {
-    "restaurantId": "saporevero",
-    "restaurantName": "Sapore Vero",
-    "date": "2025-07-30",
-    "dayOfWeek": "středa",
-    "items": [
-      {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
-      }
-    ],
-    "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-07-30T18:15:05.822Z",
-    "isAvailable": true
-  },
-  {
     "restaurantId": "hybernska",
     "restaurantName": "Restaurace Hybernská",
     "date": "2025-07-30",
@@ -136,7 +61,38 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-07-30T18:15:14.624Z",
+    "scrapedAt": "2025-07-30T21:17:24.422Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2025-07-30",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Rajská polévka s těstovinami",
+        "price": 59
+      },
+      {
+        "name": "Hovězí brisket s pepřovou omáčkou, listový špenát na másle, krémová polenta s bylinkami",
+        "price": 249
+      },
+      {
+        "name": "Kuřecí řízečky v parmazánové strouhance, bramborová kaše, mesclun",
+        "price": 189
+      },
+      {
+        "name": "Halušky s uzeným masem a kysaným zelím, vídeňská cibulka",
+        "price": 189
+      },
+      {
+        "name": "Salát s tuňákem, sušenými rajčaty, vejcem a medovým dresinkem",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2025-07-30T21:17:30.995Z",
     "isAvailable": true
   },
   {
@@ -176,7 +132,51 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-07-30T18:15:24.320Z",
+    "scrapedAt": "2025-07-30T21:17:39.528Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2025-07-30",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Rajčatová polévka s bazalkou, krutonem a parmazánem",
+        "price": 50,
+        "description": "Polévka"
+      },
+      {
+        "name": "Telecí saltimbocca s batátovým pyré",
+        "price": 179
+      },
+      {
+        "name": "Penne all´amatraciana s cherry rajčaty a parmazánem",
+        "price": 165
+      },
+      {
+        "name": "Hovězí burger s gorgonzolou, slaninou, portskou majonézou a baby špenátem podávaný s coleslawem",
+        "price": 249
+      }
+    ],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2025-07-30T21:17:46.598Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "saporevero",
+    "restaurantName": "Sapore Vero",
+    "date": "2025-07-30",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Menu not posted yet",
+        "price": 0,
+        "description": "Check back later"
+      }
+    ],
+    "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
+    "scrapedAt": "2025-07-30T21:18:01.311Z",
     "isAvailable": true
   },
   {
@@ -212,7 +212,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-07-30T18:15:32.801Z",
+    "scrapedAt": "2025-07-30T21:18:09.290Z",
     "isAvailable": true
   }
 ]
