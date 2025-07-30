@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { format } from 'date-fns';
-import { loadMenuData } from '@/lib/utils/storage';
 import { restaurants } from '@/lib/config/restaurants';
 import { RestaurantMenu } from '@/lib/types';
 import fs from 'fs/promises';
@@ -15,12 +14,12 @@ export async function GET(request: Request) {
     // In development, use the file system
     let menus: RestaurantMenu[] = [];
     
-    // Try to read directly from the public directory
+    // Read menu data from the public directory
     try {
       const filePath = path.join(process.cwd(), 'public', 'data', 'menus', `${date}.json`);
       const fileContent = await fs.readFile(filePath, 'utf-8');
       menus = JSON.parse(fileContent);
-    } catch (error) {
+    } catch {
       console.log('No menu data found for', date);
     }
     

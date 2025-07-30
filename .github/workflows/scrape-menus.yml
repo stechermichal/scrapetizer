@@ -9,6 +9,8 @@ on:
     - cron: '0 7,8 * * 1-5'  # 7am & 8am UTC
     - cron: '0 8,9 * * 1-5'  # 8am & 9am UTC  
     - cron: '0 9,10 * * 1-5' # 9am & 10am UTC
+    # Test run at 19:45 CEST (17:45 UTC summer, 18:45 UTC winter)
+    - cron: '45 17,18 * * *' # 19:45 Prague time
   workflow_dispatch: # Allow manual trigger
   push:
     branches:
@@ -17,6 +19,9 @@ on:
       - 'lib/scrapers/**'
       - '.github/workflows/scrape-menus.yml'
 
+permissions:
+  contents: write
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -24,8 +29,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Set up Node.js
       uses: actions/setup-node@v4

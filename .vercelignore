@@ -1,14 +1,14 @@
 # Scripts (not needed for production)
 scripts/
 
-# Old data directory
-data/
+# Old data directory (but NOT public/data)
+/data/
+!public/
 
 # Development files
 *.md
 .env.local
 .env.development
-IMPLEMENTATION_PLAN.md
 
 # GitHub
 .github/
