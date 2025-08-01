@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect, RefObject } from 'react';
 
 interface UseHorizontalScrollReturn {
-  scrollContainerRef: RefObject<HTMLDivElement>;
+  scrollContainerRef: RefObject<HTMLDivElement | null>;
   showLeftShadow: boolean;
   showRightShadow: boolean;
   scrollHorizontally: (direction: 'left' | 'right') => void;
