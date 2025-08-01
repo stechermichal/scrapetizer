@@ -38,8 +38,8 @@ export function useMenus(): UseMenusReturn {
       const data: MenuResponse = await response.json();
       setMenus(data.menus);
       setLastUpdated(data.lastUpdated);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
+    } catch {
+      setError('An error occurred');
     } finally {
       setLoading(false);
     }
@@ -80,7 +80,7 @@ export function useMenus(): UseMenusReturn {
         toast.info('Scraping should be complete. Refresh the page if needed.');
       }, 5 * 60 * 1000);
       
-    } catch (err) {
+    } catch {
       toast.error('Failed to trigger scraping');
       setIsScraping(false);
     }

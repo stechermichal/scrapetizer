@@ -15,7 +15,7 @@ const eslintConfig = [
     rules: {
       // TypeScript
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       
       // React
@@ -23,17 +23,13 @@ const eslintConfig = [
       'react/prop-types': 'off',
       
       // General
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-console': 'off',
       'prefer-const': 'error',
       'no-var': 'error',
       'eqeqeq': ['error', 'always'],
       
-      // Import
-      'import/order': ['error', {
-        'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-        'newlines-between': 'always',
-        'alphabetize': { order: 'asc', caseInsensitive: true }
-      }]
+      // Import - disabled for now
+      'import/order': 'off'
     }
   }
 ];

@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 // Store last scrape time in memory (resets on server restart)
 let lastScrapeTime: number | null = null;
 
-export async function POST(request: NextRequest) {
+export async function POST(_request: NextRequest) {
   try {
     // Check rate limiting (10 minutes)
     const now = Date.now();

@@ -7,8 +7,6 @@ export class TiskarnaScraper extends BaseScraper {
   }
 
   protected async extractMenuItems(): Promise<MenuItem[]> {
-    const items: MenuItem[] = [];
-
     try {
       // Get today's menu from the page
       const menuData = await this.page!.evaluate(() => {
