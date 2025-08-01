@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-08-01T08:29:55.363Z",
+    "scrapedAt": "2025-08-01T08:36:05.027Z",
     "isAvailable": true
   },
   {
@@ -97,7 +97,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-08-01T08:30:01.351Z",
+    "scrapedAt": "2025-08-01T08:36:10.655Z",
     "isAvailable": true
   },
   {
@@ -137,7 +137,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-08-01T08:30:09.711Z",
+    "scrapedAt": "2025-08-01T08:36:18.846Z",
     "isAvailable": true
   },
   {
@@ -165,7 +165,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-08-01T08:30:16.683Z",
+    "scrapedAt": "2025-08-01T08:36:25.870Z",
     "isAvailable": true
   },
   {
@@ -175,32 +175,32 @@
     "dayOfWeek": "pátek",
     "items": [
       {
-        "name": "Fazolová polévka",
+        "name": "Houbový krém",
         "price": 59
       },
       {
-        "name": "Míchaný salát s kuřecím masem, cizrnou a cherry rajčaty",
-        "price": 179
+        "name": "Míchaný salát s mozzarellou di bufala a cherry rajčaty",
+        "price": 189
       },
       {
-        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, rukolou a parmazánem",
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, tuňákem a cibulí",
         "price": 199
       },
       {
-        "name": "Tagliatelle s česnekem, olivovým olejem a zeleninou",
+        "name": "Ravioli plněné parmazánem s máslem a šalvějí",
         "price": 199
       },
       {
-        "name": "Rigatoni s rajčatovou omáčkou, klobásou a hříbky",
-        "price": 209
+        "name": "Penne s hovězím masem, sušenými rajčaty, cuketou a rukolou",
+        "price": 219
       },
       {
-        "name": "Grilované vepřové plátky s opečenými bramborami a žampionovou omáčkou",
-        "price": 249
+        "name": "Kuřecí řízek s hranolkami",
+        "price": 239
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-08-01T08:30:21.438Z",
+    "scrapedAt": "2025-08-01T08:36:30.337Z",
     "isAvailable": true
   },
   {
@@ -232,7 +232,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-08-01T08:30:29.595Z",
+    "scrapedAt": "2025-08-01T08:36:38.178Z",
     "isAvailable": true
   }
 ]
