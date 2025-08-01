@@ -1,6 +1,7 @@
 import { chromium, Browser, Page } from 'playwright';
 import { Restaurant, RestaurantMenu, ScraperResult, MenuItem } from '../types';
 import { getCurrentCzechDay } from '../utils/czech-days';
+import { logger } from '../utils/logger';
 
 export abstract class BaseScraper {
   protected browser: Browser | null = null;
@@ -28,14 +29,14 @@ export abstract class BaseScraper {
       await this.init();
       
       const url = this.getMenuUrl();
-      console.log(`🔍 Scraping ${this.restaurant.name} from ${url}`);
+      logger.info(`Scraping ${this.restaurant.name}`, { url, restaurantId: this.restaurant.id });
       
       await this.page!.goto(url, { waitUntil: 'networkidle' });
       
       // Wait a bit for dynamic content
       await this.page!.waitForTimeout(2000);
       
-      const items = await this.extractMenuItems();
+      const items = await this.safeExtractMenuItems();
       
       const menu: RestaurantMenu = {
         restaurantId: this.restaurant.id,
@@ -49,9 +50,16 @@ export abstract class BaseScraper {
         errorMessage: items.length === 0 ? 'No menu items found' : undefined
       };
 
+      logger.info(`Successfully scraped ${this.restaurant.name}`, { 
+        itemCount: items.length,
+        restaurantId: this.restaurant.id 
+      });
+
       return { success: true, menu };
     } catch (error) {
-      console.error(`❌ Error scraping ${this.restaurant.name}:`, error);
+      logger.error(`Error scraping ${this.restaurant.name}`, error, { 
+        restaurantId: this.restaurant.id 
+      });
       return {
         success: false,
         error: error instanceof Error ? error.message : 'Unknown error'
@@ -63,6 +71,31 @@ export abstract class BaseScraper {
 
   protected abstract getMenuUrl(): string;
   protected abstract extractMenuItems(): Promise<MenuItem[]>;
+
+  /**
+   * Wrapper for extractMenuItems with consistent error handling and logging
+   */
+  protected async safeExtractMenuItems(): Promise<MenuItem[]> {
+    try {
+      logger.debug(`Extracting menu items for ${this.restaurant.name}`);
+      const items = await this.extractMenuItems();
+      
+      if (items.length > 0) {
+        logger.info(`Found ${items.length} menu items from ${this.restaurant.name}`);
+        // Log first 3 items for debugging
+        items.slice(0, 3).forEach((item, index) => {
+          logger.debug(`Item ${index + 1}: ${item.name}: ${item.price} Kč`);
+        });
+      } else {
+        logger.warn(`No menu items found for ${this.restaurant.name}`);
+      }
+      
+      return items;
+    } catch (error) {
+      logger.error(`Error extracting menu items from ${this.restaurant.name}`, error);
+      return [];
+    }
+  }
 
   protected parsePrice(priceText: string): number {
     // Extract number from strings like "189 Kč", "189,-", "Kč 189"
@@ -85,5 +118,16 @@ export abstract class BaseScraper {
     if (cleaned.length === 0) return cleaned;
     
     return cleaned.charAt(0).toUpperCase() + cleaned.slice(1).toLowerCase();
+  }
+
+  /**
+   * Process menu item data with consistent formatting
+   */
+  protected createMenuItem(name: string, priceText: string, description?: string): MenuItem {
+    return {
+      name: this.normalizeText(name),
+      price: this.parsePrice(priceText),
+      description: description ? this.normalizeText(description) : undefined
+    };
   }
 }

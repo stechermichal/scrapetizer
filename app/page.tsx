@@ -1,254 +1,33 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
-import { format } from 'date-fns';
-import { cs } from 'date-fns/locale';
-import { RefreshCw, Utensils, ChevronLeft, ChevronRight, Sun } from 'lucide-react';
-import { RestaurantMenu } from '@/lib/types';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { MenuCard } from './components/MenuCard';
 import { MenuCardSkeleton } from './components/MenuCardSkeleton';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { getCurrentCzechDayUrl } from '@/lib/utils/czech-days';
-import { toast } from 'sonner';
-
-interface MenuResponse {
-  date: string;
-  menus: RestaurantMenu[];
-  lastUpdated: string | null;
-}
+import { Header } from './components/Header';
+import { EmptyState } from './components/EmptyState';
+import { UnreadableRestaurants } from './components/UnreadableRestaurants';
+import { useMenus } from './hooks/useMenus';
+import { useHorizontalScroll } from './hooks/useHorizontalScroll';
 
 export default function Home() {
-  const [menus, setMenus] = useState<RestaurantMenu[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [lastUpdated, setLastUpdated] = useState<string | null>(null);
-  const [showLeftShadow, setShowLeftShadow] = useState(false);
-  const [showRightShadow, setShowRightShadow] = useState(false);
-  const [friedLevel, setFriedLevel] = useState(0);
-  const [isScraping, setIsScraping] = useState(false);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  const fetchMenus = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      
-      const response = await fetch('/api/menus');
-      if (!response.ok) {
-        throw new Error('Failed to fetch menus');
-      }
-      
-      const data: MenuResponse = await response.json();
-      setMenus(data.menus);
-      setLastUpdated(data.lastUpdated);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const triggerScrape = async () => {
-    try {
-      setIsScraping(true);
-      
-      const response = await fetch('/api/scrape', {
-        method: 'POST',
-      });
-      
-      const data = await response.json();
-      
-      if (!response.ok) {
-        if (response.status === 429) {
-          toast.error(data.error);
-        } else {
-          toast.error('Failed to start scraping');
-        }
-        return;
-      }
-      
-      toast.success('Scraping started! This might take up to 4 minutes.', {
-        duration: 6000,
-      });
-      
-      // Poll for updates every 30 seconds
-      const pollInterval = setInterval(async () => {
-        await fetchMenus();
-      }, 30000);
-      
-      // Stop polling after 5 minutes
-      setTimeout(() => {
-        clearInterval(pollInterval);
-        setIsScraping(false);
-        toast.info('Scraping should be complete. Refresh the page if needed.');
-      }, 5 * 60 * 1000);
-      
-    } catch (err) {
-      toast.error('Failed to trigger scraping');
-      setIsScraping(false);
-    }
-  };
-
-  const checkScroll = () => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-
-    const { scrollLeft, scrollWidth, clientWidth } = container;
-    setShowLeftShadow(scrollLeft > 0);
-    setShowRightShadow(scrollLeft < scrollWidth - clientWidth - 5);
-  };
-
-  const scrollHorizontally = (direction: 'left' | 'right') => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-    
-    const scrollAmount = 300; // Scroll by roughly one card width
-    const targetScroll = direction === 'left' 
-      ? container.scrollLeft - scrollAmount 
-      : container.scrollLeft + scrollAmount;
-    
-    container.scrollTo({
-      left: targetScroll,
-      behavior: 'smooth'
-    });
-  };
-
-  const getFriedStyles = () => {
-    const filters = [];
-    
-    // Level 1: Slight brightness boost
-    if (friedLevel >= 1) filters.push('brightness(1.15)');
-    
-    // Level 2: More brightness + slight saturation
-    if (friedLevel >= 2) {
-      filters[0] = 'brightness(1.3)';
-      filters.push('saturate(1.2)');
-    }
-    
-    // Level 3: Even more brightness + more saturation
-    if (friedLevel >= 3) {
-      filters[0] = 'brightness(1.5)';
-      filters[1] = 'saturate(1.4)';
-      filters.push('contrast(1.1)');
-    }
-    
-    // Level 4: Getting bright
-    if (friedLevel >= 4) {
-      filters[0] = 'brightness(1.8)';
-      filters[1] = 'saturate(1.7)';
-      filters[2] = 'contrast(1.2)';
-    }
-    
-    // Level 5: Very bright
-    if (friedLevel >= 5) {
-      filters[0] = 'brightness(2.2)';
-      filters[1] = 'saturate(2)';
-      filters[2] = 'contrast(1.3)';
-    }
-    
-    // Level 6: Super bright
-    if (friedLevel >= 6) {
-      filters[0] = 'brightness(2.6)';
-      filters[1] = 'saturate(2.5)';
-      filters[2] = 'contrast(1.4)';
-    }
-    
-    // Level 7: Ultra bright
-    if (friedLevel >= 7) {
-      filters[0] = 'brightness(3)';
-      filters[1] = 'saturate(3)';
-      filters[2] = 'contrast(1.5)';
-    }
-    
-    // Level 8+: Maximum overdrive
-    if (friedLevel >= 8) {
-      const extraLevels = friedLevel - 7;
-      filters[0] = `brightness(${3 + extraLevels * 0.5})`;
-      filters[1] = `saturate(${3 + extraLevels * 0.5})`;
-      filters[2] = `contrast(${1.5 + extraLevels * 0.1})`;
-    }
-    
-    return {
-      filter: filters.join(' '),
-      transition: 'filter 0.3s ease-in-out'
-    };
-  };
-
-  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-
-    // Check if the event target is inside a card
-    const target = e.target as HTMLElement;
-    const card = target.closest('.hover\\:shadow-lg'); // Cards have this class
-    
-    // If we're over a card, check if it has a scrollbar
-    if (card) {
-      const scrollableDiv = card.querySelector('div[style*="overflow-y"]') as HTMLElement;
-      if (scrollableDiv && scrollableDiv.scrollHeight > scrollableDiv.clientHeight) {
-        // Card is scrollable, don't handle horizontal scroll
-        return;
-      }
-    }
-
-    // Otherwise, convert vertical scroll to horizontal
-    e.preventDefault();
-    container.scrollLeft += e.deltaY;
-  };
-
-  useEffect(() => {
-    fetchMenus();
-  }, []);
-
-  useEffect(() => {
-    checkScroll();
-    window.addEventListener('resize', checkScroll);
-    return () => window.removeEventListener('resize', checkScroll);
-  }, [menus]);
-
-  const today = format(new Date(), 'EEEE d. MMMM', { locale: cs });
+  const { menus, loading, error, lastUpdated, isScraping, triggerScrape } = useMenus();
+  const { 
+    scrollContainerRef, 
+    showLeftShadow, 
+    showRightShadow, 
+    scrollHorizontally, 
+    handleWheel 
+  } = useHorizontalScroll();
 
   return (
-    <div className="h-screen bg-background flex flex-col overflow-hidden" style={getFriedStyles()}>
-      {/* Header */}
-      <header className="flex-shrink-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Utensils className="h-6 w-6 text-primary" />
-              <div>
-                <h1 className="text-xl font-bold">Scrapetizer</h1>
-                <p className="text-sm text-muted-foreground">{today}</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-4">
-              {lastUpdated && (
-                <p className="text-xs text-muted-foreground">
-                  Last updated: {format(new Date(lastUpdated), 'HH:mm')}
-                </p>
-              )}
-              <button
-                onClick={() => setFriedLevel(prev => prev + 1)}
-                className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
-                aria-label="Toggle brightness mode"
-                title={friedLevel > 0 ? `Brightness: ${friedLevel}` : 'Toggle brightness'}
-              >
-                <Sun className="h-4 w-4" />
-              </button>
-              <button
-                onClick={triggerScrape}
-                disabled={loading || isScraping}
-                className="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent hover:text-accent-foreground disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                aria-label="Refresh menus"
-              >
-                <RefreshCw className={`h-4 w-4 ${loading || isScraping ? 'animate-spin' : ''}`} />
-                <span className="hidden sm:inline">{isScraping ? 'Scraping...' : 'Refresh'}</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
+    <div className="h-screen bg-background flex flex-col overflow-hidden">
+      <Header 
+        lastUpdated={lastUpdated}
+        loading={loading}
+        isScraping={isScraping}
+        onRefresh={triggerScrape}
+      />
 
       {/* Main Content */}
       <main className="flex-1 container mx-auto px-4 py-8 overflow-hidden flex flex-col">
@@ -261,7 +40,6 @@ export default function Home() {
           <div className="flex-1 overflow-hidden flex flex-col relative" onWheel={handleWheel}>
             <div 
               ref={scrollContainerRef}
-              onScroll={checkScroll}
               className="flex items-start gap-6 overflow-x-auto pb-4 w-full"
             >
               {loading
@@ -305,41 +83,9 @@ export default function Home() {
           </div>
         )}
 
-        {!loading && !error && menus.length === 0 && (
-          <div className="text-center py-12">
-            <Utensils className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <h2 className="text-lg font-semibold mb-2">No menus available</h2>
-            <p className="text-muted-foreground">
-              Try running the scraper to fetch today&apos;s menus.
-            </p>
-            <pre className="mt-4 text-sm bg-muted px-3 py-2 rounded-md inline-block">
-              npm run scrape:restaurant
-            </pre>
-          </div>
-        )}
+        {!loading && !error && menus.length === 0 && <EmptyState />}
         
-        {/* Unreadable restaurants section */}
-        <div className="mt-8 p-4 bg-muted rounded-lg flex-shrink-0">
-          <h2 className="text-xl font-semibold mb-3">Restaurants with unreadable menus 😢</h2>
-          <div className="flex flex-wrap gap-4">
-            <a 
-              href="https://www.lasadelitas.cz/denni-menu/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
-            >
-              Las Adelitas →
-            </a>
-            <a 
-              href={`https://masaryckarestaurace.choiceqr.com/section:poledni-menu/${getCurrentCzechDayUrl()}`}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
-            >
-              Masarycka →
-            </a>
-          </div>
-        </div>
+        <UnreadableRestaurants />
       </main>
     </div>
   );

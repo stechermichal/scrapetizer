@@ -144,28 +144,13 @@ export class TiskarnaScraper extends BaseScraper {
         return itemsData;
       });
 
-      // Process the extracted data
-      for (const item of menuData) {
-        const menuItem: MenuItem = {
-          name: this.normalizeText(item.name),
-          price: this.parsePrice(item.priceText),
-          description: item.description ? this.normalizeText(item.description) : undefined
-        };
-        
-        items.push(menuItem);
-      }
-
-      console.log(`✅ Found ${items.length} menu items from ${this.restaurant.name}`);
-      
-      // Debug: Show what we found
-      items.slice(0, 3).forEach(item => {
-        console.log(`   - ${item.name}: ${item.price} Kč`);
-      });
+      // Process the extracted data using base class helper
+      return menuData.map(item => 
+        this.createMenuItem(item.name, item.priceText, item.description)
+      );
       
     } catch (error) {
-      console.error(`❌ Error extracting menu items from ${this.restaurant.name}:`, error);
+      throw error; // Let base class handle the error
     }
-
-    return items;
   }
 }

@@ -37,7 +37,7 @@ export function MenuCard({ menu }: MenuCardProps) {
             <div className="flex-1">
               <h3 className="font-semibold flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                {menu.restaurantName.replace('Restaurace ', '')}
+                {menu.restaurantName}
               </h3>
             </div>
             <a
