@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-08-05T06:11:38.074Z",
+    "scrapedAt": "2025-08-05T07:11:22.222Z",
     "isAvailable": true
   },
   {
@@ -92,7 +92,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-08-05T06:11:42.950Z",
+    "scrapedAt": "2025-08-05T07:11:28.210Z",
     "isAvailable": true
   },
   {
@@ -132,7 +132,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-08-05T06:11:51.900Z",
+    "scrapedAt": "2025-08-05T07:11:37.410Z",
     "isAvailable": true
   },
   {
@@ -160,7 +160,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-08-05T06:11:58.777Z",
+    "scrapedAt": "2025-08-05T07:11:44.843Z",
     "isAvailable": true
   },
   {
@@ -170,13 +170,32 @@
     "dayOfWeek": "úterý",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Houbový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s malými chobotničkami",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, pikantním salámem a gorgonzolou",
+        "price": 199
+      },
+      {
+        "name": "Spaghetti s česnekem, olejem a chilli papričkou",
+        "price": 199
+      },
+      {
+        "name": "Penne s rajčatovou omáčkou, kapary, olivami a krevetami",
+        "price": 219
+      },
+      {
+        "name": "Grilované kuřecí prso s grenaille bramborami",
+        "price": 239
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-08-05T06:12:13.091Z",
+    "scrapedAt": "2025-08-05T07:11:50.486Z",
     "isAvailable": true
   },
   {
@@ -208,7 +227,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-08-05T06:12:20.738Z",
+    "scrapedAt": "2025-08-05T07:11:59.012Z",
     "isAvailable": true
   }
 ]
