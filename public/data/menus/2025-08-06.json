@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-08-06T06:11:34.518Z",
+    "scrapedAt": "2025-08-06T07:11:02.238Z",
     "isAvailable": true
   },
   {
@@ -89,7 +89,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-08-06T06:11:39.779Z",
+    "scrapedAt": "2025-08-06T07:11:08.655Z",
     "isAvailable": true
   },
   {
@@ -129,7 +129,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-08-06T06:11:49.006Z",
+    "scrapedAt": "2025-08-06T07:11:16.923Z",
     "isAvailable": true
   },
   {
@@ -157,7 +157,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-08-06T06:11:56.055Z",
+    "scrapedAt": "2025-08-06T07:11:23.780Z",
     "isAvailable": true
   },
   {
@@ -167,13 +167,32 @@
     "dayOfWeek": "středa",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Pórkový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s kuřecím masem",
+        "price": 179
+      },
+      {
+        "name": "Pinsa se čtyřmi sýry",
+        "price": 199
+      },
+      {
+        "name": "Ravioli s parmezánem a smetanou",
+        "price": 199
+      },
+      {
+        "name": "Tagliatelle s boloňskou omáčkou",
+        "price": 199
+      },
+      {
+        "name": "Filety z mořského vlka s grilovanou zeleninou",
+        "price": 279
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-08-06T06:12:10.221Z",
+    "scrapedAt": "2025-08-06T07:11:28.329Z",
     "isAvailable": true
   },
   {
@@ -209,7 +228,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-08-06T06:12:18.343Z",
+    "scrapedAt": "2025-08-06T07:11:38.488Z",
     "isAvailable": true
   }
 ]
