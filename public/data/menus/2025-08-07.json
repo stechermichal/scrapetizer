@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-08-07T06:11:24.650Z",
+    "scrapedAt": "2025-08-07T07:11:10.150Z",
     "isAvailable": true
   },
   {
@@ -93,7 +93,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-08-07T06:11:30.365Z",
+    "scrapedAt": "2025-08-07T07:11:15.487Z",
     "isAvailable": true
   },
   {
@@ -133,7 +133,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-08-07T06:11:39.378Z",
+    "scrapedAt": "2025-08-07T07:11:24.161Z",
     "isAvailable": true
   },
   {
@@ -161,7 +161,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-08-07T06:11:46.566Z",
+    "scrapedAt": "2025-08-07T07:11:31.448Z",
     "isAvailable": true
   },
   {
@@ -171,13 +171,32 @@
     "dayOfWeek": "čtvrtek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Špenátový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s krevetami",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, salámem, paprikou a cibulí",
+        "price": 199
+      },
+      {
+        "name": "Tagliatelle se směsí zeleniny",
+        "price": 199
+      },
+      {
+        "name": "Špagety aglio, olio, peperoncino a hovězí",
+        "price": 219
+      },
+      {
+        "name": "Grilovaná klobása s hranolkami",
+        "price": 239
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-08-07T06:12:00.946Z",
+    "scrapedAt": "2025-08-07T07:11:37.060Z",
     "isAvailable": true
   },
   {
@@ -213,7 +232,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-08-07T06:12:08.911Z",
+    "scrapedAt": "2025-08-07T07:11:44.827Z",
     "isAvailable": true
   }
 ]
