@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-08-08T07:11:20.132Z",
+    "scrapedAt": "2025-08-08T08:07:14.470Z",
     "isAvailable": true
   },
   {
@@ -97,7 +97,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-08-08T07:11:26.593Z",
+    "scrapedAt": "2025-08-08T08:07:20.181Z",
     "isAvailable": true
   },
   {
@@ -137,7 +137,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-08-08T07:11:35.836Z",
+    "scrapedAt": "2025-08-08T08:07:28.429Z",
     "isAvailable": true
   },
   {
@@ -165,7 +165,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-08-08T07:11:43.111Z",
+    "scrapedAt": "2025-08-08T08:07:35.336Z",
     "isAvailable": true
   },
   {
@@ -175,32 +175,32 @@
     "dayOfWeek": "pátek",
     "items": [
       {
-        "name": "Pórkový krém",
+        "name": "Špenátový krém",
         "price": 59
       },
       {
-        "name": "Míchaný salát s mozzarellou",
-        "price": 179
+        "name": "Míchaný salát s krevetamy",
+        "price": 189
       },
       {
-        "name": "Pinsa s sunkou",
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou z buvoliho mleka",
         "price": 199
       },
       {
-        "name": "Ravioli s rajcatovou omackou a bazalkou",
+        "name": "Ravioli plněné parmazánem s máslem a šalvějí",
         "price": 199
       },
       {
-        "name": "Penne s klobasou a chilli",
-        "price": 199
+        "name": "Penne s lososem, porkem a smetanou",
+        "price": 219
       },
       {
-        "name": "Grilovani file z lososa s fazolkama",
-        "price": 279
+        "name": "Kuřecí řízek s hranolkami",
+        "price": 239
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-08-08T07:11:48.284Z",
+    "scrapedAt": "2025-08-08T08:07:39.935Z",
     "isAvailable": true
   },
   {
@@ -236,7 +236,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-08-08T07:11:58.884Z",
+    "scrapedAt": "2025-08-08T08:07:48.866Z",
     "isAvailable": true
   }
 ]
