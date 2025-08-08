@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-08-08T06:11:17.325Z",
+    "scrapedAt": "2025-08-08T07:11:20.132Z",
     "isAvailable": true
   },
   {
@@ -97,7 +97,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-08-08T06:11:24.468Z",
+    "scrapedAt": "2025-08-08T07:11:26.593Z",
     "isAvailable": true
   },
   {
@@ -137,7 +137,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-08-08T06:11:33.341Z",
+    "scrapedAt": "2025-08-08T07:11:35.836Z",
     "isAvailable": true
   },
   {
@@ -165,7 +165,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-08-08T06:11:40.350Z",
+    "scrapedAt": "2025-08-08T07:11:43.111Z",
     "isAvailable": true
   },
   {
@@ -175,13 +175,32 @@
     "dayOfWeek": "pátek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Pórkový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s mozzarellou",
+        "price": 179
+      },
+      {
+        "name": "Pinsa s sunkou",
+        "price": 199
+      },
+      {
+        "name": "Ravioli s rajcatovou omackou a bazalkou",
+        "price": 199
+      },
+      {
+        "name": "Penne s klobasou a chilli",
+        "price": 199
+      },
+      {
+        "name": "Grilovani file z lososa s fazolkama",
+        "price": 279
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-08-08T06:11:55.029Z",
+    "scrapedAt": "2025-08-08T07:11:48.284Z",
     "isAvailable": true
   },
   {
@@ -217,7 +236,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-08-08T06:12:02.951Z",
+    "scrapedAt": "2025-08-08T07:11:58.884Z",
     "isAvailable": true
   }
 ]
