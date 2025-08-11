@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-08-11T06:57:15.705Z",
+    "scrapedAt": "2025-08-11T07:10:41.790Z",
     "isAvailable": true
   },
   {
@@ -92,7 +92,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-08-11T06:57:21.264Z",
+    "scrapedAt": "2025-08-11T07:10:47.530Z",
     "isAvailable": true
   },
   {
@@ -132,7 +132,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-08-11T06:57:29.733Z",
+    "scrapedAt": "2025-08-11T07:11:00.390Z",
     "isAvailable": true
   },
   {
@@ -160,7 +160,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-08-11T06:57:36.598Z",
+    "scrapedAt": "2025-08-11T07:11:07.264Z",
     "isAvailable": true
   },
   {
@@ -170,13 +170,32 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Špenátový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s krevetamy",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou z buvoliho mleka",
+        "price": 199
+      },
+      {
+        "name": "Ravioli plněné parmazánem s máslem a šalvějí",
+        "price": 199
+      },
+      {
+        "name": "Penne s lososem, porkem a smetanou",
+        "price": 219
+      },
+      {
+        "name": "Kuřecí řízek s hranolkami",
+        "price": 239
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-08-11T06:57:50.668Z",
+    "scrapedAt": "2025-08-11T07:11:12.242Z",
     "isAvailable": true
   },
   {
@@ -208,7 +227,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-08-11T06:57:58.360Z",
+    "scrapedAt": "2025-08-11T07:11:20.010Z",
     "isAvailable": true
   }
 ]
