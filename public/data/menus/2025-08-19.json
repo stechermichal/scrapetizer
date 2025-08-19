@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-08-19T06:09:46.238Z",
+    "scrapedAt": "2025-08-19T07:07:32.471Z",
     "isAvailable": true
   },
   {
@@ -88,7 +88,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-08-19T06:09:51.285Z",
+    "scrapedAt": "2025-08-19T07:07:37.287Z",
     "isAvailable": true
   },
   {
@@ -128,7 +128,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-08-19T06:10:00.391Z",
+    "scrapedAt": "2025-08-19T07:07:45.820Z",
     "isAvailable": true
   },
   {
@@ -156,7 +156,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-08-19T06:10:07.450Z",
+    "scrapedAt": "2025-08-19T07:07:53.005Z",
     "isAvailable": true
   },
   {
@@ -166,13 +166,32 @@
     "dayOfWeek": "úterý",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Hovězí vývar",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s lososem",
+        "price": 199
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a salamem",
+        "price": 199
+      },
+      {
+        "name": "Špagety s česnekem a chilli",
+        "price": 199
+      },
+      {
+        "name": "Penne s rajčatovou omáčkou, klobásou a žampiony",
+        "price": 199
+      },
+      {
+        "name": "Pomalu pečené telecí s bramborami a vlastní šťávou",
+        "price": 279
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-08-19T06:10:22.182Z",
+    "scrapedAt": "2025-08-19T07:07:57.522Z",
     "isAvailable": true
   },
   {
@@ -204,7 +223,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-08-19T06:10:30.154Z",
+    "scrapedAt": "2025-08-19T07:08:05.412Z",
     "isAvailable": true
   }
 ]
