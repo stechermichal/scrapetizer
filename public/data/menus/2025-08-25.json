@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-08-25T06:10:42.301Z",
+    "scrapedAt": "2025-08-25T07:08:08.164Z",
     "isAvailable": true
   },
   {
@@ -92,7 +92,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-08-25T06:10:47.091Z",
+    "scrapedAt": "2025-08-25T07:08:14.137Z",
     "isAvailable": true
   },
   {
@@ -132,7 +132,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-08-25T06:10:55.531Z",
+    "scrapedAt": "2025-08-25T07:08:23.885Z",
     "isAvailable": true
   },
   {
@@ -142,17 +142,17 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Batátová polévka s kokosovým mlékem a chilli",
+        "name": "Brokolicový krém s máslovým krutonem",
         "price": 50,
         "description": "Polévka"
       },
       {
-        "name": "Spaghetti bolognese",
-        "price": 169
+        "name": "Holandský řízek s bramborovou kaší a kyselou okurkou",
+        "price": 170
       },
       {
-        "name": "Vepřový na houbách s jasmínovou rýží",
-        "price": 175
+        "name": "Risotto primavera s parmazánem a rukolou",
+        "price": 170
       },
       {
         "name": "Hovězí burger s cheddarem, slaninou, kečupem, česnekovo-pažitkovou majonézou a salátkem s rajčaty podávaný s hranolky a dipem",
@@ -160,7 +160,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-08-25T06:11:03.189Z",
+    "scrapedAt": "2025-08-25T07:08:32.121Z",
     "isAvailable": true
   },
   {
@@ -170,13 +170,32 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Pórkový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s tuňákem",
+        "price": 179
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, šunkou a žampiony",
+        "price": 199
+      },
+      {
+        "name": "Špagety s restovanou zeleninou",
+        "price": 199
+      },
+      {
+        "name": "Penne s boloňskou omáčkou a smetanou",
+        "price": 199
+      },
+      {
+        "name": "Kuřecí řízek s hranolkama",
+        "price": 239
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-08-25T06:11:17.908Z",
+    "scrapedAt": "2025-08-25T07:08:37.595Z",
     "isAvailable": true
   },
   {
@@ -208,7 +227,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-08-25T06:11:25.564Z",
+    "scrapedAt": "2025-08-25T07:08:45.640Z",
     "isAvailable": true
   }
 ]
