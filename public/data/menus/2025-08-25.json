@@ -6,62 +6,62 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Čočková polévka",
+        "name": "Zelná polévka s vepřovým masem",
         "price": 45,
-        "description": "Polévka z hnědé čočky s opečenou šunkou od kosti"
+        "description": "S vepřovou plecí, kysaným zelím, bramborem, klobásou a smetanou"
       },
       {
-        "name": "Květákový krém s bramborem",
+        "name": "Slepičí vývar",
         "price": 45,
-        "description": "Krémová květáková polévka s máslem, smetanou, bramborem a opečenou houskou"
+        "description": "S masem, zeleninou a vlasový nudlemi"
       },
       {
-        "name": "Kuřecí prsa teriyaki",
+        "name": "Hovězí na houbách",
+        "price": 159,
+        "description": "Dušený hovězí karabáček se silnou cibulovou omáčkou s houbami a pečenou jasmínovou rýží"
+      },
+      {
+        "name": "Kuře v sezamové strouhance",
         "price": 149,
-        "description": "Smažené kousky kuřecích prsou s rýžovým vínem, cibulí, pak choi, pórkem, sezamem a pečenou jasmínovou rýží"
+        "description": "Smažené kuřecí řízečky v sezamové strouhance, bramborová kaše, okurkový salát"
       },
       {
-        "name": "Smažený sýr 45%",
+        "name": "Bryndzové halušky",
         "price": 154,
-        "description": "Smažený jihočeský eidam s vařeným bramborem, máslem a tatarskou omáčkou"
+        "description": "Z bramborové těsta se škvařeným špekem, křupavou cibulkou a pažitkou"
       },
       {
-        "name": "Vepřová plec na česneku",
+        "name": "1/2 pečeného kuřete",
+        "price": 154,
+        "description": "S máslem, šťávou z výpeku, mačkaným bramborem se smetanou a zahradním hráškem"
+      },
+      {
+        "name": "Vepřový bok na medu",
+        "price": 149,
+        "description": "Vepřový bok pečený s pivem a medem, šťávou z výpeku, dušeným červeným zelím, chlupatým knedlíkem a křupavou cibulkou"
+      },
+      {
+        "name": "Květákové placičky",
         "price": 144,
-        "description": "Pečená vepřová plec s česnekem, hořčicí, cibulí, šťávou z výpeku, kysaným sudovým zelím a bramborovým knedlíkem"
+        "description": "Vařený květák s vejci, uzeným sýrem, jarní cibulkou, opečenými bramborami grenaille a selským jogurtem"
       },
       {
-        "name": "Kuřecí stehno na paprice",
-        "price": 149,
-        "description": "Pečené kuřecí stehno s krémovou paprikovou omáčkou a opečenými bramborovými noky"
-      },
-      {
-        "name": "Guláš z divočáka",
-        "price": 165,
-        "description": "Guláš z divočáka s červeným vínem, brusinkami, špekovým knedlíkem, křupavou cibulkou a strouhaným čerstvým křenem"
-      },
-      {
-        "name": "Kuřecí steak",
+        "name": "Zapečená vepřová krkovice",
         "price": 154,
-        "description": "Grilovaný plátek kuřecích prsou s rajčatovou omáčkou a pečenou dýní hokaido"
-      },
-      {
-        "name": "Vepřová panenka na švestkách",
-        "price": 154,
-        "description": "Sous vide vepřová panenka, omáčka z červeného vína, pečené brambory grenaille, perlová cibulka se slaninou"
+        "description": "Se slaninou, hermelínem, omáčka z hrubozrnné hořčice, americké brambory, rajčatová majonéza"
       },
       {
         "name": "Bramborové krokety s trhaným hovězím",
         "price": 189,
-        "description": "Naše bramborové krokety, plněné trhaným hovězím karabáčkem v libečkové strouhance s tvarůžkovou omáčkou a zelným salátem"
+        "description": "Naše bramborové krokety, plněné trhyným hovězím karabáčkem v libečkové strouhance s tvarůžkovou omáčkou a zelným salátem"
       },
       {
-        "name": "Tvarohový koláč",
+        "name": "Roláda s vanilkovým krémem a malinami",
         "price": 45
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-08-25T10:03:10.139Z",
+    "scrapedAt": "2025-08-25T22:02:15.462Z",
     "isAvailable": true
   },
   {
@@ -92,7 +92,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-08-25T10:03:16.758Z",
+    "scrapedAt": "2025-08-25T22:02:20.980Z",
     "isAvailable": true
   },
   {
@@ -132,7 +132,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-08-25T10:03:27.518Z",
+    "scrapedAt": "2025-08-25T22:02:30.023Z",
     "isAvailable": true
   },
   {
@@ -160,7 +160,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-08-25T10:03:35.355Z",
+    "scrapedAt": "2025-08-25T22:02:37.239Z",
     "isAvailable": true
   },
   {
@@ -170,32 +170,13 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Cizrnová polévka",
-        "price": 59
-      },
-      {
-        "name": "Caesar salát",
-        "price": 189
-      },
-      {
-        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a houbami",
-        "price": 199
-      },
-      {
-        "name": "Penne s rajčatovou omáčkou, česnekem a chilli",
-        "price": 199
-      },
-      {
-        "name": "Rizoto s kalamáry a slávkami",
-        "price": 219
-      },
-      {
-        "name": "Vepřové panenky medailonky s restovanými houbami a pečenými bramborami",
-        "price": 249
+        "name": "Menu not posted yet",
+        "price": 0,
+        "description": "Check back later"
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-08-25T10:03:39.866Z",
+    "scrapedAt": "2025-08-25T22:02:52.255Z",
     "isAvailable": true
   },
   {
@@ -205,7 +186,7 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Hovězí vývar",
+        "name": "Zelná s klobásou",
         "price": 59,
         "description": "Polévka"
       },
@@ -224,10 +205,14 @@
       {
         "name": "Kuřecí supreme s hráškovým pyré a glazovanou mrkví",
         "price": 239
+      },
+      {
+        "name": "Kynuté borůvkové knedlíky",
+        "price": 179
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-08-25T10:03:48.619Z",
+    "scrapedAt": "2025-08-25T22:03:00.167Z",
     "isAvailable": true
   }
 ]
