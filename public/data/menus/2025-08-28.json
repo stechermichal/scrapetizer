@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-08-28T06:09:54.753Z",
+    "scrapedAt": "2025-08-28T07:07:22.778Z",
     "isAvailable": true
   },
   {
@@ -93,7 +93,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-08-28T06:10:01.298Z",
+    "scrapedAt": "2025-08-28T07:07:28.045Z",
     "isAvailable": true
   },
   {
@@ -133,7 +133,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-08-28T06:10:11.114Z",
+    "scrapedAt": "2025-08-28T07:07:38.070Z",
     "isAvailable": true
   },
   {
@@ -161,7 +161,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-08-28T06:10:18.496Z",
+    "scrapedAt": "2025-08-28T07:07:45.397Z",
     "isAvailable": true
   },
   {
@@ -171,13 +171,32 @@
     "dayOfWeek": "čtvrtek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Zeleninový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s fetou",
+        "price": 179
+      },
+      {
+        "name": "Pinsa s čtyř druhů sýrů",
+        "price": 199
+      },
+      {
+        "name": "Penne s rajčatovou omáčkou,klobasou, česnekem a chilli",
+        "price": 199
+      },
+      {
+        "name": "Ravioli s máslem, šalvějí a parmazánem",
+        "price": 199
+      },
+      {
+        "name": "Grilovaný losos s zelenými fazolkami",
+        "price": 269
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-08-28T06:10:34.222Z",
+    "scrapedAt": "2025-08-28T07:07:50.868Z",
     "isAvailable": true
   },
   {
@@ -217,7 +236,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-08-28T06:10:43.076Z",
+    "scrapedAt": "2025-08-28T07:07:59.241Z",
     "isAvailable": true
   }
 ]
