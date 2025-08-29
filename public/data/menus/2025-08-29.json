@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-08-29T06:09:37.795Z",
+    "scrapedAt": "2025-08-29T07:07:12.127Z",
     "isAvailable": true
   },
   {
@@ -98,7 +98,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-08-29T06:09:44.093Z",
+    "scrapedAt": "2025-08-29T07:07:17.705Z",
     "isAvailable": true
   },
   {
@@ -138,7 +138,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-08-29T06:09:53.273Z",
+    "scrapedAt": "2025-08-29T07:07:27.042Z",
     "isAvailable": true
   },
   {
@@ -166,7 +166,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-08-29T06:10:00.281Z",
+    "scrapedAt": "2025-08-29T07:07:34.103Z",
     "isAvailable": true
   },
   {
@@ -176,13 +176,32 @@
     "dayOfWeek": "pátek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Krémová polévka ze zelených fazolek",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s lososem",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, salámem a cibuli",
+        "price": 199
+      },
+      {
+        "name": "Tagliatelle s rajčatovou omáčkou a burratou",
+        "price": 199
+      },
+      {
+        "name": "Penne s hovězím masem, česnekem a chilli",
+        "price": 199
+      },
+      {
+        "name": "Filátka z mořského vlka a pečení brambory",
+        "price": 259
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-08-29T06:10:14.835Z",
+    "scrapedAt": "2025-08-29T07:07:38.675Z",
     "isAvailable": true
   },
   {
@@ -218,7 +237,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-08-29T06:10:23.354Z",
+    "scrapedAt": "2025-08-29T07:07:46.554Z",
     "isAvailable": true
   }
 ]
