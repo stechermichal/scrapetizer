@@ -28,7 +28,7 @@
       {
         "name": "Hovězí na česneku se šumavským knedlíkem",
         "price": 179,
-        "description": "Dušené kostky hovězí plece s cibulí, hrubozrnnou hořčicí , česnekem, listovým špenátem a kulatým bramborovým knedlíkem se žemlí"
+        "description": "Dušené kostky hovězí plece s cibulí, hrubozrnnou hořčicí , česnekem, zelím a kulatým bramborovým knedlíkem se žemlí"
       },
       {
         "name": "Kung pao",
@@ -38,7 +38,7 @@
       {
         "name": "Kuřecí plátek na paprice",
         "price": 144,
-        "description": "Pečené kuřecí stehno, krémová papriková omáčka, bramborové noky, restované papriky"
+        "description": "Pečený kuřecí plátek, krémová papriková omáčka, bramborové noky, restované papriky"
       },
       {
         "name": "Krůtí prsa sous vide",
@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-09-01T07:10:38.013Z",
+    "scrapedAt": "2025-09-01T08:07:19.420Z",
     "isAvailable": true
   },
   {
@@ -93,7 +93,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-09-01T07:10:43.114Z",
+    "scrapedAt": "2025-09-01T08:07:24.897Z",
     "isAvailable": true
   },
   {
@@ -133,7 +133,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-09-01T07:10:51.726Z",
+    "scrapedAt": "2025-09-01T08:07:33.219Z",
     "isAvailable": true
   },
   {
@@ -161,7 +161,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-09-01T07:10:58.785Z",
+    "scrapedAt": "2025-09-01T08:07:40.273Z",
     "isAvailable": true
   },
   {
@@ -196,7 +196,7 @@
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-09-01T07:11:04.060Z",
+    "scrapedAt": "2025-09-01T08:07:45.223Z",
     "isAvailable": true
   },
   {
@@ -228,7 +228,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-09-01T07:11:11.952Z",
+    "scrapedAt": "2025-09-01T08:07:53.031Z",
     "isAvailable": true
   }
 ]
