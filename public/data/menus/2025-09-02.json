@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-09-02T06:10:00.728Z",
+    "scrapedAt": "2025-09-02T07:07:27.219Z",
     "isAvailable": true
   },
   {
@@ -92,7 +92,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-09-02T06:10:06.872Z",
+    "scrapedAt": "2025-09-02T07:07:32.706Z",
     "isAvailable": true
   },
   {
@@ -132,7 +132,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-09-02T06:10:15.525Z",
+    "scrapedAt": "2025-09-02T07:07:42.587Z",
     "isAvailable": true
   },
   {
@@ -160,7 +160,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-09-02T06:10:22.669Z",
+    "scrapedAt": "2025-09-02T07:07:49.873Z",
     "isAvailable": true
   },
   {
@@ -170,13 +170,32 @@
     "dayOfWeek": "úterý",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Rybí polévka",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s mozzarellou",
+        "price": 179
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a olivami",
+        "price": 199
+      },
+      {
+        "name": "Rigatoni se špenátem, smetanou a kuřecím masem",
+        "price": 199
+      },
+      {
+        "name": "Tagliatelle s restovanou zeleninou",
+        "price": 199
+      },
+      {
+        "name": "Vepřová panenka s pečeným bramborem",
+        "price": 239
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-09-02T06:10:36.850Z",
+    "scrapedAt": "2025-09-02T07:07:56.728Z",
     "isAvailable": true
   },
   {
@@ -208,7 +227,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-09-02T06:10:44.468Z",
+    "scrapedAt": "2025-09-02T07:08:05.142Z",
     "isAvailable": true
   }
 ]
