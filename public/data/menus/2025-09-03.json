@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-09-03T06:09:40.707Z",
+    "scrapedAt": "2025-09-03T07:07:39.758Z",
     "isAvailable": true
   },
   {
@@ -92,7 +92,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-09-03T06:09:45.545Z",
+    "scrapedAt": "2025-09-03T07:07:45.143Z",
     "isAvailable": true
   },
   {
@@ -132,7 +132,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-09-03T06:09:53.665Z",
+    "scrapedAt": "2025-09-03T07:07:54.655Z",
     "isAvailable": true
   },
   {
@@ -160,7 +160,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-09-03T06:10:00.576Z",
+    "scrapedAt": "2025-09-03T07:08:02.062Z",
     "isAvailable": true
   },
   {
@@ -170,13 +170,32 @@
     "dayOfWeek": "středa",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Houbový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s kuřecím masem",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a salamem",
+        "price": 199
+      },
+      {
+        "name": "Rigatoni s panenkou, sušenými rajčaty a rukolou",
+        "price": 199
+      },
+      {
+        "name": "Tagliatelle s rajčatovou omáčkou a bazalkou",
+        "price": 199
+      },
+      {
+        "name": "Filátka z mořského vlka s špenátem",
+        "price": 269
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-09-03T06:10:15.237Z",
+    "scrapedAt": "2025-09-03T07:08:09.464Z",
     "isAvailable": true
   },
   {
@@ -212,7 +231,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-09-03T06:10:22.965Z",
+    "scrapedAt": "2025-09-03T07:08:17.713Z",
     "isAvailable": true
   }
 ]
