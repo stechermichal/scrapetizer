@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-09-04T06:09:53.129Z",
+    "scrapedAt": "2025-09-04T07:07:10.726Z",
     "isAvailable": true
   },
   {
@@ -92,7 +92,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-09-04T06:09:59.689Z",
+    "scrapedAt": "2025-09-04T07:07:16.441Z",
     "isAvailable": true
   },
   {
@@ -132,7 +132,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-09-04T06:10:09.600Z",
+    "scrapedAt": "2025-09-04T07:07:26.616Z",
     "isAvailable": true
   },
   {
@@ -160,7 +160,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-09-04T06:10:17.551Z",
+    "scrapedAt": "2025-09-04T07:07:34.047Z",
     "isAvailable": true
   },
   {
@@ -170,13 +170,32 @@
     "dayOfWeek": "čtvrtek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Rajčatova krém polévka se sýrem",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s fetou",
+        "price": 179
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a šunkou",
+        "price": 199
+      },
+      {
+        "name": "Špagety s kalamáry a mušlemi",
+        "price": 199
+      },
+      {
+        "name": "Tagliatelle s houbami a smetanou",
+        "price": 199
+      },
+      {
+        "name": "Kuřecí medailonky se sýrovou omáčkou a šťouchanými bramborami",
+        "price": 269
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-09-04T06:10:31.728Z",
+    "scrapedAt": "2025-09-04T07:07:39.875Z",
     "isAvailable": true
   },
   {
@@ -212,7 +231,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-09-04T06:10:39.412Z",
+    "scrapedAt": "2025-09-04T07:07:48.299Z",
     "isAvailable": true
   }
 ]
