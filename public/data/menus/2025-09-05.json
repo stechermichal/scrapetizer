@@ -61,7 +61,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
-    "scrapedAt": "2025-09-05T06:10:07.636Z",
+    "scrapedAt": "2025-09-05T07:07:40.213Z",
     "isAvailable": true
   },
   {
@@ -97,7 +97,7 @@
       }
     ],
     "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
-    "scrapedAt": "2025-09-05T06:10:14.155Z",
+    "scrapedAt": "2025-09-05T07:07:45.260Z",
     "isAvailable": true
   },
   {
@@ -137,7 +137,7 @@
       }
     ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2025-09-05T06:10:23.428Z",
+    "scrapedAt": "2025-09-05T07:07:54.286Z",
     "isAvailable": true
   },
   {
@@ -165,7 +165,7 @@
       }
     ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2025-09-05T06:10:30.881Z",
+    "scrapedAt": "2025-09-05T07:08:02.125Z",
     "isAvailable": true
   },
   {
@@ -175,13 +175,32 @@
     "dayOfWeek": "pátek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Zeleninova polevka",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s lososem",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, tuňákem a cibulí",
+        "price": 199
+      },
+      {
+        "name": "Ravioli plněné parmezánem s bazalkovým pestem",
+        "price": 199
+      },
+      {
+        "name": "Penne s klobásou a rajčaty",
+        "price": 199
+      },
+      {
+        "name": "Kuřecí soté s jasmínovou rýží",
+        "price": 249
       }
     ],
     "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-09-05T06:10:46.500Z",
+    "scrapedAt": "2025-09-05T07:08:06.739Z",
     "isAvailable": true
   },
   {
@@ -217,7 +236,7 @@
       }
     ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2025-09-05T06:10:55.376Z",
+    "scrapedAt": "2025-09-05T07:08:14.754Z",
     "isAvailable": true
   }
 ]
