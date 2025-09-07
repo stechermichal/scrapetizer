@@ -1,0 +1,158 @@
+[
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2025-09-07",
+    "dayOfWeek": "neděle",
+    "items": [
+      {
+        "name": "Bramborová lokše plněná trhaným kachním masem, pak choi, hlávkové zelí, kachní šťáva, zelný salát s chilli, křupavá cibulka",
+        "price": 275,
+        "description": "150 g 1, 7"
+      },
+      {
+        "name": "Knedlík z bramborového těsta plněný husím masem, dýně hokkaido, konfitované šalotky, baby špenát, husí demi-glace",
+        "price": 249,
+        "description": "150 g 1, 3, 7"
+      },
+      {
+        "name": "Svíčková na smetaně, karlovarský knedlík, perníkový chips, brusinkový bonbon",
+        "price": 283,
+        "description": "200 g 1, 3, 7, 9, 10"
+      },
+      {
+        "name": "Konfitované hovězí žebro s kostí, šťouchané brambory s cibulkou a slaninou, silná hovězí šťáva, bílé fazole s pancettou a rajčaty",
+        "price": 355,
+        "description": "300 g 1, 3, 7, 9"
+      },
+      {
+        "name": "Vyzrálé hovězí v krémové omáčce s čerstvým koprem, pošírované vejce, hrnkový knedlík, máslové brambůrky",
+        "price": 275,
+        "description": "200 g 1, 3, 7"
+      },
+      {
+        "name": "Pečené kachní stehno, zelí z červené cibule, šumavský bramborový knedlík",
+        "price": 349,
+        "description": "500 g 1, 3, 7"
+      },
+      {
+        "name": "Pivní guláš z vepřových líček, bramborová lokše, pečené papriky, mladá cibulka, strouhaný čerstvý křen",
+        "price": 315,
+        "description": "200 g 1, 3, 7"
+      }
+    ],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "scrapedAt": "2025-09-07T16:15:10.626Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2025-09-07",
+    "dayOfWeek": "neděle",
+    "items": [],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2025-09-07T16:15:16.203Z",
+    "isAvailable": false,
+    "errorMessage": "No menu items found"
+  },
+  {
+    "restaurantId": "meatbeer",
+    "restaurantName": "Meat Beer",
+    "date": "2025-09-07",
+    "dayOfWeek": "neděle",
+    "items": [
+      {
+        "name": "Hráškový krém s máslovými krutony",
+        "price": 85,
+        "description": "Polévka"
+      },
+      {
+        "name": "Žloutkové těstoviny aglio olio e pepperoncino s českým česnekem, čerstvým chilli a sýrem gran moravia",
+        "price": 195
+      },
+      {
+        "name": "Masové koule v rajské omáčce s jasmínovou rýží, křupavou cibulkou a bylinkami",
+        "price": 225
+      },
+      {
+        "name": "Trhané vepřové maso s grilovanou zeleninou a máslovou bramborovou kaší",
+        "price": 235
+      },
+      {
+        "name": "Hovězí smash burger se slaninovou majonézou, sýrem cheddar a papričkami jalapeňos",
+        "price": 255
+      },
+      {
+        "name": "Pomalu pečená vepřová žebra s čerstvým bramborovým chlebem, nakládaným křenem a hořčicí",
+        "price": 265
+      },
+      {
+        "name": "Svíčková na smetaně z hovězí loupané plece s karlovarským knedlíkem, brusinkami a šlehačkou",
+        "price": 445
+      }
+    ],
+    "sourceUrl": "https://www.meatbeer.cz/menu/",
+    "scrapedAt": "2025-09-07T16:15:26.015Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2025-09-07",
+    "dayOfWeek": "neděle",
+    "items": [],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2025-09-07T16:15:33.791Z",
+    "isAvailable": false,
+    "errorMessage": "No menu items found"
+  },
+  {
+    "restaurantId": "saporevero",
+    "restaurantName": "Sapore Vero",
+    "date": "2025-09-07",
+    "dayOfWeek": "neděle",
+    "items": [
+      {
+        "name": "Menu not posted yet",
+        "price": 0,
+        "description": "Check back later"
+      }
+    ],
+    "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
+    "scrapedAt": "2025-09-07T16:15:49.019Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "nekazanka",
+    "restaurantName": "Bistro Nekázanka",
+    "date": "2025-09-07",
+    "dayOfWeek": "neděle",
+    "items": [
+      {
+        "name": "Hovězí vývar",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Těstovinový salát s tuňákem",
+        "price": 189
+      },
+      {
+        "name": "Houbové risotto",
+        "price": 189
+      },
+      {
+        "name": "Holandský řízek s bramborovou kaší",
+        "price": 219
+      },
+      {
+        "name": "Hovězí steak s restovanými žampiony a špenátem",
+        "price": 299
+      }
+    ],
+    "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
+    "scrapedAt": "2025-09-07T16:15:57.697Z",
+    "isAvailable": true
+  }
+]
