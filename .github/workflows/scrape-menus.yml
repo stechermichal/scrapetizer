@@ -8,9 +8,7 @@ on:
     # 10am CET = 9am UTC (winter) or 8am UTC (summer)
     # 11am CET = 10am UTC (winter) or 9am UTC (summer)
     # Using both times to handle DST changes
-    - cron: '0 6,7 * * 1-5'   # 8am Prague time
     - cron: '0 8,9 * * 1-5'   # 10am Prague time  
-    - cron: '0 9,10 * * 1-5'  # 11am Prague time
   workflow_dispatch: # Allow manual trigger
   push:
     branches:
