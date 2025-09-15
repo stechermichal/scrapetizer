@@ -7,8 +7,13 @@ import { RestaurantMenu } from '../lib/types';
 
 async function main() {
   const args = process.argv.slice(2);
-  const restaurantIdArg = args.find(arg => arg.startsWith('--restaurant='));
-  const restaurantId = restaurantIdArg?.split('=')[1];
+  // Support both `--restaurant=id` and `--restaurant id` forms
+  const eqArg = args.find(arg => arg.startsWith('--restaurant='));
+  const flagIndex = args.findIndex(arg => arg === '--restaurant');
+  const flagValue = flagIndex !== -1 && args[flagIndex + 1] && !args[flagIndex + 1].startsWith('-')
+    ? args[flagIndex + 1]
+    : undefined;
+  const restaurantId = (eqArg?.split('=')[1] || flagValue)?.trim();
 
   console.log('🍽️  Prague Lunch Menu Scraper');
   console.log('============================\n');
@@ -16,6 +21,10 @@ async function main() {
   const today = format(new Date(), 'yyyy-MM-dd');
   console.log(`📅 Date: ${today}`);
   console.log(`🕐 Time: ${format(new Date(), 'HH:mm:ss')}\n`);
+
+  // Load existing data for today (to support incremental scraping)
+  const existingData = await loadMenuData(today);
+  const existingById = new Map<string, RestaurantMenu>(existingData.map(m => [m.restaurantId, m]));
 
   // Determine which restaurants to scrape
   let restaurantsToScrape = restaurants;
@@ -29,7 +38,18 @@ async function main() {
     restaurantsToScrape = [restaurant];
     console.log(`🎯 Scraping only: ${restaurant.name}\n`);
   } else {
-    console.log(`🎯 Scraping all ${restaurants.length} restaurants\n`);
+    // Smart default: only scrape restaurants that don't have a valid menu today
+    const toScrape = restaurants.filter(r => {
+      const existing = existingById.get(r.id);
+      // scrape if no data, or not available, or no items
+      if (!existing) return true;
+      if (!existing.isAvailable) return true;
+      if (!existing.items || existing.items.length === 0) return true;
+      return false;
+    });
+    const skipped = restaurants.length - toScrape.length;
+    restaurantsToScrape = toScrape;
+    console.log(`🎯 Incremental scrape: ${toScrape.length} to scrape, ${skipped} up-to-date\n`);
   }
 
   const results: RestaurantMenu[] = [];
@@ -70,17 +90,33 @@ async function main() {
   // Save results
   if (results.length > 0) {
     try {
-      // If scraping single restaurant, merge with existing data
-      if (restaurantId) {
-        const existingData = await loadMenuData(today);
-        const otherRestaurants = existingData.filter(m => m.restaurantId !== restaurantId);
-        const allMenus = [...otherRestaurants, ...results];
-        await saveMenuData(today, allMenus);
-      } else {
-        await saveMenuData(today, results);
+      // Always merge with today's existing data to preserve prior successes
+      const existing = await loadMenuData(today);
+      const updatesById = new Map<string, RestaurantMenu>(results.map(m => [m.restaurantId, m]));
+      const merged: RestaurantMenu[] = [];
+      const seen = new Set<string>();
+
+      // Keep current items, overwrite with new ones when present
+      for (const item of existing) {
+        const updated = updatesById.get(item.restaurantId);
+        if (updated) {
+          merged.push(updated);
+          seen.add(item.restaurantId);
+        } else {
+          merged.push(item);
+        }
       }
+
+      // Add any new restaurants that weren't in existing
+      for (const r of results) {
+        if (!seen.has(r.restaurantId)) {
+          merged.push(r);
+        }
+      }
+
+      await saveMenuData(today, merged);
       
-      console.log(`\n💾 Saved ${results.length} restaurant menus to data/menus/${today}.json`);
+      console.log(`\n💾 Saved ${results.length} updated menus (merged) to data/menus/${today}.json`);
     } catch (error) {
       console.error('\n❌ Failed to save menu data:', error);
     }
@@ -90,6 +126,10 @@ async function main() {
   console.log('\n📊 Summary:');
   console.log(`   ✅ Success: ${results.length} restaurants`);
   console.log(`   ❌ Failed: ${errors.length} restaurants`);
+  if (!restaurantId) {
+    const skippedCount = restaurants.length - restaurantsToScrape.length;
+    console.log(`   ⏭️  Skipped (already up-to-date): ${skippedCount}`);
+  }
   
   if (errors.length > 0) {
     console.log('\n❌ Errors:');
@@ -97,7 +137,9 @@ async function main() {
   }
 
   console.log('\n✨ Done!');
-  process.exit(errors.length > 0 ? 1 : 0);
+  // Do not fail the whole job if at least one restaurant succeeded
+  // Exit with failure only if all scrapes failed
+  process.exit(results.length === 0 ? 1 : 0);
 }
 
 // Run the script

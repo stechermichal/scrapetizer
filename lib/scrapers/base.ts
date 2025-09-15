@@ -10,8 +10,15 @@ export abstract class BaseScraper {
   constructor(protected restaurant: Restaurant) {}
 
   async init(): Promise<void> {
-    this.browser = await chromium.launch({ headless: true });
+    this.browser = await chromium.launch({
+      headless: true,
+      // More robust in CI environments with limited shared memory
+      args: ['--disable-dev-shm-usage']
+    });
     this.page = await this.browser.newPage();
+    // Be a bit more forgiving for slower sites
+    this.page.setDefaultNavigationTimeout(45000);
+    this.page.setDefaultTimeout(15000);
     
     // Set Czech locale and timezone
     await this.page.setExtraHTTPHeaders({
@@ -31,13 +38,13 @@ export abstract class BaseScraper {
       const url = this.getMenuUrl();
       logger.info(`Scraping ${this.restaurant.name}`, { url, restaurantId: this.restaurant.id });
       
-      await this.page!.goto(url, { waitUntil: 'networkidle' });
-      
-      // Wait a bit for dynamic content
-      await this.page!.waitForTimeout(2000);
+      await this.gotoWithRetries(url);
+      // Small settle time for dynamic content
+      await this.page!.waitForTimeout(1000);
       
       const items = await this.safeExtractMenuItems();
       
+      const hasRealItems = items.some(i => (i as any)?.price && (i as any).price > 0);
       const menu: RestaurantMenu = {
         restaurantId: this.restaurant.id,
         restaurantName: this.restaurant.name,
@@ -46,8 +53,8 @@ export abstract class BaseScraper {
         items,
         sourceUrl: url,
         scrapedAt: new Date().toISOString(),
-        isAvailable: items.length > 0,
-        errorMessage: items.length === 0 ? 'No menu items found' : undefined
+        isAvailable: hasRealItems,
+        errorMessage: hasRealItems ? undefined : 'No valid menu items found'
       };
 
       logger.info(`Successfully scraped ${this.restaurant.name}`, { 
@@ -129,5 +136,23 @@ export abstract class BaseScraper {
       price: this.parsePrice(priceText),
       description: description ? this.normalizeText(description) : undefined
     };
+  }
+
+  private async gotoWithRetries(url: string, attempts: number = 3): Promise<void> {
+    let lastError: unknown = null;
+    for (let i = 1; i <= attempts; i++) {
+      try {
+        // 'domcontentloaded' is less flaky than 'networkidle' on sites with beacons
+        await this.page!.goto(url, { waitUntil: 'domcontentloaded' });
+        return;
+      } catch (err) {
+        lastError = err;
+        logger.warn(`Navigation attempt ${i} failed for ${url}`);
+        if (i < attempts) {
+          await this.page!.waitForTimeout(1000 * i);
+        }
+      }
+    }
+    throw lastError instanceof Error ? lastError : new Error('Navigation failed');
   }
 }

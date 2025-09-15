@@ -28,13 +28,13 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Install Playwright browsers
-      run: npx playwright install chromium
+    - name: Install Playwright browsers and deps
+      run: npx playwright install --with-deps chromium
 
     - name: Run scrapers
       run: |
         if [ -n "${{ github.event.inputs.restaurant }}" ]; then
-          npm run scrape:restaurant ${{ github.event.inputs.restaurant }}
+          npm run scrape:restaurant -- ${{ github.event.inputs.restaurant }}
         else
           npm run scrape
         fi
