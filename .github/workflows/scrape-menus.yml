@@ -52,7 +52,10 @@ jobs:
             raise SystemExit(0)
         data = json.loads(file.read_text(encoding='utf-8'))
         by_id = {m.get('restaurantId'): m for m in data}
-        missing = [rid for rid in ids if rid not in by_id or not by_id[rid].get('isAvailable') or not by_id[rid].get('items') or len(by_id[rid].get('items') or []) == 0]
+        def has_real_items(m):
+            items = (m or {}).get('items') or []
+            return any((i.get('price') or 0) > 0 for i in items)
+        missing = [rid for rid in ids if rid not in by_id or not has_real_items(by_id.get(rid))]
         open(gh_out,'a').write(f"complete={'true' if not missing else 'false'}\nmissing={json.dumps(missing)}\n")
         PY
 

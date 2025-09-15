@@ -41,11 +41,10 @@ async function main() {
     // Smart default: only scrape restaurants that don't have a valid menu today
     const toScrape = restaurants.filter(r => {
       const existing = existingById.get(r.id);
-      // scrape if no data, or not available, or no items
       if (!existing) return true;
-      if (!existing.isAvailable) return true;
-      if (!existing.items || existing.items.length === 0) return true;
-      return false;
+      const items = existing.items || [];
+      const hasRealItems = items.some(i => (i?.price ?? 0) > 0);
+      return !hasRealItems;
     });
     const skipped = restaurants.length - toScrape.length;
     restaurantsToScrape = toScrape;
@@ -137,8 +136,12 @@ async function main() {
   }
 
   console.log('\n✨ Done!');
-  // Do not fail the whole job if at least one restaurant succeeded
-  // Exit with failure only if all scrapes failed
+  // Exit rules:
+  // - If nothing to scrape (incremental skip), exit success
+  // - If we attempted and all failed (no results), exit failure
+  // - Otherwise, success
+  const attempted = restaurantsToScrape.length;
+  if (attempted === 0) process.exit(0);
   process.exit(results.length === 0 ? 1 : 0);
 }
 
