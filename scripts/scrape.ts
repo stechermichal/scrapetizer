@@ -92,6 +92,7 @@ async function main() {
       // Always merge with today's existing data to preserve prior successes
       const existing = await loadMenuData(today);
       const updatesById = new Map<string, RestaurantMenu>(results.map(m => [m.restaurantId, m]));
+      const hasReal = (m?: RestaurantMenu) => !!m && Array.isArray(m.items) && m.items.some(i => (i?.price ?? 0) > 0);
       const merged: RestaurantMenu[] = [];
       const seen = new Set<string>();
 
@@ -99,7 +100,12 @@ async function main() {
       for (const item of existing) {
         const updated = updatesById.get(item.restaurantId);
         if (updated) {
-          merged.push(updated);
+          // If both existing and updated have no real items, keep existing to avoid churn
+          if (!hasReal(updated) && !hasReal(item)) {
+            merged.push(item);
+          } else {
+            merged.push(updated);
+          }
           seen.add(item.restaurantId);
         } else {
           merged.push(item);
