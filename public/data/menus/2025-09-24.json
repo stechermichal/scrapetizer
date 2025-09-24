@@ -1,0 +1,219 @@
+[
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2025-09-24",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Frankfurtská polévka",
+        "price": 45,
+        "description": "S opečeným párkem, mletou paprikou a bramborem"
+      },
+      {
+        "name": "Česnečka",
+        "price": 45,
+        "description": "Se slaninou, bramborem, vejcem a smaženým chlebem"
+      },
+      {
+        "name": "1/2 pečeného kuřete",
+        "price": 154,
+        "description": "S máslem, šťávou z výpeku, bramborovou kaší a zahradním hráškem"
+      },
+      {
+        "name": "Králik na smetaně",
+        "price": 165,
+        "description": "Pečené králičí stehno se smetanovou omáčkou z kořenové zeleniny, s brusinkami a našim karlovarským knedlíkem"
+      },
+      {
+        "name": "Kroupoto s medvědím česnekem",
+        "price": 149,
+        "description": "Kroupy, medvědí česnek, smetana, parmazán, trhaná vepřová plec, kukuřice, baby špenát"
+      },
+      {
+        "name": "Zbojnická hovězí roláda",
+        "price": 175,
+        "description": "Rolovaná hovězí kýta s česnekem a slaninou, šťávou z výpeku, dušeným listovým špenátem a šumavským bramborovým knedlíkem"
+      },
+      {
+        "name": "Kuře s rajčatovým curry",
+        "price": 144,
+        "description": "Z kuřecích stehen s rajčatovou omáčkou, kořením, pečenou jasmínovou rýží s čočkou beluga a nakládanou ředkví"
+      },
+      {
+        "name": "Krůtí řízek s vločkami",
+        "price": 154,
+        "description": "Smažený krůtí řízek ve strouhance s drcenými ovesnými vločkami, opečený vařený brambor, rajčatový salát"
+      },
+      {
+        "name": "Zapečená vepřová krkovice",
+        "price": 154,
+        "description": "Se slaninou, feferonkou, sýrem gouda, omáčkou z hrubozrnné hořčice, americkými bramborami a rajčatovou majonézou"
+      },
+      {
+        "name": "Bramborové krokety s cheddarem",
+        "price": 209,
+        "description": "Smažené bramborové krokety s cheddarem a pancettou, podávané s parmazánovou omáčkou s medvědím česnekem a pestem z pečených paprik"
+      },
+      {
+        "name": "Višňový závin",
+        "price": 45
+      }
+    ],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "scrapedAt": "2025-09-24T08:07:51.667Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2025-09-24",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Rajská polévka s těstovinami",
+        "price": 59
+      },
+      {
+        "name": "Hovězí brisket s pepřovou omáčkou, listový špenát na másle, krémová polenta s bylinkami",
+        "price": 249
+      },
+      {
+        "name": "Kuřecí řízečky v sýrové strouhance, bramborová kaše, mesclun",
+        "price": 189
+      },
+      {
+        "name": "Halušky s uzeným masem a kysaným zelím, vídeňská cibulka",
+        "price": 189
+      },
+      {
+        "name": "Krůtí prsa s gorgonzolovou omáčkou, jasmínová rýže",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2025-09-24T08:07:54.222Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "meatbeer",
+    "restaurantName": "Meat Beer",
+    "date": "2025-09-24",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Drůbeží vývar s játrovými knedlíčky, bylinkami a nudlemi",
+        "price": 85,
+        "description": "Polévka"
+      },
+      {
+        "name": "Koprová omáčka s vejci na hniličko, nakládaným a čerstvým koprem a kynutými knedlíčky",
+        "price": 195
+      },
+      {
+        "name": "Hrachová kaše s uzenou krkovicí na grilu, cubulka na sádle, nakládaná kyselá okurka",
+        "price": 225
+      },
+      {
+        "name": "Znojemská hovězí loupaná plec s jasmínovou rýží a bylinkami",
+        "price": 235
+      },
+      {
+        "name": "Naše sekaná v domácí máslové housce s hořčicí, křenem a nakládanou cibulí",
+        "price": 245
+      },
+      {
+        "name": "Krůtí stehenní steak grilovaný na dřevěném uhlí, pečené grenaille, smetanová hořčičná omáčka",
+        "price": 255
+      },
+      {
+        "name": "Svíčková na smetaně z hovězí loupané plece s karlovarským knedlíkem, brusinkami a šlehačkou",
+        "price": 445
+      }
+    ],
+    "sourceUrl": "https://www.meatbeer.cz/menu/",
+    "scrapedAt": "2025-09-24T08:08:00.501Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2025-09-24",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Gulášová polévka",
+        "price": 50,
+        "description": "Polévka"
+      },
+      {
+        "name": "Smažená treska v panko strouhance s bramborovou kaší",
+        "price": 175
+      },
+      {
+        "name": "Thajský nudlový salát s kuřecími kousky",
+        "price": 169
+      },
+      {
+        "name": "Hovězí burger s trhaným masem, chipotle, polníčkem podávaný s bylinkovými hranolkami a dipem",
+        "price": 249
+      }
+    ],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2025-09-24T08:08:05.972Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "saporevero",
+    "restaurantName": "Sapore Vero",
+    "date": "2025-09-24",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Menu not posted yet",
+        "price": 0,
+        "description": "Check back later"
+      }
+    ],
+    "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
+    "scrapedAt": "2025-09-24T08:08:17.628Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "nekazanka",
+    "restaurantName": "Bistro Nekázanka",
+    "date": "2025-09-24",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Brokolicová s vejcem",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Grilovaná zelenina se sýrem halloumi",
+        "price": 199
+      },
+      {
+        "name": "Spaghetti s červenou řepou a kozím sýrem",
+        "price": 189
+      },
+      {
+        "name": "Penne arrabbiata",
+        "price": 189
+      },
+      {
+        "name": "Kuřecí burrito",
+        "price": 219
+      },
+      {
+        "name": "Vepřová panenka s liškami, pečené brambory grenaille",
+        "price": 239
+      }
+    ],
+    "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
+    "scrapedAt": "2025-09-24T08:08:24.661Z",
+    "isAvailable": true
+  }
+]
