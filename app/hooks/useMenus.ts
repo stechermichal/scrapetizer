@@ -48,38 +48,32 @@ export function useMenus(): UseMenusReturn {
   const triggerScrape = async () => {
     try {
       setIsScraping(true);
-      
+
       const response = await fetch('/api/scrape', {
         method: 'POST',
       });
-      
+
       const data = await response.json();
-      
+
       if (!response.ok) {
         if (response.status === 429) {
           toast.error(data.error);
         } else {
           toast.error('Failed to start scraping');
         }
+        setIsScraping(false);
         return;
       }
-      
-      toast.success('Scraping started! This might take up to 4 minutes.', {
-        duration: 6000,
+
+      toast.success('Scraping started! Refresh the page in a few minutes to see updates.', {
+        duration: 8000,
       });
-      
-      // Poll for updates every 30 seconds
-      const pollInterval = setInterval(async () => {
-        await fetchMenus();
-      }, 30000);
-      
-      // Stop polling after 5 minutes
+
+      // Re-enable button after 10 seconds to prevent spam
       setTimeout(() => {
-        clearInterval(pollInterval);
         setIsScraping(false);
-        toast.info('Scraping should be complete. Refresh the page if needed.');
-      }, 5 * 60 * 1000);
-      
+      }, 10000);
+
     } catch {
       toast.error('Failed to trigger scraping');
       setIsScraping(false);
