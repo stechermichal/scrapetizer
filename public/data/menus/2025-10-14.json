@@ -225,5 +225,24 @@
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
     "scrapedAt": "2025-10-14T08:07:33.665Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "kantyna",
+    "restaurantName": "Kantýna",
+    "date": "2025-10-14",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Boršč",
+        "price": 112
+      },
+      {
+        "name": "Frankfurtská vepřová plec - vařené těstoviny",
+        "price": 258
+      }
+    ],
+    "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
+    "scrapedAt": "2025-10-14T08:46:52.046Z",
+    "isAvailable": true
   }
 ]
