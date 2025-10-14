@@ -67,6 +67,15 @@ export const restaurants: Restaurant[] = [
     scrapeConfig: {
       type: 'static'
     }
+  },
+  {
+    id: 'kantyna',
+    name: 'Kantýna',
+    url: 'https://www.kantyna.ambi.cz/',
+    menuUrl: 'https://www.kantyna.ambi.cz/menu/denni-menu',
+    scrapeConfig: {
+      type: 'static'
+    }
   }
 ];
 
