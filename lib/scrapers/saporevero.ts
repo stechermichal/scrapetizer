@@ -1,107 +1,101 @@
 import { BaseScraper } from './base';
 import { MenuItem } from '../types';
-import pdf from 'pdf-parse';
 
 export class SaporeveroScraper extends BaseScraper {
   protected getMenuUrl(): string {
-    return this.restaurant.menuUrl || 'https://saporevero.choiceqr.com/delivery/section:denni-menu';
+    return 'https://www.saporevero.cz/';
+  }
+
+  async init(): Promise<void> {
+    await super.init();
+
+    // Set Czech locale cookie before navigation
+    const context = this.page!.context();
+    await context.addCookies([{
+      name: 'NEXT_LOCALE',
+      value: 'cz',
+      domain: '.saporevero.cz',
+      path: '/'
+    }]);
   }
 
   async extractMenuItems(): Promise<MenuItem[]> {
-    console.log('Looking for PDF button on Sapore Vero...');
-    
+    console.log('Looking for Denní Menu button on Sapore Vero...');
+
     try {
-      // Wait for the PDF button/link to be available
-      try {
-        await this.page!.waitForSelector('a[href*="/api/public/menu/open"]', { timeout: 10000 });
-      } catch {
-        // No PDF link found - menu not posted yet
-        console.log('📅 Sapore Vero menu not posted yet');
+      // Wait for page to load and Czech button to appear
+      await this.page!.waitForTimeout(2000);
+
+      // Find and click the "Denní Menu" button
+      const dailyMenuButton = await this.page!.waitForSelector('button:has-text("Denní Menu"), a:has-text("Denní Menu")', {
+        timeout: 10000
+      }).catch(() => null);
+
+      if (!dailyMenuButton) {
+        console.log('📅 Denní Menu button not found - menu may not be available today');
         return [{
           name: 'Menu not posted yet',
           price: 0,
           description: 'Check back later'
         }];
       }
-      
-      // Get the PDF URL from the link
-      const pdfUrl = await this.page!.evaluate(() => {
-        const pdfLink = document.querySelector('a[href*="/api/public/menu/open"]');
-        return pdfLink ? (pdfLink as HTMLAnchorElement).href : null;
-      });
-      
-      if (!pdfUrl) {
-        console.log('📅 Sapore Vero menu not posted yet');
-        return [{
-          name: 'Menu not posted yet',
-          price: 0,
-          description: 'Check back later'
-        }];
-      }
-      
-      console.log(`📄 Found PDF URL: ${pdfUrl}`);
-      
-      // Download the PDF
-      const response = await fetch(pdfUrl);
-      const pdfBuffer = await response.arrayBuffer();
-      
-      // Parse the PDF
-      const data = await pdf(Buffer.from(pdfBuffer));
-      const text = data.text;
-      
-      console.log('📄 PDF content extracted, parsing menu items...');
-      
-      // Parse menu items from the PDF text
-      const items: MenuItem[] = [];
-      const lines = text.split('\n').map((line: string) => line.trim()).filter((line: string) => line.length > 0);
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        // Look for Italian names with prices (e.g., "MINESTRONE 59Kč")
-        const priceMatch = line.match(/(\d+)\s*(?:Kč|CZK|,-)/);
-        
-        if (priceMatch && i + 1 < lines.length) {
-          const price = parseInt(priceMatch[1]);
-          
-          // The Czech name is on the next line after the Italian name
-          const czechName = lines[i + 1];
-          
-          // Skip if the next line looks like a category header or English translation
-          if (!czechName.match(/^[A-Z\s\/]+$/) && // Not all caps (category)
-              !czechName.match(/\d+\s*Kč/) && // Doesn't have a price
-              czechName.length > 3 && // Not too short
-              price > 0 && price < 500) { // Reasonable price range
-            
-            items.push({ 
-              name: czechName.trim(),
-              price 
-            });
+
+      await dailyMenuButton.click();
+      console.log('✅ Clicked Denní Menu button, waiting for modal...');
+
+      // Wait for modal content to load
+      await this.page!.waitForTimeout(2000);
+
+      // Extract menu items from the modal
+      const items = await this.page!.evaluate(() => {
+        const menuItems: Array<{ name: string; price: string }> = [];
+
+        // Find all menu item containers (they have h4 for Italian name)
+        const itemContainers = document.querySelectorAll('h4.font-sans.text-lg.font-bold');
+
+        itemContainers.forEach((italianNameEl) => {
+          // Find the price in the same container
+          const priceContainer = italianNameEl.parentElement?.parentElement;
+          const priceEl = priceContainer?.querySelector('p.text-sm');
+          const priceText = priceEl?.textContent?.trim();
+
+          // Find the Czech description (in <p> tag after the price div)
+          const descriptionEl = priceContainer?.querySelector('p.mt-1');
+          const descriptionText = descriptionEl?.textContent?.trim();
+
+          if (!descriptionText || !priceText) return;
+
+          // Extract Czech name from description (before the dash or English translation)
+          // Format: "Czech name - English name" or just "Czech name"
+          const czechName = descriptionText.split('-')[0].trim();
+
+          if (czechName && priceText) {
+            menuItems.push({ name: czechName, price: priceText });
           }
-        }
+        });
+
+        return menuItems;
+      });
+
+      if (items.length === 0) {
+        console.log('⚠️ No menu items found in modal');
+        return [{
+          name: 'Menu not posted yet',
+          price: 0,
+          description: 'Check back later'
+        }];
       }
-      
-      // Remove duplicates based on name
-      const uniqueItems = items.filter((item, index, self) =>
-        index === self.findIndex(i => i.name === item.name)
+
+      console.log(`✅ Found ${items.length} menu items from modal`);
+
+      // Process and normalize items
+      return items.map(item =>
+        this.createMenuItem(item.name, item.price)
       );
-      
-      console.log(`✅ Found ${uniqueItems.length} menu items from PDF`);
-      
-      if (uniqueItems.length === 0) {
-        console.log('PDF text sample:', text.substring(0, 500));
-      }
-      
-      // Normalize text before returning
-      return uniqueItems.map(item => ({
-        ...item,
-        name: this.normalizeText(item.name)
-      }));
-      
+
     } catch (error) {
-      console.error('Error processing Sapore Vero PDF:', error);
-      
-      // If it's a timeout error that wasn't caught above, it's likely menu not posted
+      console.error('Error processing Sapore Vero menu:', error);
+
       if (error instanceof Error && error.name === 'TimeoutError') {
         return [{
           name: 'Menu not posted yet',
@@ -109,7 +103,7 @@ export class SaporeveroScraper extends BaseScraper {
           description: 'Check back later'
         }];
       }
-      
+
       return [{
         name: 'Menu temporarily unavailable',
         price: 0,

@@ -53,11 +53,10 @@ export const restaurants: Restaurant[] = [
   {
     id: 'saporevero',
     name: 'Sapore Vero',
-    url: 'https://saporevero.choiceqr.com/',
-    menuUrl: 'https://saporevero.choiceqr.com/delivery/section:denni-menu',
+    url: 'https://www.saporevero.cz/',
+    menuUrl: 'https://www.saporevero.cz/',
     scrapeConfig: {
-      type: 'pdf',
-      pdfUrl: 'dynamic' // PDF URL changes daily
+      type: 'static' // Menu available via modal on homepage
     }
   },
   {
