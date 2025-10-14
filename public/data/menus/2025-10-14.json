@@ -166,15 +166,33 @@
     "dayOfWeek": "úterý",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Špenátový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s mozzarellou",
+        "price": 179
+      },
+      {
+        "name": "Pinsa s čtyři druhy sýrů",
+        "price": 199
+      },
+      {
+        "name": "Rigatoni s hovězím masem a hříbkami",
+        "price": 209
+      },
+      {
+        "name": "Špagety s rajčatovou omáčkou, ančovičkami, olivami, kapary a česnekem",
+        "price": 199
+      },
+      {
+        "name": "Grilovaný filet z lososa se zelenými fazolkami",
+        "price": 249
       }
     ],
-    "sourceUrl": "https://saporevero.choiceqr.com/delivery/section:denni-menu",
-    "scrapedAt": "2025-10-14T08:07:27.454Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "sourceUrl": "https://www.saporevero.cz/",
+    "scrapedAt": "2025-10-14T08:35:30.673Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
