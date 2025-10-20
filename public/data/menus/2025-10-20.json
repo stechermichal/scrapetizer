@@ -219,14 +219,16 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Čočková polévka s párkem",
+        "price": 115
+      },
+      {
+        "name": "Pečené hovězí hrudí - toskánská zelenina",
+        "price": 308
       }
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
-    "scrapedAt": "2025-10-20T08:12:00.683Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2025-10-20T09:12:34.965Z",
+    "isAvailable": true
   }
 ]
