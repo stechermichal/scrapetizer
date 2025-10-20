@@ -170,15 +170,33 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Rajčatový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s tuňákem",
+        "price": 179
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou a mozzarellou z buvaliho mleka",
+        "price": 199
+      },
+      {
+        "name": "Tagliatelle s houbami a smetanou",
+        "price": 199
+      },
+      {
+        "name": "Risotto sépie s malými chobotnicemi",
+        "price": 219
+      },
+      {
+        "name": "Kuřecí řízek s bramborovou kaší a tatarkou",
+        "price": 239
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2025-10-20T08:11:37.209Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2025-10-20T10:01:11.482Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
