@@ -187,5 +187,70 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2025-10-22T07:36:45.909Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2025-10-22",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Dršťková polévka z hlívy ústřičné",
+        "price": 45,
+        "description": "S mletou paprikou a majoránkou"
+      },
+      {
+        "name": "Česnekový krém",
+        "price": 45,
+        "description": "Krémová polévka s česnekem, smetanou a opečenou houskou"
+      },
+      {
+        "name": "Smažený květák",
+        "price": 149,
+        "description": "S vařeným bramborem, máslem, pažitkou a tatarskou omáčkou"
+      },
+      {
+        "name": "Strapačky s uzeným masem",
+        "price": 144,
+        "description": "Domácí bramborové halušky s opečeným uzeným masem, kysaným zelím a křupavou cibulkou"
+      },
+      {
+        "name": "Špíz z kuřecích stehýnek",
+        "price": 149,
+        "description": "S cibulí, paprikou, klobásou, pečenými bramborami, pečenou kořenovou zeleninou a bbq majonézou"
+      },
+      {
+        "name": "Táborská bašta",
+        "price": 154,
+        "description": "Pečená vepřová krkovice, rozpečená uzená krkovice, papriková klobása, šťáva z výpeku, kysané sudové zelí a špekový knedlík"
+      },
+      {
+        "name": "Kuřecí plátek na paprice",
+        "price": 149,
+        "description": "Pečený kuřecí plátek, krémová papriková omáčka, těstoviny fusilli, restovaný pak choi"
+      },
+      {
+        "name": "Vepřové na houbách a bambusu",
+        "price": 154,
+        "description": "Smažené nudličky z vepřové pečeně s houbami, bambusem, chilli, zázvorem, sojovou omáčkou a pečenou jasmínovou rýží"
+      },
+      {
+        "name": "Krůta po dijonsku",
+        "price": 165,
+        "description": "Pečená krůtí prsa s omáčkou z dijonské hořčice, s bramborovými lívanci a kořenovou zeleninou s bylinkami"
+      },
+      {
+        "name": "Tažená hovězí plec",
+        "price": 189,
+        "description": "Na nízkou teplotu pečená hovězí plec, cibulová omáčka, smažené hranolky, křen a tatarská omáčka"
+      },
+      {
+        "name": "Indián",
+        "price": 45
+      }
+    ],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "scrapedAt": "2025-10-22T08:08:56.143Z",
+    "isAvailable": true
   }
 ]
