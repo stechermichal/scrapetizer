@@ -168,15 +168,33 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Hráškový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchání salát s tuňákem",
+        "price": 199
+      },
+      {
+        "name": "Pinsa s čtyřmi druhy sýrů",
+        "price": 199
+      },
+      {
+        "name": "Risotto s dýní a guanciale",
+        "price": 219
+      },
+      {
+        "name": "Penne s rajčatovou omáčkou a stracciatella mozzarella",
+        "price": 199
+      },
+      {
+        "name": "Grilovaná salsiccia selským bramborem",
+        "price": 239
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2025-10-27T09:06:01.179Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2025-10-27T09:44:21.952Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
