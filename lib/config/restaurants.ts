@@ -5,7 +5,7 @@ export const restaurants: Restaurant[] = [
     id: 'hybernska',
     name: 'Restaurace Hybernská',
     url: 'https://www.restauracehybernska.cz/',
-    instagramUrl: 'https://www.instagram.com/restauracehybernska/',
+    instagramUrl: 'https://www.instagram.com/hybernska_',
     scrapeConfig: {
       type: 'static',
       selectors: {
