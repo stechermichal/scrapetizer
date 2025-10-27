@@ -1,6 +1,7 @@
 import { BaseScraper } from './base';
 import { MenuItem } from '../types';
-import { getCurrentCzechDayUrl } from '../utils/czech-days';
+import { getCurrentCzechDayUrl, czechDays } from '../utils/czech-days';
+import { getDay } from 'date-fns';
 
 export class MasaryckaScraper extends BaseScraper {
   protected getMenuUrl(): string {
@@ -19,99 +20,131 @@ export class MasaryckaScraper extends BaseScraper {
     // Wait for content to load
     await this.page!.waitForTimeout(2000);
 
+    // Get current Czech day name for filtering
+    const dayIndex = getDay(new Date());
+    const currentDayName = czechDays[dayIndex];
+
     // Extract menu items from the page
-    const menuData = await this.page!.evaluate(() => {
+    const menuData = await this.page!.evaluate((dayName: string) => {
       const itemsData: Array<{
         name: string;
         description: string;
         priceText: string;
       }> = [];
 
-      // Try to find menu items - ChoiceQR typically uses specific structure
-      // Look for elements that might contain menu items
-      const possibleContainers = [
-        '.menu-item',
-        '.item',
-        '.product',
-        '[class*="menu"]',
-        '[class*="item"]'
-      ];
+      // Find the section for the current day
+      // Look for headings that contain the day name (case insensitive)
+      const allHeadings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6, [class*="heading"], [class*="title"]'));
 
-      let items: Element[] = [];
+      let daySection: Element | null = null;
+      let nextDaySection: Element | null = null;
 
-      // Try each selector until we find items
-      for (const selector of possibleContainers) {
-        const found = Array.from(document.querySelectorAll(selector));
-        if (found.length > 0) {
-          items = found;
+      // Find the heading that matches current day
+      for (let i = 0; i < allHeadings.length; i++) {
+        const heading = allHeadings[i];
+        const headingText = heading.textContent?.toLowerCase() || '';
+
+        if (headingText.includes(dayName.toLowerCase())) {
+          daySection = heading;
+          // Find the next day section to know where to stop
+          if (i + 1 < allHeadings.length) {
+            nextDaySection = allHeadings[i + 1];
+          }
           break;
         }
       }
 
-      // If no items found with selectors, try a different approach
-      // Look for all elements with text that contains price patterns
-      if (items.length === 0) {
-        const bodyText = document.body.innerText;
-        const lines = bodyText.split('\n');
+      if (!daySection) {
+        console.log('Could not find day section for:', dayName);
+        return itemsData;
+      }
 
-        let currentName = '';
-        let currentDescription = '';
+      // Get all text between this day section and the next day section
+      let currentElement: Element | null = daySection;
+      const seenItems = new Set<string>();
 
+      // Walk through siblings until we hit the next day section
+      while (currentElement) {
+        currentElement = currentElement.nextElementSibling;
+
+        // Stop if we hit the next day section
+        if (currentElement === nextDaySection || !currentElement) {
+          break;
+        }
+
+        // Get text content from this element
+        const text = currentElement.textContent?.trim() || '';
+        const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+
+        // Look for lines with prices
         for (const line of lines) {
-          const trimmed = line.trim();
-
-          // Skip empty lines
-          if (!trimmed) continue;
-
-          // Check if line contains a price (number followed by Kč or just a number at the end)
-          const priceMatch = trimmed.match(/(\d+)\s*(?:Kč|,-|,-)?\s*$/);
+          // Match pattern: "Item name XXX Kč" or just "XXX Kč"
+          const priceMatch = line.match(/^(.+?)\s*(\d+)\s*(?:Kč|kč)\s*$/);
 
           if (priceMatch) {
-            // This line has a price, extract the name and description
-            const nameAndPrice = trimmed;
-            const name = nameAndPrice.replace(/\d+\s*(?:Kč|,-|,-)?\s*$/, '').trim();
+            const name = priceMatch[1].trim();
+            const price = priceMatch[2];
 
-            if (name && name.length > 2) {
+            // Create a unique key to avoid duplicates
+            const itemKey = `${name}|${price}`;
+
+            if (name.length > 3 && !seenItems.has(itemKey)) {
+              seenItems.add(itemKey);
               itemsData.push({
-                name: name,
-                description: currentDescription,
-                priceText: priceMatch[1]
+                name,
+                description: '',
+                priceText: price
               });
-            }
-
-            currentDescription = '';
-          } else if (trimmed.length > 15 && !trimmed.match(/^\d/)) {
-            // This might be a description or name
-            if (!currentName) {
-              currentName = trimmed;
-            } else {
-              currentDescription = trimmed;
             }
           }
         }
-      } else {
-        // Process found items
-        items.forEach(item => {
-          const nameEl = item.querySelector('[class*="name"], [class*="title"], h3, h4, strong');
-          const priceEl = item.querySelector('[class*="price"], [class*="cena"]');
-          const descEl = item.querySelector('[class*="desc"], [class*="popis"], p');
+      }
 
-          const name = nameEl?.textContent?.trim() || '';
-          const priceText = priceEl?.textContent?.trim() || '';
-          const description = descEl?.textContent?.trim() || '';
+      // If we didn't find items with the section approach, try a simpler approach
+      // Just look at the visible text near the day name
+      if (itemsData.length === 0 && daySection) {
+        const sectionText = daySection.parentElement?.textContent || '';
+        const lines = sectionText.split('\n').map(l => l.trim()).filter(l => l.length > 0);
 
-          if (name && priceText) {
-            itemsData.push({
-              name,
-              description,
-              priceText
-            });
+        let inCurrentDay = false;
+        const seenItems = new Set<string>();
+
+        for (const line of lines) {
+          // Check if we've reached our day
+          if (line.toLowerCase().includes(dayName.toLowerCase())) {
+            inCurrentDay = true;
+            continue;
           }
-        });
+
+          // Check if we've hit another day (stop processing)
+          const otherDays = ['pondělí', 'úterý', 'středa', 'čtvrtek', 'pátek'];
+          if (inCurrentDay && otherDays.some(d => d !== dayName && line.toLowerCase().includes(d))) {
+            break;
+          }
+
+          if (inCurrentDay) {
+            const priceMatch = line.match(/^(.+?)\s*(\d+)\s*(?:Kč|kč)\s*$/);
+
+            if (priceMatch) {
+              const name = priceMatch[1].trim();
+              const price = priceMatch[2];
+              const itemKey = `${name}|${price}`;
+
+              if (name.length > 3 && !seenItems.has(itemKey)) {
+                seenItems.add(itemKey);
+                itemsData.push({
+                  name,
+                  description: '',
+                  priceText: price
+                });
+              }
+            }
+          }
+        }
       }
 
       return itemsData;
-    });
+    }, currentDayName);
 
     // Process the extracted data using base class helper
     return menuData
