@@ -11,6 +11,7 @@ export interface RestaurantMenu {
   dayOfWeek: string; // Czech day name
   items: MenuItem[];
   sourceUrl: string;
+  instagramUrl?: string;
   scrapedAt: string; // ISO timestamp
   isAvailable: boolean;
   errorMessage?: string;
@@ -21,6 +22,7 @@ export interface Restaurant {
   name: string;
   url: string;
   menuUrl?: string; // If different from main URL
+  instagramUrl?: string; // Instagram profile URL
   scrapeConfig: {
     type: 'static' | 'dynamic' | 'pdf';
     selectors?: {

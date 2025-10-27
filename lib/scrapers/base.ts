@@ -52,6 +52,7 @@ export abstract class BaseScraper {
         dayOfWeek: getCurrentCzechDay(),
         items,
         sourceUrl: url,
+        instagramUrl: this.restaurant.instagramUrl,
         scrapedAt: new Date().toISOString(),
         isAvailable: hasRealItems,
         errorMessage: hasRealItems ? undefined : 'No valid menu items found'

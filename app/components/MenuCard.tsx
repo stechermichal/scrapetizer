@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, MapPin, AlertCircle } from 'lucide-react';
+import { ExternalLink, MapPin, AlertCircle, Instagram } from 'lucide-react';
 import { RestaurantMenu } from '@/lib/types';
 import { formatMenuItemName } from '@/lib/utils/text-formatting';
 
@@ -40,15 +40,28 @@ export function MenuCard({ menu }: MenuCardProps) {
                 {menu.restaurantName}
               </h3>
             </div>
-            <a
-              href={menu.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label={`Visit ${menu.restaurantName} website`}
-            >
-              <ExternalLink className="h-4 w-4" />
-            </a>
+            <div className="flex items-center gap-2">
+              {menu.instagramUrl && (
+                <a
+                  href={menu.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label={`Visit ${menu.restaurantName} on Instagram`}
+                >
+                  <Instagram className="h-4 w-4" />
+                </a>
+              )}
+              <a
+                href={menu.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label={`Visit ${menu.restaurantName} website`}
+              >
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
         <div className="border-b" />

@@ -32,11 +32,12 @@ export async function GET(request: Request) {
         dayOfWeek: format(new Date(date), 'EEEE'),
         items: [],
         sourceUrl: restaurant.url,
+        instagramUrl: restaurant.instagramUrl,
         scrapedAt: null,
         isAvailable: false,
         errorMessage: 'No menu data available'
       }));
-      
+
       return NextResponse.json({
         date,
         menus: emptyMenus,
