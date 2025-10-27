@@ -7,6 +7,7 @@ import { SaporeveroScraper } from './saporevero';
 import { MeatbeerScraper } from './meatbeer';
 import { NekazankaScraper } from './nekazanka';
 import { KantynaScraper } from './kantyna';
+import { MasaryckaScraper } from './masarycka';
 
 // Type for concrete scraper classes
 type ScraperClass = new (restaurant: Restaurant) => BaseScraper;
@@ -20,6 +21,7 @@ const scraperMap: Record<string, ScraperClass> = {
   'meatbeer': MeatbeerScraper,
   'nekazanka': NekazankaScraper,
   'kantyna': KantynaScraper,
+  'masarycka': MasaryckaScraper,
 };
 
 export async function scrapeRestaurant(restaurant: Restaurant): Promise<ScraperResult> {
@@ -45,3 +47,4 @@ export { SaporeveroScraper } from './saporevero';
 export { MeatbeerScraper } from './meatbeer';
 export { NekazankaScraper } from './nekazanka';
 export { KantynaScraper } from './kantyna';
+export { MasaryckaScraper } from './masarycka';
