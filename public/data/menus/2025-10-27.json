@@ -234,14 +234,344 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Scraper needs to be tested",
-        "price": 0,
-        "description": "Run: npm run scrape:restaurant -- --restaurant masarycka"
+        "name": "Slepičí vývar s nudlemi, masem a zeleninou",
+        "price": 59
+      },
+      {
+        "name": "Slepičí vývar s nudlemi, masem a zeleninou",
+        "price": 59
+      },
+      {
+        "name": "Slepičí vývar s nudlemi, masem a zeleninou",
+        "price": 59
+      },
+      {
+        "name": "Dýňová polévka se semínky",
+        "price": 59
+      },
+      {
+        "name": "Dýňová polévka se semínky",
+        "price": 59
+      },
+      {
+        "name": "Dýňová polévka se semínky",
+        "price": 59
+      },
+      {
+        "name": "Malý míchaný salátek",
+        "price": 59
+      },
+      {
+        "name": "Malý míchaný salátek",
+        "price": 59
+      },
+      {
+        "name": "Malý míchaný salátek",
+        "price": 59
+      },
+      {
+        "name": "Penne ala arrabiata se sýrem gran moravia",
+        "price": 179
+      },
+      {
+        "name": "Penne ala arrabiata se sýrem gran moravia",
+        "price": 179
+      },
+      {
+        "name": "Penne ala arrabiata se sýrem gran moravia",
+        "price": 179
+      },
+      {
+        "name": "Vepřové maso na houbách s jasmínovou rýží",
+        "price": 185
+      },
+      {
+        "name": "Vepřové maso na houbách s jasmínovou rýží",
+        "price": 185
+      },
+      {
+        "name": "Vepřové maso na houbách s jasmínovou rýží",
+        "price": 185
+      },
+      {
+        "name": "Kuřecí roláda se šunkou a sýrem, bramborová kaše, malý salátek",
+        "price": 189
+      },
+      {
+        "name": "Kuřecí roláda se šunkou a sýrem, bramborová kaše, malý salátek",
+        "price": 189
+      },
+      {
+        "name": "Kuřecí roláda se šunkou a sýrem, bramborová kaše, malý salátek",
+        "price": 189
+      },
+      {
+        "name": "Pečený selečí hřbet s kořenovou zeleninou na červeném víně, bramborová kaše",
+        "price": 249
+      },
+      {
+        "name": "Pečený selečí hřbet s kořenovou zeleninou na červeném víně, bramborová kaše",
+        "price": 249
+      },
+      {
+        "name": "Pečený selečí hřbet s kořenovou zeleninou na červeném víně, bramborová kaše",
+        "price": 249
+      },
+      {
+        "name": "Slepičí vývar s nudlemi, masem a zeleninou",
+        "price": 59
+      },
+      {
+        "name": "Slepičí vývar s nudlemi, masem a zeleninou",
+        "price": 59
+      },
+      {
+        "name": "Slepičí vývar s nudlemi, masem a zeleninou",
+        "price": 59
+      },
+      {
+        "name": "Boršč se zakysanou smetanou",
+        "price": 65
+      },
+      {
+        "name": "Boršč se zakysanou smetanou",
+        "price": 65
+      },
+      {
+        "name": "Boršč se zakysanou smetanou",
+        "price": 65
+      },
+      {
+        "name": "Malý míchaný salátek",
+        "price": 59
+      },
+      {
+        "name": "Malý míchaný salátek",
+        "price": 59
+      },
+      {
+        "name": "Malý míchaný salátek",
+        "price": 59
+      },
+      {
+        "name": "Buchtičky s vanilkovým krémem a mléčnou čokoládou",
+        "price": 179
+      },
+      {
+        "name": "Buchtičky s vanilkovým krémem a mléčnou čokoládou",
+        "price": 179
+      },
+      {
+        "name": "Buchtičky s vanilkovým krémem a mléčnou čokoládou",
+        "price": 179
+      },
+      {
+        "name": "Holandský řízek se sýrem niva, bramborová kaše, kyselá okurka",
+        "price": 185
+      },
+      {
+        "name": "Holandský řízek se sýrem niva, bramborová kaše, kyselá okurka",
+        "price": 185
+      },
+      {
+        "name": "Holandský řízek se sýrem niva, bramborová kaše, kyselá okurka",
+        "price": 185
+      },
+      {
+        "name": "Pečené kuřecí stehno se šťouchaným bramborem se slaninou, salát coleslaw",
+        "price": 189
+      },
+      {
+        "name": "Pečené kuřecí stehno se šťouchaným bramborem se slaninou, salát coleslaw",
+        "price": 189
+      },
+      {
+        "name": "Pečené kuřecí stehno se šťouchaným bramborem se slaninou, salát coleslaw",
+        "price": 189
+      },
+      {
+        "name": "Pečený selečí hřbet s kořenovou zeleninou na červeném víně, bramborová kaše",
+        "price": 249
+      },
+      {
+        "name": "Pečený selečí hřbet s kořenovou zeleninou na červeném víně, bramborová kaše",
+        "price": 249
+      },
+      {
+        "name": "Pečený selečí hřbet s kořenovou zeleninou na červeném víně, bramborová kaše",
+        "price": 249
+      },
+      {
+        "name": "Slepičí vývar s nudlemi, masem a zeleninou",
+        "price": 65
+      },
+      {
+        "name": "Slepičí vývar s nudlemi, masem a zeleninou",
+        "price": 65
+      },
+      {
+        "name": "Slepičí vývar s nudlemi, masem a zeleninou",
+        "price": 65
+      },
+      {
+        "name": "Pórková s vejcem",
+        "price": 59
+      },
+      {
+        "name": "Pórková s vejcem",
+        "price": 59
+      },
+      {
+        "name": "Pórková s vejcem",
+        "price": 59
+      },
+      {
+        "name": "Malý míchaný salátek",
+        "price": 59
+      },
+      {
+        "name": "Malý míchaný salátek",
+        "price": 59
+      },
+      {
+        "name": "Malý míchaný salátek",
+        "price": 59
+      },
+      {
+        "name": "Zapečené fleky s uzeným masem a vejcem",
+        "price": 179
+      },
+      {
+        "name": "Zapečené fleky s uzeným masem a vejcem",
+        "price": 179
+      },
+      {
+        "name": "Zapečené fleky s uzeným masem a vejcem",
+        "price": 179
+      },
+      {
+        "name": "Sekaná svíčková s brusinkami a s houskovým knedlíkem",
+        "price": 179
+      },
+      {
+        "name": "Sekaná svíčková s brusinkami a s houskovým knedlíkem",
+        "price": 179
+      },
+      {
+        "name": "Sekaná svíčková s brusinkami a s houskovým knedlíkem",
+        "price": 179
+      },
+      {
+        "name": "Kuřecí teriyaki s jasmínovou rýží",
+        "price": 189
+      },
+      {
+        "name": "Kuřecí teriyaki s jasmínovou rýží",
+        "price": 189
+      },
+      {
+        "name": "Kuřecí teriyaki s jasmínovou rýží",
+        "price": 189
+      },
+      {
+        "name": "Pečený selečí hřbet s kořenovou zeleninou na červeném víně, bramborová kaše",
+        "price": 249
+      },
+      {
+        "name": "Pečený selečí hřbet s kořenovou zeleninou na červeném víně, bramborová kaše",
+        "price": 249
+      },
+      {
+        "name": "Pečený selečí hřbet s kořenovou zeleninou na červeném víně, bramborová kaše",
+        "price": 249
+      },
+      {
+        "name": "Slepičí vývar s nudlemi, masem a zeleninou",
+        "price": 59
+      },
+      {
+        "name": "Slepičí vývar s nudlemi, masem a zeleninou",
+        "price": 59
+      },
+      {
+        "name": "Slepičí vývar s nudlemi, masem a zeleninou",
+        "price": 59
+      },
+      {
+        "name": "Batátový krém se sýrem ricotta",
+        "price": 59
+      },
+      {
+        "name": "Batátový krém se sýrem ricotta",
+        "price": 59
+      },
+      {
+        "name": "Batátový krém se sýrem ricotta",
+        "price": 59
+      },
+      {
+        "name": "Malý míchaný salátek",
+        "price": 59
+      },
+      {
+        "name": "Malý míchaný salátek",
+        "price": 59
+      },
+      {
+        "name": "Malý míchaný salátek",
+        "price": 59
+      },
+      {
+        "name": "Žampiony portobello s ratatouille a sýrem gran moravia",
+        "price": 179
+      },
+      {
+        "name": "Žampiony portobello s ratatouille a sýrem gran moravia",
+        "price": 179
+      },
+      {
+        "name": "Žampiony portobello s ratatouille a sýrem gran moravia",
+        "price": 179
+      },
+      {
+        "name": "Gnocchi s kuřecím masem, špenátem a smetanou",
+        "price": 185
+      },
+      {
+        "name": "Gnocchi s kuřecím masem, špenátem a smetanou",
+        "price": 185
+      },
+      {
+        "name": "Gnocchi s kuřecím masem, špenátem a smetanou",
+        "price": 185
+      },
+      {
+        "name": "Vepřový řízek s vařeným bramborem, citronem a malým salátkem",
+        "price": 189
+      },
+      {
+        "name": "Vepřový řízek s vařeným bramborem, citronem a malým salátkem",
+        "price": 189
+      },
+      {
+        "name": "Vepřový řízek s vařeným bramborem, citronem a malým salátkem",
+        "price": 189
+      },
+      {
+        "name": "Pečený selečí hřbet s kořenovou zeleninou na červeném víně, bramborová kaše",
+        "price": 249
+      },
+      {
+        "name": "Pečený selečí hřbet s kořenovou zeleninou na červeném víně, bramborová kaše",
+        "price": 249
+      },
+      {
+        "name": "Pečený selečí hřbet s kořenovou zeleninou na červeném víně, bramborová kaše",
+        "price": 249
       }
     ],
-    "sourceUrl": "https://masaryckarestaurace.choiceqr.com/section:poledni-menu",
-    "scrapedAt": "2025-10-27T12:10:00.000Z",
-    "isAvailable": false,
-    "errorMessage": "Scraper not yet run"
+    "sourceUrl": "https://masaryckarestaurace.choiceqr.com/section:poledni-menu/pondeli",
+    "scrapedAt": "2025-10-27T12:18:28.074Z",
+    "isAvailable": true
   }
 ]
