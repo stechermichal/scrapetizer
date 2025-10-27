@@ -226,22 +226,5 @@
     "scrapedAt": "2025-10-27T09:06:19.960Z",
     "isAvailable": false,
     "errorMessage": "No valid menu items found"
-  },
-  {
-    "restaurantId": "masarycka",
-    "restaurantName": "Masarykčina Restaurace",
-    "date": "2025-10-27",
-    "dayOfWeek": "pondělí",
-    "items": [
-      {
-        "name": "Scraper needs to be tested",
-        "price": 0,
-        "description": "Run: npm run scrape:restaurant -- --restaurant masarycka"
-      }
-    ],
-    "sourceUrl": "https://masaryckarestaurace.choiceqr.com/section:poledni-menu",
-    "scrapedAt": "2025-10-27T12:10:00.000Z",
-    "isAvailable": false,
-    "errorMessage": "Scraper not yet run"
   }
 ]
