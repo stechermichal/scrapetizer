@@ -1,0 +1,208 @@
+[
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2025-10-28",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Zelná polévka",
+        "price": 45,
+        "description": "S kysaným zelím, klobásou, mletou paprikou, bramborem a smetanou"
+      },
+      {
+        "name": "Kuřecí vývar s drožďovými knedlíčky",
+        "price": 45,
+        "description": "Kučecí polévka s masem, zeleninou a drožďovími knedlíčky"
+      },
+      {
+        "name": "Svíčková z daňka",
+        "price": 169,
+        "description": "Dušená dančí plec, svíčková omáčka, kynutý houskový knedlík a brusinky"
+      },
+      {
+        "name": "Pljeskavica",
+        "price": 144,
+        "description": "Z hovězího a vepřového masa s mladou cibulkou, mletou paprikou, kmínem, pečenými bramborami, jogurtovým ajvarem a trhaný listový salát"
+      },
+      {
+        "name": "Kuřecí prsa teriyaki",
+        "price": 154,
+        "description": "Smažené kousky kuřecích prsou s rýžovým vínem, cibulí, pak choi, pórkem, sezamem a pečenou jasmínovou rýží"
+      },
+      {
+        "name": "Kuřecí plátek se zeleninou",
+        "price": 149,
+        "description": "Plátek kuřecích prsou s barevným pepřem, bramborovou kaší a vařenou zeleninou"
+      },
+      {
+        "name": "Krůtí řízek s vločkami",
+        "price": 154,
+        "description": "Smažený krůtí řízek ve strouhance s drcenými ovesnými vločkami, opečený vařený brambor, rajčatový salát"
+      },
+      {
+        "name": "Vepřový guláš ba pivu",
+        "price": 149,
+        "description": "Guláš z vepřové plece s feferonkou, pivem, špekovým knedlíkem a krájenou cibulí a čerstvým křenem"
+      },
+      {
+        "name": "Grilovaná vepřová krkovice 200g",
+        "price": 154,
+        "description": "Steak z vepřové krkovice, krémová kaparová omáčka, pečené brambory se sýrem cheddar, smažené cibulové kroužky a tatarská pmáčka"
+      },
+      {
+        "name": "Pečené selečí kolínko",
+        "price": 199,
+        "description": "Pivní omáčka s česnekem, bramborovou kaší s cibulkou v sádle a kvašeným červeným zelím"
+      }
+    ],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
+    "scrapedAt": "2025-10-28T09:05:09.343Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2025-10-28",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Státní svátek",
+        "price": 0,
+        "description": "Náš tip:"
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2025-10-28T09:05:12.010Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "meatbeer",
+    "restaurantName": "Meat Beer",
+    "date": "2025-10-28",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Bramboračka s čerstvými hříbky",
+        "price": 85,
+        "description": "Polévka"
+      },
+      {
+        "name": "Losos nebo marinované vejce, na černé čočce s pečenou zeleninou a koriandrem",
+        "price": 195
+      },
+      {
+        "name": "Segedinský guláš z vepřového bůčku, zakysaná smetana a domácí houskový knedlík",
+        "price": 215
+      },
+      {
+        "name": "Špagety s boloňským ragů s kořenovou zeleninou a čerstvým vínem, sýr gran biraghi",
+        "price": 225
+      },
+      {
+        "name": "Hot dog s pikantní klobásou, hořčicí, kečupem, nakládanou a křupavou cibulkou",
+        "price": 245
+      },
+      {
+        "name": "Marinovaná kuřecí křádla v domácí sweet chilli omáčce se sezamem, bylinkami a domácí hranolky",
+        "price": 255
+      },
+      {
+        "name": "Svíčková na smetaně z hovězí loupané plece s karlovarským knedlíkem, brusinkami a šlehačkou",
+        "price": 445
+      }
+    ],
+    "sourceUrl": "https://www.meatbeer.cz/menu/",
+    "scrapedAt": "2025-10-28T09:05:18.560Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2025-10-28",
+    "dayOfWeek": "úterý",
+    "items": [],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2025-10-28T09:05:24.060Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "saporevero",
+    "restaurantName": "Sapore Vero",
+    "date": "2025-10-28",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Hráškový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchání salát s tuňákem",
+        "price": 199
+      },
+      {
+        "name": "Pinsa s čtyřmi druhy sýrů",
+        "price": 199
+      },
+      {
+        "name": "Risotto s dýní a guanciale",
+        "price": 219
+      },
+      {
+        "name": "Penne s rajčatovou omáčkou a stracciatella mozzarella",
+        "price": 199
+      },
+      {
+        "name": "Grilovaná salsiccia selským bramborem",
+        "price": 239
+      }
+    ],
+    "sourceUrl": "https://www.saporevero.cz/",
+    "scrapedAt": "2025-10-28T09:05:30.054Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "nekazanka",
+    "restaurantName": "Bistro Nekázanka",
+    "date": "2025-10-28",
+    "dayOfWeek": "úterý",
+    "items": [],
+    "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
+    "scrapedAt": "2025-10-28T09:05:36.695Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "kantyna",
+    "restaurantName": "Kantýna",
+    "date": "2025-10-28",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Brokolicová polévka",
+        "price": 115
+      },
+      {
+        "name": "Grilovaná vepřová panenka, houbové krupoto",
+        "price": 345
+      }
+    ],
+    "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
+    "scrapedAt": "2025-10-28T09:05:39.258Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "masarycka",
+    "restaurantName": "Masarykčina Restaurace",
+    "date": "2025-10-28",
+    "dayOfWeek": "úterý",
+    "items": [],
+    "sourceUrl": "https://masaryckarestaurace.choiceqr.com/section:poledni-menu/utery",
+    "scrapedAt": "2025-10-28T09:05:43.018Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  }
+]
