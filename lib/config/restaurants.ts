@@ -77,16 +77,6 @@ export const restaurants: Restaurant[] = [
     scrapeConfig: {
       type: 'static'
     }
-  },
-  {
-    id: 'masarycka',
-    name: 'Masarykčina Restaurace',
-    url: 'https://masaryckarestaurace.choiceqr.com/',
-    menuUrl: 'https://masaryckarestaurace.choiceqr.com/section:poledni-menu',
-    scrapeConfig: {
-      type: 'dynamic',
-      dayUrlPattern: 'https://masaryckarestaurace.choiceqr.com/section:poledni-menu/{day}'
-    }
   }
 ];
 

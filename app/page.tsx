@@ -6,7 +6,6 @@ import { MenuCardSkeleton } from './components/MenuCardSkeleton';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Header } from './components/Header';
 import { EmptyState } from './components/EmptyState';
-import { UnreadableRestaurants } from './components/UnreadableRestaurants';
 import { useMenus } from './hooks/useMenus';
 import { useHorizontalScroll } from './hooks/useHorizontalScroll';
 
@@ -84,8 +83,6 @@ export default function Home() {
         )}
 
         {!loading && !error && menus.length === 0 && <EmptyState />}
-        
-        <UnreadableRestaurants />
       </main>
     </div>
   );
