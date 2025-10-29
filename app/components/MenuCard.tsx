@@ -29,7 +29,7 @@ export function MenuCard({ menu }: MenuCardProps) {
   };
   
   return (
-    <Card className="hover:shadow-lg transition-shadow flex-shrink-0 w-80 overflow-hidden flex flex-col gap-0 h-fit" style={{ maxHeight: 'calc(100vh - 150px)' }}>
+    <Card className="hover:shadow-lg transition-shadow flex-shrink-0 w-80 overflow-hidden flex flex-col gap-0 h-fit" style={{ maxHeight: 'calc(100vh - 160px)' }}>
       {/* Fixed header */}
       <div className={`${isScrolled ? 'shadow-md' : ''}`}>
         <div className="px-6 pb-3 -mt-2">
