@@ -37,9 +37,9 @@ export default function Home() {
           </Alert>
         ) : (
           <div className="flex-1 overflow-hidden flex flex-col relative" onWheel={handleWheel}>
-            <div 
+            <div
               ref={scrollContainerRef}
-              className="flex items-start gap-6 overflow-x-auto pb-4 w-full"
+              className="flex items-start gap-6 overflow-x-auto pb-4 h-full"
             >
               {loading
                 ? Array.from({ length: 4 }).map((_, i) => <MenuCardSkeleton key={i} />)

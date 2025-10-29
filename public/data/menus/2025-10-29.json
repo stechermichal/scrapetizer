@@ -253,16 +253,5 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2025-10-29T09:05:25.855Z",
     "isAvailable": true
-  },
-  {
-    "restaurantId": "masarycka",
-    "restaurantName": "Masarykčina Restaurace",
-    "date": "2025-10-29",
-    "dayOfWeek": "středa",
-    "items": [],
-    "sourceUrl": "https://masaryckarestaurace.choiceqr.com/section:poledni-menu/streda",
-    "scrapedAt": "2025-10-29T09:05:29.408Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
   }
 ]
