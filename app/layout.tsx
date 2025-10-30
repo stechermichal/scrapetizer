@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Scrapetizer",
-  description: "yummy yummy in my tummy",
+  description: "Menička kolem Jindřišské",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
