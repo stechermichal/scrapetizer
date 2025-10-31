@@ -192,5 +192,71 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2025-10-31T09:07:34.865Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2025-10-31",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Zeleninový krém s černou čočkou",
+        "price": 45,
+        "description": "Krémová zeleninová polévka s čočkou beluga, smetanou a opečenou houskou"
+      },
+      {
+        "name": "Moravská cibulačka",
+        "price": 45,
+        "description": "S bílým vínem, sýrem a zašlehaným vejcem"
+      },
+      {
+        "name": "Butter chicken",
+        "price": 144,
+        "description": "Kousky kuřecích prsou s cibulí, kokosovým mlékem, kešu oříšky, koriandrem, kurkumou a pečenou jasmínovou rýží"
+      },
+      {
+        "name": "Vepřový špalíček",
+        "price": 175,
+        "description": "Pečený vepřový špalíček s kostí podávaný se šťávou z výpeku, kysaným sudovým zelím, a bramborovým knedlíkem"
+      },
+      {
+        "name": "Divočák na houbách",
+        "price": 159,
+        "description": "Dušená plec z divočáka s cibulí, kořením, sušenými houbami, smetanou, špekovým knedlíkem a červenou cibulí"
+      },
+      {
+        "name": "Kuřecí řízečky v panko strouhance",
+        "price": 149,
+        "description": "Smažené kousky kuřecích prsou v panko strouhance, s bramborovou kaší a kyselou okurkou"
+      },
+      {
+        "name": "Zapečená vepřová krkovice",
+        "price": 149,
+        "description": "S rajčetem, sýrem gouda, omáčkou z hrubozrnné hořčice, pečenými bramborami a rajčatovou majonézou"
+      },
+      {
+        "name": "Gombovci",
+        "price": 144,
+        "description": "Smažené koblížky z kynutého těsta, obalené ve skořicovém cukru, plněné švestkovými povidly, podávané s vanilkovou omáčkou"
+      },
+      {
+        "name": "Bramborové krokety s trhaným vepřovým a cheddarem",
+        "price": 154,
+        "description": "Smažené bramborové krokety, plněné trhaným vepřovým masem, cheddarem a parmazánovou omáčkou s medvědím česnekem"
+      },
+      {
+        "name": "Burger s bufallo kuřetem",
+        "price": 195,
+        "description": "Burger se smaženým kuřetem s bufallo omáčkou, nakládanou zeleninou, vaječnou majonézou a hranolkami"
+      },
+      {
+        "name": "Kokoska",
+        "price": 45
+      }
+    ],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
+    "scrapedAt": "2025-10-31T10:06:47.265Z",
+    "isAvailable": true
   }
 ]
