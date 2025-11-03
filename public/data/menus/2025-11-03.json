@@ -238,14 +238,16 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Dýňová polévka",
+        "price": 115
+      },
+      {
+        "name": "Chilli con carne - rýže",
+        "price": 258
       }
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
-    "scrapedAt": "2025-11-03T09:05:54.022Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2025-11-03T10:05:19.534Z",
+    "isAvailable": true
   }
 ]
