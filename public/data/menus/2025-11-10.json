@@ -239,14 +239,16 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Husí kaldoun",
+        "price": 115
+      },
+      {
+        "name": "Konfitované husí stehno/prso - bramborové špalíky, špekové knedlíky, dušené zelí, červené zelí",
+        "price": 648
       }
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
-    "scrapedAt": "2025-11-10T09:06:18.132Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2025-11-10T10:05:28.800Z",
+    "isAvailable": true
   }
 ]
