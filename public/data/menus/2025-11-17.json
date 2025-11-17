@@ -1,0 +1,159 @@
+[
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2025-11-17",
+    "dayOfWeek": "pondělí",
+    "items": [],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
+    "scrapedAt": "2025-11-17T09:05:53.879Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2025-11-17",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Státní svátek",
+        "price": 0
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2025-11-17T09:05:57.019Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "meatbeer",
+    "restaurantName": "Meat Beer",
+    "date": "2025-11-17",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Tomatová polévka s bazalkou a zakysanou smetanou",
+        "price": 85,
+        "description": "Polévka"
+      },
+      {
+        "name": "Domácí bramborové gnocchi se špenátem, s čerstvým pepřem a ovčím sýrem",
+        "price": 195
+      },
+      {
+        "name": "Smažený hermelín s vařenými brambory s máslem a petrželí, domácí tatarka, brusinky",
+        "price": 225
+      },
+      {
+        "name": "Pečená kuřecí čtvrtka na divoko se silnou šťávou z výpeku s jasmínovou rýží a bylinkami",
+        "price": 235
+      },
+      {
+        "name": "Hovězí smash burger s cheddarem, jalapeňos, křupavou a nakládanou cibulkou a umami majonézou",
+        "price": 245
+      },
+      {
+        "name": "Vepřová panenka (sous-vide) se smetanovo houbovou omáčkou a pečenou podzimní zeleninou",
+        "price": 255
+      },
+      {
+        "name": "Konfitované husí stehno se špekovým zelím, domácí špekový a houskový knedlík, silná omáčka z výpeku, vídeňská cibulka",
+        "price": 489
+      }
+    ],
+    "sourceUrl": "https://www.meatbeer.cz/menu/",
+    "scrapedAt": "2025-11-17T09:06:04.294Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2025-11-17",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Dýňová polévka s dýňovým chipsem a chilli olejem",
+        "price": 50,
+        "description": "Polévka"
+      },
+      {
+        "name": "Tradiční česká hovězí svíčková na smetaně s karlovarským knedlíkem",
+        "price": 189
+      },
+      {
+        "name": "Burger s vepřovými výpečky, červeným zelí, uzenou hořčičnou majonézou a smaženými olomouckými syrečky podávaný s domácími chipsy a majonézou z pečeného česneku",
+        "price": 249
+      }
+    ],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2025-11-17T09:06:09.789Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "saporevero",
+    "restaurantName": "Sapore Vero",
+    "date": "2025-11-17",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Hovězí vývar",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s mozzarellou",
+        "price": 179
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a mortadellou",
+        "price": 199
+      },
+      {
+        "name": "Penne s boloňskou omáčkou",
+        "price": 199
+      },
+      {
+        "name": "Rigatoni s ricottou a rajčaty",
+        "price": 199
+      },
+      {
+        "name": "Filet z lososa s rýží a hráškem",
+        "price": 259
+      }
+    ],
+    "sourceUrl": "https://www.saporevero.cz/",
+    "scrapedAt": "2025-11-17T09:06:15.515Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "nekazanka",
+    "restaurantName": "Bistro Nekázanka",
+    "date": "2025-11-17",
+    "dayOfWeek": "pondělí",
+    "items": [],
+    "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
+    "scrapedAt": "2025-11-17T09:06:22.304Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "kantyna",
+    "restaurantName": "Kantýna",
+    "date": "2025-11-17",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Boršč",
+        "price": 112
+      },
+      {
+        "name": "Karbanátek - bramborová kaše",
+        "price": 258
+      }
+    ],
+    "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
+    "scrapedAt": "2025-11-17T09:06:24.581Z",
+    "isAvailable": true
+  }
+]
