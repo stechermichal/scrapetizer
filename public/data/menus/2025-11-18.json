@@ -171,15 +171,33 @@
     "dayOfWeek": "úterý",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Celerový krém se šunkou",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s krevetami",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, šunkou a houbami",
+        "price": 199
+      },
+      {
+        "name": "Penne s rajčaty a chilli",
+        "price": 199
+      },
+      {
+        "name": "Gnocchi s kuřetem, špenátem a smetanou",
+        "price": 199
+      },
+      {
+        "name": "Vepřové medailonky z panenky s hranolkami a omáčkou ze zeleného pepře",
+        "price": 239
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2025-11-18T09:07:38.130Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2025-11-18T10:05:21.580Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
