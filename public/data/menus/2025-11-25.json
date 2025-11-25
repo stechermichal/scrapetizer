@@ -218,5 +218,36 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2025-11-25T09:08:36.771Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2025-11-25",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Hovězí vývar s játrovými knedlíčky",
+        "price": 59
+      },
+      {
+        "name": "Řízečky z vepřové panenky bylinkové strouhance, brambory vařené v páře, okurkový salát s kysanou smetanou a koprem",
+        "price": 249
+      },
+      {
+        "name": "Kuřecí kung - pao s arašídy a jarní cibulkou, jasmínová rýže",
+        "price": 189
+      },
+      {
+        "name": "Falešná hovězí svíčková na česneku, šťouchané brambory se špenátem",
+        "price": 189
+      },
+      {
+        "name": "Bavorské klobásy s hrachovou kaší a cibulkou, kyselá okurka",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2025-11-25T09:47:12.522Z",
+    "isAvailable": true
   }
 ]
