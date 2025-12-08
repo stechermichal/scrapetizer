@@ -171,15 +171,33 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Mrkvový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s tuňákem",
+        "price": 179
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, šunkou a paprikou",
+        "price": 199
+      },
+      {
+        "name": "Rigatoni s krevetami v rajčatovo",
+        "price": 219
+      },
+      {
+        "name": "Gnocchi s ricottou a rajčatovou omáčkou",
+        "price": 199
+      },
+      {
+        "name": "Telecí brisket s vařeným bramborem",
+        "price": 249
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2025-12-08T09:07:32.119Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2025-12-08T10:05:07.390Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
