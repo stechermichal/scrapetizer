@@ -1,0 +1,193 @@
+[
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2025-12-23",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Gulášová polévka",
+        "price": 45,
+        "description": "S hovězím masem, mletou paprikou a bramborem"
+      },
+      {
+        "name": "Kuřecí vývar s domácími nudlemi",
+        "price": 45,
+        "description": "Kuřecí vývar s masem, zeleninou a domácími nudlemi"
+      },
+      {
+        "name": "Panenka v panko strouhance",
+        "price": 154,
+        "description": "Smažená vepřová panenka v panko strouhance s bramborovou kaší a okurkovým salátem"
+      },
+      {
+        "name": "Pečené kukuřičné kuře",
+        "price": 165,
+        "description": "Na másle pečené kukuřičné kuře podávané se šťávou z výpeku, pařížskou karotkou a pečenými bramborami grenaille"
+      },
+      {
+        "name": "Kung pao",
+        "price": 149,
+        "description": "Z kuřecích stehen s pórkem, arašídy, sójovou omáčkou a jasmínovou rýží"
+      },
+      {
+        "name": "Divočák na víně",
+        "price": 159,
+        "description": "Dušený divočák se zeleninou, červeným vínem, bramborové placky se švestkami. kapusta se slaninou"
+      },
+      {
+        "name": "Strapačky s trhanou kachnou",
+        "price": 154,
+        "description": "Bramborové strapačky s kysaným červeným zelím, trhanou kachnou a křupavou cibulkou"
+      },
+      {
+        "name": "Plzeňský guláš",
+        "price": 175,
+        "description": "Guláš z hovězího karabáčku s mletou paprikou a česnekem, žemlovým knedlíkem a opečeným špekáčkem s cibulí a kapií"
+      },
+      {
+        "name": "Grilovaný kuřecí steak",
+        "price": 144,
+        "description": "Plátek kuřecích prsou, šťáva z výpeku, hráškové pyré, vařená zelenina s pohankou"
+      },
+      {
+        "name": "Telecí pavouček",
+        "price": 195,
+        "description": "Dušený telecí pavouček s omáčkou se sušenými houbami, kořenovou zeleninou, koprem a vídeňským knedlíkem"
+      },
+      {
+        "name": "Čokoládová pěna s ovocem",
+        "price": 45
+      }
+    ],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
+    "scrapedAt": "2025-12-23T09:06:40.678Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2025-12-23",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Jihočeská kulajda s houbami a koprem",
+        "price": 59
+      },
+      {
+        "name": "Kuřecí prsa suprème s holandskou omáčkou, zelenina na másle, pečené zámecké brambory s rozmarýnem",
+        "price": 239
+      },
+      {
+        "name": "Holandský řízek se sýrem gouda, bramborová kaše, okurkový salát",
+        "price": 189
+      },
+      {
+        "name": "Halušky s uzeným masem a kysaným zelím, vídeňská cibulka",
+        "price": 189
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2025-12-23T09:06:43.217Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "meatbeer",
+    "restaurantName": "Meat Beer",
+    "date": "2025-12-23",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Zelná polévka s kovářskou klobásou, bramborami a čerstvým libečkem",
+        "price": 85,
+        "description": "Polévka"
+      },
+      {
+        "name": "Pečená vinná klobása s máslovou bramborovou kaší, silnou bylinkovou omáčkou a nakládanou cibulí",
+        "price": 245
+      },
+      {
+        "name": "Tutovka: streetovka: meatovka: srdcovka: svíčková na smetaně z hovězí loupané plece s karlovarským knedlíkem, brusinkami a šlehačkou",
+        "price": 445
+      },
+      {
+        "name": "Dezerty domácí vánočka s marmeládou z černého rybízu, meduňka a karamelizovaná kůra z pomerančů",
+        "price": 115
+      },
+      {
+        "name": "Kremrole plněná domácím vanilkovým krémem s karamelizovanými broskvemi a praskacím cukrem ,,tip\"",
+        "price": 128
+      },
+      {
+        "name": "Čokoládové brownies s vanilkovou zmrzlinou",
+        "price": 128
+      },
+      {
+        "name": "Mandlový věneček s vanilkovým krémem",
+        "price": 128
+      }
+    ],
+    "sourceUrl": "https://www.meatbeer.cz/menu/",
+    "scrapedAt": "2025-12-23T09:06:50.335Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2025-12-23",
+    "dayOfWeek": "úterý",
+    "items": [],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2025-12-23T09:06:55.723Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "saporevero",
+    "restaurantName": "Sapore Vero",
+    "date": "2025-12-23",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Menu not posted yet",
+        "price": 0,
+        "description": "Check back later"
+      }
+    ],
+    "sourceUrl": "https://www.saporevero.cz/",
+    "scrapedAt": "2025-12-23T09:07:02.274Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "nekazanka",
+    "restaurantName": "Bistro Nekázanka",
+    "date": "2025-12-23",
+    "dayOfWeek": "úterý",
+    "items": [],
+    "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
+    "scrapedAt": "2025-12-23T09:07:08.640Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "kantyna",
+    "restaurantName": "Kantýna",
+    "date": "2025-12-23",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Česnečka s chlebovými krutony",
+        "price": 108
+      },
+      {
+        "name": "Segedínský guláš - houskové knedlíky",
+        "price": 258
+      }
+    ],
+    "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
+    "scrapedAt": "2025-12-23T09:07:10.586Z",
+    "isAvailable": true
+  }
+]
