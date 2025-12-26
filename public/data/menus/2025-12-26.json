@@ -1,0 +1,132 @@
+[
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2025-12-26",
+    "dayOfWeek": "pátek",
+    "items": [],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
+    "scrapedAt": "2025-12-26T09:05:36.601Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2025-12-26",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "2. svátek vánoční",
+        "price": 10
+      },
+      {
+        "name": "Objednávky online",
+        "price": 0,
+        "description": "Na vašem soukromí nám záleží"
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2025-12-26T09:05:39.156Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "meatbeer",
+    "restaurantName": "Meat Beer",
+    "date": "2025-12-26",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Zelná polévka s kovářskou klobásou, bramborami a čerstvým libečkem",
+        "price": 85,
+        "description": "Polévka"
+      },
+      {
+        "name": "Pečená vinná klobása s máslovou bramborovou kaší, silnou bylinkovou omáčkou a nakládanou cibulí",
+        "price": 245
+      },
+      {
+        "name": "Tutovka: streetovka: meatovka: srdcovka: svíčková na smetaně z hovězí loupané plece s karlovarským knedlíkem, brusinkami a šlehačkou",
+        "price": 445
+      },
+      {
+        "name": "Dezerty domácí vánočka s marmeládou z černého rybízu, meduňka a karamelizovaná kůra z pomerančů",
+        "price": 115
+      },
+      {
+        "name": "Kremrole plněná domácím vanilkovým krémem s karamelizovanými broskvemi a praskacím cukrem ,,tip\"",
+        "price": 128
+      },
+      {
+        "name": "Čokoládové brownies s vanilkovou zmrzlinou",
+        "price": 128
+      },
+      {
+        "name": "Mandlový věneček s vanilkovým krémem",
+        "price": 128
+      }
+    ],
+    "sourceUrl": "https://www.meatbeer.cz/menu/",
+    "scrapedAt": "2025-12-26T09:05:46.607Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2025-12-26",
+    "dayOfWeek": "pátek",
+    "items": [],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2025-12-26T09:05:52.179Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "saporevero",
+    "restaurantName": "Sapore Vero",
+    "date": "2025-12-26",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Menu not posted yet",
+        "price": 0,
+        "description": "Check back later"
+      }
+    ],
+    "sourceUrl": "https://www.saporevero.cz/",
+    "scrapedAt": "2025-12-26T09:05:59.807Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "nekazanka",
+    "restaurantName": "Bistro Nekázanka",
+    "date": "2025-12-26",
+    "dayOfWeek": "pátek",
+    "items": [],
+    "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
+    "scrapedAt": "2025-12-26T09:06:06.371Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "kantyna",
+    "restaurantName": "Kantýna",
+    "date": "2025-12-26",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Špenátová polévka",
+        "price": 115
+      },
+      {
+        "name": "Smažená vinná klobása - bramborový salát",
+        "price": 258
+      }
+    ],
+    "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
+    "scrapedAt": "2025-12-26T09:06:09.311Z",
+    "isAvailable": true
+  }
+]
