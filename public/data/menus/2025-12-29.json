@@ -153,15 +153,29 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Zeleninový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s krevetkami",
+        "price": 189
+      },
+      {
+        "name": "Ravioli s pestem",
+        "price": 199
+      },
+      {
+        "name": "Tagliatelle s kuřecím masem a růžovou omáčkou tagliatelle with chicken and pink sauce",
+        "price": 199
+      },
+      {
+        "name": "Hovězí medailonky s pečenými bramborami a pepřovou omáčkou",
+        "price": 259
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2025-12-29T09:08:28.563Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2025-12-29T10:05:02.761Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
