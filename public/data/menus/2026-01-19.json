@@ -152,5 +152,102 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-01-19T09:12:47.042Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2026-01-19",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Hrachová polévka",
+        "price": 45,
+        "description": "Polévka ze zeleného hrachu s česnekem, majoránkou a paprikovou klobásou"
+      },
+      {
+        "name": "Květákový krém",
+        "price": 45,
+        "description": "Krémová květáková polévka s máslem, smetanou a opečenou houskou"
+      },
+      {
+        "name": "Smažené rybí filé",
+        "price": 149,
+        "description": "S vařeným bramborem, máslem, šnitlíkem a tatarskou omáčkou"
+      },
+      {
+        "name": "Kuřecí roláda se šunkou a sýrem",
+        "price": 154,
+        "description": "Pečená s máslem a kořením, šťáva z výpeku, bramborová kaše, máslová karotka"
+      },
+      {
+        "name": "Guláš z divočáka",
+        "price": 165,
+        "description": "Guláš z divočáka s červeným vínem, brusinkami, bramborové placky se sušenými švestkami, křupavou cibulkou a strouhaným čerstvým křenem"
+      },
+      {
+        "name": "Moravský vrabec",
+        "price": 149,
+        "description": "Z vepřové krkovice s česnekem, cibulí a kmínem, šťáva z výpeku, s dušeným zelím s červenou řepou a chlupatým knedlíkem"
+      },
+      {
+        "name": "Peanuts chicken",
+        "price": 154,
+        "description": "Kousky kuřecích prsou s arašídovou omáčkou s česnekem, zázvorem, koriandrem, kari kořením, kokosovým mlékem, jasmínovou rýží a nakládanou červenou cibulí"
+      },
+      {
+        "name": "Hovězí kyta s koprovou",
+        "price": 175,
+        "description": "Vařená hovězí kýta se smetanovou omáčkou s čerstvým koprem a kynutým houskovým knedlíkem"
+      },
+      {
+        "name": "Kuřecí steak",
+        "price": 154,
+        "description": "Grilovaný plátek kuřecích prsou, smetanová omáčka se šalvějí, americké brambory a grilovaná zelenina"
+      },
+      {
+        "name": "Pečený candát",
+        "price": 195,
+        "description": "Pečený filet z candáta, krémová vinná omáčka, karotkové pyré, romanesco"
+      },
+      {
+        "name": "Tiramisu",
+        "price": 45
+      }
+    ],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
+    "scrapedAt": "2026-01-19T10:07:06.729Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-01-19",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Cizrnová polévka s koriandrem",
+        "price": 59
+      },
+      {
+        "name": "Pečený filet tresky s citrónovou omáčkou, brokolice na másle, pečené mladé brambory",
+        "price": 249
+      },
+      {
+        "name": "Krůtí závitek se slaninou a rozmarýnem, bramborová kaše, salát coleslaw",
+        "price": 189
+      },
+      {
+        "name": "Hovězí na žampiónech, dušená jasmínová rýže",
+        "price": 189
+      },
+      {
+        "name": "Kuřecí křídla v bbq marinádě, zelenina, bylinkový dip, bageta",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-01-19T10:07:09.498Z",
+    "isAvailable": true
   }
 ]
