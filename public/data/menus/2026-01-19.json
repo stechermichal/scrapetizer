@@ -1,0 +1,156 @@
+[
+  {
+    "restaurantId": "meatbeer",
+    "restaurantName": "Meat Beer",
+    "date": "2026-01-19",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Polévka: špenátový krém se smetanou a máslovými krutony",
+        "price": 85,
+        "description": "Polévka"
+      },
+      {
+        "name": "Špagety aglio olio a peperoncino se sýrem gran biraghi",
+        "price": 195
+      },
+      {
+        "name": "Masové koule v rajské omáčce s jasmínovou rýží a bylinkami",
+        "price": 225
+      },
+      {
+        "name": "Pikantní kuřecí křídla s chilli majonézou a domácími hranolkami",
+        "price": 235
+      },
+      {
+        "name": "Hovězí smash burger s jalapeňos, slaninou, nakládanou cibulí, cheddarem a domácí majonézou",
+        "price": 245
+      },
+      {
+        "name": "Grilovaný kuřecí supreme s omáčkou z modrého sýra s pečenou a nakládanou zeleninou",
+        "price": 255
+      },
+      {
+        "name": "Svíčková na smetaně z hovězí loupané plece s karlovarským knedlíkem, brusinkami a šlehačkou",
+        "price": 445
+      }
+    ],
+    "sourceUrl": "https://www.meatbeer.cz/menu/",
+    "scrapedAt": "2026-01-19T09:12:25.332Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2026-01-19",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Celerová polévka se zázvorem",
+        "price": 50,
+        "description": "Polévka"
+      },
+      {
+        "name": "Řecká musaka s mixem salátů a tzatziky",
+        "price": 185
+      },
+      {
+        "name": "Spaghetti aglio olio e peperoncino",
+        "price": 175
+      },
+      {
+        "name": "Hovězí burger s cheddarem, slaninou, kečupem, česnekovo-pažitkovou majonézou a salátkem s rajčaty podávaný s hranolky a dipem",
+        "price": 249
+      }
+    ],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2026-01-19T09:12:31.010Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "saporevero",
+    "restaurantName": "Sapore Vero",
+    "date": "2026-01-19",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Celerový krém s parmskou šunkou",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s grilovanými kalamáry",
+        "price": 189
+      },
+      {
+        "name": "Vegetariánská pinsa",
+        "price": 199
+      },
+      {
+        "name": "Rizoto s kuřecím masem a houbami",
+        "price": 199
+      },
+      {
+        "name": "Tagliatelle alla bolognese",
+        "price": 199
+      },
+      {
+        "name": "Grilované klobásy s hranolky a hořčicí",
+        "price": 239
+      }
+    ],
+    "sourceUrl": "https://www.saporevero.cz/",
+    "scrapedAt": "2026-01-19T09:12:37.578Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "nekazanka",
+    "restaurantName": "Bistro Nekázanka",
+    "date": "2026-01-19",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Hovězí vývar",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Bramborový salát s chobotnicí, rajčaty a olivami",
+        "price": 249
+      },
+      {
+        "name": "Spaghetti puttanesca",
+        "price": 209
+      },
+      {
+        "name": "Langoš s trhaným kachním masem",
+        "price": 249
+      },
+      {
+        "name": "Kuřecí stripsy na zeleninovém salátu",
+        "price": 219
+      }
+    ],
+    "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
+    "scrapedAt": "2026-01-19T09:12:44.575Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "kantyna",
+    "restaurantName": "Kantýna",
+    "date": "2026-01-19",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Hrachová polévka s párkem",
+        "price": 115
+      },
+      {
+        "name": "Hovězí guláš z kližky - špekové knedlíky",
+        "price": 258
+      }
+    ],
+    "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
+    "scrapedAt": "2026-01-19T09:12:47.042Z",
+    "isAvailable": true
+  }
+]
