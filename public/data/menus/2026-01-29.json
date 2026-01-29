@@ -4,12 +4,66 @@
     "restaurantName": "Restaurace Hybernská",
     "date": "2026-01-29",
     "dayOfWeek": "čtvrtek",
-    "items": [],
+    "items": [
+      {
+        "name": "Boršč",
+        "price": 45,
+        "description": "S masem, zeleninou, bramborem, červenou řepou a zakysanou smetanou"
+      },
+      {
+        "name": "Hovězí vývar s játrovou rýží",
+        "price": 45,
+        "description": "Hovězí vývar se zeleninou a játrovou rýží"
+      },
+      {
+        "name": "Tradiční šunkofleky",
+        "price": 144,
+        "description": "Vařené fleky s cibulí a rozpečenou šunkou od kosti, zapečené se šlehanými vejci a smetanou, kyselá okurka"
+      },
+      {
+        "name": "Kuře tikka masala",
+        "price": 149,
+        "description": "Smažené kousky kuřecích prsou marinovaných v jogurtu a omáčce z chilli, kokosového mléka, garam masala, česneku, kurkumy a rajčatového pyré s pečenou jasmínovou rýží s černou čočkou"
+      },
+      {
+        "name": "Guláš petra voka",
+        "price": 175,
+        "description": "Guláš z hovězího a vepřové masa s mletou paprikou, červeným vínem, rajčaty, paprikami, špekovým knedlíkem a zakysanou smetanou"
+      },
+      {
+        "name": "Špíz z vepřové panenky",
+        "price": 165,
+        "description": "S cibulí, paprikou, krémovou pepřovou omáčkou, zapečenými bramborami se smetanou a fazolovými lusky"
+      },
+      {
+        "name": "Bramborák s pečeným bokem",
+        "price": 154,
+        "description": "Domácí bramborák s pečeným vepřovým bokem, zelným salátem a zauzenou majonézou"
+      },
+      {
+        "name": "Smažený řízek",
+        "price": 154,
+        "description": "Z vepřové pečeně, marinovaný v hořčici a česneku, podávaný s bramborovou kaší a kyselou okurkou"
+      },
+      {
+        "name": "Ciabatta s trhaným vepřovým",
+        "price": 165,
+        "description": "Ciabatta, trhané vepřové maso s cibulí, slaninou, hořčicí, hranolky, česneková majonéza a trhaný listový salát"
+      },
+      {
+        "name": "Kuřecí prso supreme",
+        "price": 185,
+        "description": "Grilované kuřecí prso s kůží a křídlem, zámecké brambory, holandská omáčka, růžičková kapusta"
+      },
+      {
+        "name": "Mascarpone řez s višněmi",
+        "price": 45
+      }
+    ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
     "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
-    "scrapedAt": "2026-01-29T09:14:44.030Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-01-29T09:57:46.553Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "tiskarna",
