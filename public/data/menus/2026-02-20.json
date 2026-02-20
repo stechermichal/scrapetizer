@@ -1,0 +1,262 @@
+[
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2026-02-20",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Vichyssouise",
+        "price": 45,
+        "description": "Krémová polévka z brambor, pórku s opečenou houskou"
+      },
+      {
+        "name": "Česnečka",
+        "price": 45,
+        "description": "Se slaninou, bramborem, vejcem a smaženým chlebem"
+      },
+      {
+        "name": "Butter chicken",
+        "price": 149,
+        "description": "Kousky kuřecích prsou s cibulí, kokosovým mlékem, kešu oříšky, koriandrem, kurkumou a pečenou jasmínovou rýží"
+      },
+      {
+        "name": "Krůtí závitek se šunkou a vejci",
+        "price": 154,
+        "description": "Pečený závitek z krůtích prsou s pražskou šunkou a vejci, s karotkovým pyré a zahradní hrášek"
+      },
+      {
+        "name": "Kuřecí stripsy v kukuřici",
+        "price": 154,
+        "description": "Kousky kuřecích prsou v kukuřičné strouhance, bramborová kaše, kyselá okurka"
+      },
+      {
+        "name": "Boloňská hovězí směs",
+        "price": 149,
+        "description": "Mleté hovězí maso s červeným vínem, kořenovou zeleninou, s těstovinami penne a sýrem parmazán"
+      },
+      {
+        "name": "Segedínský guláš",
+        "price": 144,
+        "description": "Z vepřové plece s mletou paprikou, kysaným zelím, smetanou a houskovým knedlíkem"
+      },
+      {
+        "name": "Kuřecí steak",
+        "price": 149,
+        "description": "Ústřicová omáčka, pečené brambora, fazolové lusky s karotkou"
+      },
+      {
+        "name": "Stroganov z vepřové pečeně",
+        "price": 154,
+        "description": "Nudličky z vepřové pečeně v pikantní omáčce s cibulí, žampióny, okurkou, smetanou, hranolky"
+      },
+      {
+        "name": "Španělský ptáček 200g",
+        "price": 209,
+        "description": "Z hovězí kýty, hořčice, okurka, vejce, uzenina, špek, silná cibulová omáčka, pečená jasmínová rýže"
+      },
+      {
+        "name": "Kokoska",
+        "price": 45
+      }
+    ],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
+    "scrapedAt": "2026-02-20T09:14:39.591Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-02-20",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Hovězí vývar s celestýnskými nudlemi",
+        "price": 59
+      },
+      {
+        "name": "Hovězí cheeseburger se sýrem gouda a slaninou, koktejlovou majonézou a nakládanou cibulí, salát mesclun",
+        "price": 249
+      },
+      {
+        "name": "Pečené kuře na másle, bramborová kaše, šopský salát",
+        "price": 189
+      },
+      {
+        "name": "Rajská omáčka s vařeným hovězím masem, domácí houskové knedlíky",
+        "price": 189
+      },
+      {
+        "name": "Spaghetti aglio olio se slaninou a sýrem gran biraghi",
+        "price": 179
+      },
+      {
+        "name": "Objednávky online",
+        "price": 0,
+        "description": "Na vašem soukromí nám záleží"
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-02-20T09:14:41.833Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "meatbeer",
+    "restaurantName": "Meat Beer",
+    "date": "2026-02-20",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Polévka: francouzská cibulačka s tymiánem, bílým vínem, sýrem a krutonem",
+        "price": 85,
+        "description": "Polévka"
+      },
+      {
+        "name": "Parmazánové rizoto s bazalkovým pestem a grilovanou brokolicí",
+        "price": 185
+      },
+      {
+        "name": "Pečené kuřecí stehno na másle s jasmínovou rýží, čerstvou pažitkou a višňovým kompotem",
+        "price": 225
+      },
+      {
+        "name": "Hovězí guláš z krku s vídeňskou cibulkou a domácím houskovým knedlíkem",
+        "price": 235
+      },
+      {
+        "name": "Kuřecí burger s rajčatovou salsou, cheddarem, rajčaty, koriandrovou majonézou a jalapeňos",
+        "price": 245
+      },
+      {
+        "name": "Stařená vepřová kotleta na kosti, domácí hranolky a sýrová omáčka",
+        "price": 255
+      },
+      {
+        "name": "Svíčková na smetaně z hovězí loupané plece s karlovarským knedlíkem, brusinkami a šlehačkou",
+        "price": 445
+      }
+    ],
+    "sourceUrl": "https://www.meatbeer.cz/menu/",
+    "scrapedAt": "2026-02-20T09:14:48.758Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2026-02-20",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Gulášová polévka",
+        "price": 50,
+        "description": "Polévka"
+      },
+      {
+        "name": "Butter chicken s indickým chlebem a rajčatovým salátkem",
+        "price": 179
+      },
+      {
+        "name": "Variace smažených sýrů (mozzarella, gouda a chilli gouda) pečené grenaille a tatarská omáčka",
+        "price": 190
+      },
+      {
+        "name": "Hovězí burger s chilli cheddarem, slaninou, vídeňskou cibulkou, jalapeño-koriandrovou omáčkou, bbq omáčkou, rajčaty a salátkem podávaný s hranolky a dipem",
+        "price": 249
+      }
+    ],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2026-02-20T09:14:54.037Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "saporevero",
+    "restaurantName": "Sapore Vero",
+    "date": "2026-02-20",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Mrkvový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s kuřecím masem",
+        "price": 189
+      },
+      {
+        "name": "Pinsa se čtyřmi druhy sýra",
+        "price": 199
+      },
+      {
+        "name": "Ravioli s ricottou a rajčatovou omáčkou",
+        "price": 219
+      },
+      {
+        "name": "Penne s klobásou, žampiony a sušenými rajčaty",
+        "price": 209
+      },
+      {
+        "name": "Pečené telecí maso s vařeným bramborem",
+        "price": 259
+      }
+    ],
+    "sourceUrl": "https://www.saporevero.cz/",
+    "scrapedAt": "2026-02-20T09:14:59.896Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "nekazanka",
+    "restaurantName": "Bistro Nekázanka",
+    "date": "2026-02-20",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Brokolicový krém",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Zapečený uzený sýr, olivy, cibulka, rozmarýnové brambory",
+        "price": 219
+      },
+      {
+        "name": "Šafránové risotto s kuřecím masem",
+        "price": 229
+      },
+      {
+        "name": "Spaghetti genovese",
+        "price": 209
+      },
+      {
+        "name": "Čevabčiči s pečeným bramborem a ajvarem",
+        "price": 219
+      },
+      {
+        "name": "Vepřový perkelt s haluškami",
+        "price": 239
+      }
+    ],
+    "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
+    "scrapedAt": "2026-02-20T09:15:05.940Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "kantyna",
+    "restaurantName": "Kantýna",
+    "date": "2026-02-20",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Dršťková polévka",
+        "price": 115
+      },
+      {
+        "name": "Smažený kuřecí řízek - bramborový salát",
+        "price": 308
+      }
+    ],
+    "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
+    "scrapedAt": "2026-02-20T09:15:08.375Z",
+    "isAvailable": true
+  }
+]
