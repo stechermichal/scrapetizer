@@ -243,14 +243,16 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Kuřecí vývar",
+        "price": 115
+      },
+      {
+        "name": "Grilovaná vepřová panenka - pepřová omáčka, pečené brambory",
+        "price": 345
       }
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
-    "scrapedAt": "2026-02-23T09:17:20.238Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-02-23T10:19:48.985Z",
+    "isAvailable": true
   }
 ]
