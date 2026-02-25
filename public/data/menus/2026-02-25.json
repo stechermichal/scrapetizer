@@ -172,15 +172,33 @@
     "dayOfWeek": "středa",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Špenátový krém",
+        "price": 59
+      },
+      {
+        "name": "Míchaný salát s burratou",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a zeleninou",
+        "price": 199
+      },
+      {
+        "name": "Risotto s rajčatovou omáčkou a syrem stracciatella",
+        "price": 209
+      },
+      {
+        "name": "Penne s guanciale, rajčatovou omáčkou a chilli",
+        "price": 219
+      },
+      {
+        "name": "Grilovaná kuřecí prsa s hranolkami a houbovou omáčkou",
+        "price": 249
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-02-25T09:11:45.412Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-02-25T09:24:01.481Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
