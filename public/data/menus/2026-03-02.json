@@ -238,14 +238,16 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Cibulačka s krutony",
+        "price": 115
+      },
+      {
+        "name": "Smažený karbanátek - bramborová kaše",
+        "price": 258
       }
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
-    "scrapedAt": "2026-03-02T09:18:03.221Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-03-02T10:16:50.544Z",
+    "isAvailable": true
   }
 ]
