@@ -220,5 +220,36 @@
     "scrapedAt": "2026-03-25T09:21:55.261Z",
     "isAvailable": false,
     "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-03-25",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Středomořská rajčatová polévka s rybou",
+        "price": 59
+      },
+      {
+        "name": "Vepřová líčka na červeném víně, restované žampióny a cibulky, bramborové pyré",
+        "price": 239
+      },
+      {
+        "name": "Kuřecí prsa v bylinkovém těstíčku, bramborový salát s majonézou",
+        "price": 189
+      },
+      {
+        "name": "Dýňové risotto z rýže arborio se sýrem provolone piccante",
+        "price": 189
+      },
+      {
+        "name": "Masové kuličky v rajské omáčce, těstoviny kolínka",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-03-25T10:17:57.793Z",
+    "isAvailable": true
   }
 ]
