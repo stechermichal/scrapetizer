@@ -216,5 +216,36 @@
     "scrapedAt": "2026-04-08T08:28:04.525Z",
     "isAvailable": false,
     "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-04-08",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Zeleninový boršč s koprem",
+        "price": 59
+      },
+      {
+        "name": "Trhaná hovězí plec na červeném víně s restovanými žampióny a zeleninou, pastinákové pyré",
+        "price": 239
+      },
+      {
+        "name": "Domácí karbanátek, šťouchané brambory s cibulkou, rajčatový salát",
+        "price": 189
+      },
+      {
+        "name": "Kuřecí kari rizoto se sýrem a kyselou okurkou",
+        "price": 189
+      },
+      {
+        "name": "Koprovka s vejcem 63°, pečené zámecké brambory",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-04-08T09:25:20.937Z",
+    "isAvailable": true
   }
 ]
