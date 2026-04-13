@@ -216,5 +216,33 @@
     "scrapedAt": "2026-04-13T08:45:29.405Z",
     "isAvailable": false,
     "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-04-13",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Frankfurtská s párky",
+        "price": 249,
+        "description": "Náš tip: telecí medajlonky s omáčkou bèarnaise, brokolice na másle, pečené americké brambory"
+      },
+      {
+        "name": "Kuřecí řízek v sýrovém těstíčku, brambory, salát coleslaw",
+        "price": 189
+      },
+      {
+        "name": "Hovězí karabáček na česneku, smetanový špenát, šumavské knedlíky",
+        "price": 189
+      },
+      {
+        "name": "Linguine s mozzarellou, rajčatovou omáčkou a bazalkou",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-04-13T09:36:11.746Z",
+    "isAvailable": true
   }
 ]
