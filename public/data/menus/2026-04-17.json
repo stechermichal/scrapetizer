@@ -221,5 +221,41 @@
     "scrapedAt": "2026-04-17T08:37:31.804Z",
     "isAvailable": false,
     "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-04-17",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Kuřecí vývar s celestýnskými nudlemi",
+        "price": 59
+      },
+      {
+        "name": "Vepřová panenka s omáčkou ze zeleného pepře, barevná karotka na másle, šťouchané brambory se slaninou",
+        "price": 239
+      },
+      {
+        "name": "Pečené kuře na másle, bramborová kaše, šopský salát",
+        "price": 189
+      },
+      {
+        "name": "Rajská omáčka s vařeným hovězím masem, domácí houskové knedlíky",
+        "price": 189
+      },
+      {
+        "name": "Burrito papriky plněné cheddarem a fazolemi, tortilla chips, salsa",
+        "price": 179
+      },
+      {
+        "name": "Objednávky online",
+        "price": 0,
+        "description": "Na vašem soukromí nám záleží"
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-04-17T09:32:17.620Z",
+    "isAvailable": true
   }
 ]
