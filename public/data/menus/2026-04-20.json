@@ -1,0 +1,208 @@
+[
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2026-04-20",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Fazolová polévka",
+        "price": 45,
+        "description": "Polévka z bílých fazolí s klobásou, mletou paprikou a bramborem"
+      },
+      {
+        "name": "Vichyssouise",
+        "price": 45,
+        "description": "Krémová polévka z brambor, pórku s opečenou houskou"
+      },
+      {
+        "name": "Smažený sýr 45%",
+        "price": 159,
+        "description": "Smažený jihočeský eidam s vařeným bramborem, máslem a tatarskou omáčkou"
+      },
+      {
+        "name": "Výpečky z vepřové boku",
+        "price": 154,
+        "description": "Pečený vepřový bok s česnekem, kmínem, cibulí, šťávou z výpeku, listovým špenátem a bramborovými šiškami"
+      },
+      {
+        "name": "Žluté kari s kuřetem",
+        "price": 149,
+        "description": "Z kuřecích stehen, pikantní omáčka s kokosovým mlékem, nakládaná zelenina, pečená jasmínová rýže"
+      },
+      {
+        "name": "Krůta po burgundsku",
+        "price": 165,
+        "description": "Z krůtích prsou s omáčkou z kořenové zeleniny a červeného vína, bramborovou kaší a kořenovou zeleninou"
+      },
+      {
+        "name": "Svíčková z daňka",
+        "price": 169,
+        "description": "Dušená dančí plec, svíčková omáčka, kynutý houskový knedlík a brusinky"
+      },
+      {
+        "name": "Panenka sous vide",
+        "price": 154,
+        "description": "V celku pečená vepřová panenka, smetanová pivní omáčka, čočka beluga, zahradní hrášek, perlová cibulka"
+      },
+      {
+        "name": "Katův šleh",
+        "price": 149,
+        "description": "Z vepřové pečeně v pikantní rajčatové omáčce se zeleninou, americké brambory, dijonská majonéza"
+      },
+      {
+        "name": "300g vepřová kotleta tomahawk",
+        "price": 195,
+        "description": "Grilovaná vepřová kotleta s dlouhou kosti, jablečný juice, cizrnové ragú, kadeřávek"
+      },
+      {
+        "name": "Kokosový řez",
+        "price": 45
+      }
+    ],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
+    "scrapedAt": "2026-04-20T08:17:43.618Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "meatbeer",
+    "restaurantName": "Meat Beer",
+    "date": "2026-04-20",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Polévka: česnekový krém s krutony",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Zeleninový salát s fazolkami edamame, sladkokyselou zálivkou, nakládanými rajčaty a mungo klíčky",
+        "price": 179
+      },
+      {
+        "name": "Bramborové noky s kuřecím masem, špenátem a smetanovou omáčkou",
+        "price": 189
+      },
+      {
+        "name": "Houbový kuba s vypečenou slaninou a čerstvou majoránkou",
+        "price": 199
+      }
+    ],
+    "sourceUrl": "https://www.meatbeer.cz/menu/",
+    "scrapedAt": "2026-04-20T08:20:05.348Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2026-04-20",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Kukuřičný krém s chilli",
+        "price": 50,
+        "description": "Polévka"
+      },
+      {
+        "name": "Kapustové karbanátky se sýrem a máslovou bramborovou kaší",
+        "price": 169
+      },
+      {
+        "name": "Quesadilla s kuřecím masem, bbq, chedarem a ledovým salátem podávaná s kroketami a dipem",
+        "price": 195
+      },
+      {
+        "name": "Hovězí burger s cheddarem, slaninou, kečupem, česnekovo-pažitkovou majonézou a salátkem s rajčaty podávaný s hranolky a dipem",
+        "price": 249
+      }
+    ],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2026-04-20T08:20:10.805Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "saporevero",
+    "restaurantName": "Sapore Vero",
+    "date": "2026-04-20",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Hovězí polévka",
+        "price": 65
+      },
+      {
+        "name": "Míchaný salát s tuňákem",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou z buvolího mléka a bazalkou",
+        "price": 209
+      },
+      {
+        "name": "Tagliatelle s rajčaty, burratou a bazalkou",
+        "price": 209
+      },
+      {
+        "name": "Špagety s česnekem, olivovým olejem, chilli papričkou a krevetkami",
+        "price": 229
+      },
+      {
+        "name": "Grilovaný losos se zelenými fazolkami",
+        "price": 269
+      }
+    ],
+    "sourceUrl": "https://www.saporevero.cz/",
+    "scrapedAt": "2026-04-20T08:20:17.569Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "nekazanka",
+    "restaurantName": "Bistro Nekázanka",
+    "date": "2026-04-20",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Hovězí vývar",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Zelený chřest se šunkou, zastřeným vejcem a holandskou omáčkou",
+        "price": 229
+      },
+      {
+        "name": "Spaghetti carbonara",
+        "price": 209
+      },
+      {
+        "name": "Pečené kuřecí stehno s bramborovou kaší a okurkovým salátem",
+        "price": 219
+      },
+      {
+        "name": "Candát s cibulovým quichem a zeleným chřestem",
+        "price": 329
+      }
+    ],
+    "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
+    "scrapedAt": "2026-04-20T08:20:25.109Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "kantyna",
+    "restaurantName": "Kantýna",
+    "date": "2026-04-20",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Menu not posted yet",
+        "price": 0,
+        "description": "Check back later"
+      }
+    ],
+    "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
+    "scrapedAt": "2026-04-20T08:20:38.476Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  }
+]
