@@ -204,5 +204,33 @@
     "scrapedAt": "2026-04-20T08:20:38.476Z",
     "isAvailable": false,
     "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-04-20",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Hovězí vývar s fritátovými nudlemi",
+        "price": 249,
+        "description": "Náš tip: quesadilla s kuřetem, sýrem cheddar a gouda, pikantní rajčatová salsa, hranolky s limetovou majonézou"
+      },
+      {
+        "name": "Bramborové gnocchi s tuňákem, sušenými rajčaty, baby špenát",
+        "price": 189
+      },
+      {
+        "name": "Srbské rizoto s vepřovým masem a balkánským sýrem, kyselá okurka",
+        "price": 189
+      },
+      {
+        "name": "Mexický guláš z hovězího karabáčku s fazolemi, jasmínová rýže",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-04-20T08:45:49.795Z",
+    "isAvailable": true
   }
 ]
