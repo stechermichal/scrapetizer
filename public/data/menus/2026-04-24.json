@@ -191,5 +191,42 @@
     "scrapedAt": "2026-04-24T08:44:53.193Z",
     "isAvailable": false,
     "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-04-24",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Gulášová polévka",
+        "price": 59
+      },
+      {
+        "name": "Porchetta - pečená roláda z vepřového boku s bylinkami, špenát se sýrem gran biraghi a smetanou, bramborová kaše",
+        "price": 229
+      },
+      {
+        "name": "Smažený květák, pažitkové brambory, domácí tatarská omáčka",
+        "price": 189,
+        "description": "1,3,6,7,8,9,10,11,12"
+      },
+      {
+        "name": "Trhaná hlíva v pita chlebu, okurkové tzatziki, mesclun",
+        "price": 189
+      },
+      {
+        "name": "Hovězí tokáň na bílém víně s paprikami, dušená rýže",
+        "price": 179
+      },
+      {
+        "name": "Objednávky online",
+        "price": 0,
+        "description": "Na vašem soukromí nám záleží"
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-04-24T09:34:02.354Z",
+    "isAvailable": true
   }
 ]
