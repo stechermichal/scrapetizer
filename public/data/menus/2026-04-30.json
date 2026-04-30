@@ -226,14 +226,17 @@
     "dayOfWeek": "čtvrtek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Kulajda",
+        "price": 138
+      },
+      {
+        "name": "Hovězí soté se zeleninou",
+        "price": 258,
+        "description": "Rýže"
       }
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
-    "scrapedAt": "2026-04-30T08:04:48.177Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-04-30T08:55:20.344Z",
+    "isAvailable": true
   }
 ]
