@@ -1,5 +1,6 @@
 import { BaseScraper } from './base';
 import { MenuItem } from '../types';
+import { getCurrentCzechDay } from '../utils/czech-days';
 
 export class MeatbeerScraper extends BaseScraper {
   protected getMenuUrl(): string {
@@ -8,100 +9,84 @@ export class MeatbeerScraper extends BaseScraper {
 
   async extractMenuItems(): Promise<MenuItem[]> {
     console.log('🥩 Scraping Meat Beer menu...');
-    
+
     try {
-      // Wait for page content to load
       await this.page!.waitForTimeout(3000);
-      
-      const items = await this.page!.evaluate(() => {
-        const menuItems: { name: string; price: number; description?: string }[] = [];
-        
-        // Get all text content from the page
-        const pageText = document.body.innerText;
-        
-        let inSoupSection = false;
-        let inMainSection = false;
-        
-        // Split the page into lines
-        const lines = pageText.split('\n').map(line => line.trim()).filter(line => line.length > 0);
-        
-        for (let i = 0; i < lines.length; i++) {
-          const line = lines[i];
-          
-          // Check if we've hit the grill section (where lunch menu ends)
-          if (line.includes('Z MEAT BEER GRILU NA DŘEVĚNÉM UHLÍ')) {
+
+      const todayCzech = getCurrentCzechDay();
+
+      const items = await this.page!.evaluate((todayCzech: string) => {
+        const dayLabels = ['neděle', 'pondělí', 'úterý', 'středa', 'čtvrtek', 'pátek', 'sobota'];
+        const todayIdx = dayLabels.indexOf(todayCzech);
+        if (todayIdx < 1 || todayIdx > 5) return []; // weekends: no lunch menu
+
+        const text = document.body.innerText;
+        const rawLines = text.split('\n');
+        const lines: string[] = [];
+        for (let k = 0; k < rawLines.length; k++) {
+          const t = rawLines[k].trim();
+          if (t) lines.push(t);
+        }
+
+        // Lunch block starts at the "OBĚD" header
+        let start = -1;
+        for (let k = 0; k < lines.length; k++) {
+          if (lines[k] === 'OBĚD') {
+            start = k;
             break;
           }
-          
-          // Check for section headers
-          if (line === 'POLÉVKY' || line.includes('POLÉVKY')) {
-            inSoupSection = true;
-            inMainSection = false;
+        }
+        if (start === -1) return [];
+
+        let currentDay = '';
+        let pendingName = '';
+        const collected: { name: string; price: number }[] = [];
+
+        for (let i = start + 1; i < lines.length; i++) {
+          const line = lines[i];
+
+          // End markers — exit the lunch block
+          if (
+            line.startsWith('ZAREZERVUJTE') ||
+            line.startsWith('USPOŘÁDEJTE') ||
+            line.startsWith('Ať už hledáte') ||
+            line === 'DOMŮ'
+          ) {
+            break;
+          }
+
+          const lower = line.toLocaleLowerCase('cs-CZ');
+          if (dayLabels.indexOf(lower) !== -1) {
+            currentDay = lower;
+            pendingName = '';
             continue;
           }
-          
-          if (line === 'HLAVNÍ JÍDLA' || line.includes('HLAVNÍ JÍDLA')) {
-            inSoupSection = false;
-            inMainSection = true;
-            continue;
-          }
-          
-          // Parse items if we're in soup or main course sections
-          if (inSoupSection || inMainSection) {
-            // Look for price pattern
-            const priceMatch = line.match(/(\d+)\s*Kč/);
-            
-            if (priceMatch) {
-              const price = parseInt(priceMatch[1]);
-              
-              // Get the item name from previous line(s)
-              let name = '';
-              let j = i - 1;
-              
-              // Go back to find the name (might be multi-line)
-              while (j >= 0) {
-                const prevLine = lines[j];
-                
-                // Stop if we hit another price or a section header
-                if (prevLine.match(/\d+\s*Kč/) || 
-                    prevLine.includes('POLÉVKY') || 
-                    prevLine.includes('HLAVNÍ JÍDLA')) {
-                  break;
-                }
-                
-                // Prepend this line to the name
-                name = prevLine + (name ? ' ' + name : '');
-                j--;
-              }
-              
-              // Clean up the name
-              name = name
-                .replace(/^(BEZMASOVKA|RYCHLOVKA|TUTOVKA|STREETOVKA|MEATOVKA|SRDCOVKA):\s*/i, '')
-                .trim();
-              
-              if (name && price > 0 && price < 500) {
-                menuItems.push({
-                  name,
-                  price,
-                  description: inSoupSection ? 'Polévka' : undefined
-                });
-              }
-            }
+
+          if (currentDay !== todayCzech) continue;
+
+          // Day-level "no menu" markers (e.g. "Státní svátek", "Zavřeno")
+          if (/státní svátek/i.test(line) || /^zavřeno/i.test(line)) break;
+
+          const priceMatch = line.match(/^(\d+)\s*Kč$/);
+          if (priceMatch && pendingName) {
+            collected.push({ name: pendingName, price: parseInt(priceMatch[1], 10) });
+            pendingName = '';
+          } else if (!priceMatch) {
+            pendingName = pendingName ? pendingName + ' ' + line : line;
           }
         }
-        
-        return menuItems;
-      });
-      
+
+        return collected;
+      }, todayCzech);
+
       console.log(`✅ Found ${items.length} items at Meat Beer`);
-      
-      // Normalize text
-      return items.map(item => ({
-        ...item,
+
+      return items.map((item, idx) => ({
         name: this.normalizeText(item.name),
-        description: item.description ? this.normalizeText(item.description) : undefined
+        price: item.price,
+        // First item each day is the soup (cheapest, ~59 Kč in current format)
+        description: idx === 0 ? this.normalizeText('Polévka') : undefined,
       }));
-      
     } catch (error) {
       console.error('Error scraping Meat Beer:', error);
       return [];

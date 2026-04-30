@@ -101,11 +101,28 @@
     "restaurantName": "Meat Beer",
     "date": "2026-04-30",
     "dayOfWeek": "čtvrtek",
-    "items": [],
+    "items": [
+      {
+        "name": "Fazolová polévka s opečenou klobásou",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Tvarohové knedlíky plněné jahodami a borůvkami",
+        "price": 179
+      },
+      {
+        "name": "Gnocchi se sýrovou omáčkou a kuřecím masem",
+        "price": 189
+      },
+      {
+        "name": "Koprovka s vejcem na hniličko a pečenými brambůrky",
+        "price": 199
+      }
+    ],
     "sourceUrl": "https://www.meatbeer.cz/menu/",
-    "scrapedAt": "2026-04-30T08:04:16.902Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-04-30T08:48:00.850Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "magburger",
