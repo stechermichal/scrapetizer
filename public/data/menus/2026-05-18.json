@@ -223,14 +223,16 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Houbová polévka",
+        "price": 115
+      },
+      {
+        "name": "Grilovaná klobása, hrachová kaše",
+        "price": 258
       }
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
-    "scrapedAt": "2026-05-18T09:10:59.618Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-05-18T09:26:12.905Z",
+    "isAvailable": true
   }
 ]
