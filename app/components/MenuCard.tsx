@@ -27,7 +27,7 @@ export function MenuCard({ menu }: MenuCardProps) {
       e.stopPropagation();
     }
   };
-  
+
   return (
     <Card className="hover:shadow-lg transition-shadow flex-shrink-0 w-80 overflow-hidden flex flex-col gap-0 max-h-full">
       {/* Fixed header */}
@@ -35,10 +35,10 @@ export function MenuCard({ menu }: MenuCardProps) {
         <div className="px-6 pb-3 -mt-2">
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              <h3 className="font-semibold flex items-center gap-2">
+              <h2 className="font-semibold flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
                 {menu.restaurantName}
-              </h3>
+              </h2>
             </div>
             <div className="flex items-center gap-2">
               {menu.instagramUrl && (
@@ -66,15 +66,14 @@ export function MenuCard({ menu }: MenuCardProps) {
         </div>
         <div className="border-b" />
       </div>
-      <div 
-        className="flex-1 overflow-y-auto"
-        onScroll={handleScroll}
-        onWheel={handleWheel}
-      >
+      <div className="flex-1 overflow-y-auto" onScroll={handleScroll} onWheel={handleWheel}>
         {hasItems ? (
           <div className="space-y-3 px-6 pb-6">
             {menu.items.map((item, index) => (
-              <div key={index} className={`border-b last:border-b-0 pb-3 last:pb-0 ${index === 0 ? 'pt-3' : ''}`}>
+              <div
+                key={index}
+                className={`border-b last:border-b-0 pb-3 last:pb-0 ${index === 0 ? 'pt-3' : ''}`}
+              >
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex-1">
                     <h4 className="font-medium text-sm leading-tight">

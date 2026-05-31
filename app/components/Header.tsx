@@ -1,7 +1,6 @@
 'use client';
 
-import { format } from 'date-fns';
-import { cs } from 'date-fns/locale';
+import { formatPragueLongDate, formatPragueTime } from '@/lib/utils/date';
 import { RefreshCw, Utensils } from 'lucide-react';
 
 interface HeaderProps {
@@ -12,7 +11,7 @@ interface HeaderProps {
 }
 
 export function Header({ lastUpdated, loading, isScraping, onRefresh }: HeaderProps) {
-  const today = format(new Date(), 'EEEE d. MMMM', { locale: cs });
+  const today = formatPragueLongDate();
 
   return (
     <header className="flex-shrink-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
@@ -25,11 +24,11 @@ export function Header({ lastUpdated, loading, isScraping, onRefresh }: HeaderPr
               <p className="text-sm text-muted-foreground">{today}</p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-4">
             {lastUpdated && (
               <p className="text-xs text-muted-foreground">
-                Last updated: {format(new Date(lastUpdated), 'HH:mm')}
+                Last updated: {formatPragueTime(lastUpdated)}
               </p>
             )}
             <button
