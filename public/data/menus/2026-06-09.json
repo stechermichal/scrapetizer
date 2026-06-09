@@ -210,5 +210,33 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-06-09T07:48:07.350Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2026-06-09",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Francouzská cibulačka se sýrovým toustem",
+        "price": 50,
+        "description": "Polévka"
+      },
+      {
+        "name": "Salát a koktejlovými krevetami, mangem, koriandrem, mungo klíčky a chilli dresinkem",
+        "price": 190
+      },
+      {
+        "name": "Halušky s brynzou, zelím a slaninou",
+        "price": 175
+      },
+      {
+        "name": "Single crispy chicken, caesar dresink, coleslaw, červená cibule a kyselá okurka podávaný s polentovými hranolky a dipem",
+        "price": 249
+      }
+    ],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2026-06-09T09:08:16.274Z",
+    "isAvailable": true
   }
 ]
