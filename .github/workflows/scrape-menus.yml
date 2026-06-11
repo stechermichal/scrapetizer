@@ -2,11 +2,12 @@ name: Scrape Restaurant Menus
 
 on:
   schedule:
-    # Target: scrape between 10:00-13:59 Prague. GitHub cron is best-effort —
-    # runs fire 30-90+ min late or get dropped entirely, and :00 slots are the
-    # most congested. So: many redundant off-peak slots (8-11 UTC covers the
-    # Prague window in both CET and CEST), gated at runtime on Prague hour.
-    - cron: '10,40 8-11 * * 1-5'
+    # Target: scrape from ~08:30 until 13:59 Prague, retrying every ~30 min
+    # until complete. GitHub cron is best-effort — runs fire 30-90+ min late
+    # or get dropped entirely, and :00/:30 slots are the most congested. So:
+    # many redundant off-peak slots (6-12 UTC covers the Prague window in both
+    # CET and CEST), gated at runtime on Prague time.
+    - cron: '25,55 6-12 * * 1-5'
   workflow_dispatch: # Allow manual trigger
   push:
     branches:
@@ -38,8 +39,9 @@ jobs:
     - name: Determine Prague time
       id: time
       run: |
-        # %-H (no zero padding) — "09" trips bash octal parsing in comparisons
-        echo "prague_hour=$(TZ=Europe/Prague date +%-H)" >> $GITHUB_OUTPUT
+        # %-H (no zero padding) — "0830" would trip bash octal parsing in
+        # comparisons; %-H%M yields e.g. "830" for 08:30, "1355" for 13:55
+        echo "prague_hm=$(TZ=Europe/Prague date +%-H%M)" >> $GITHUB_OUTPUT
         echo "prague_date=$(TZ=Europe/Prague date +%F)" >> $GITHUB_OUTPUT
 
     - name: Check completeness for today
@@ -72,17 +74,17 @@ jobs:
       env:
         EVENT_NAME: ${{ github.event_name }}
       run: |
-        HOUR="${{ steps.time.outputs.prague_hour }}"
+        HM="${{ steps.time.outputs.prague_hm }}"
         COMPLETE="${{ steps.check.outputs.complete }}"
         SHOULD_RUN=false
         if [ "$EVENT_NAME" != "schedule" ]; then
           # workflow_dispatch and scraper-code pushes always run
           SHOULD_RUN=true
-        elif [ "$HOUR" -ge 10 ] && [ "$HOUR" -le 13 ] && [ "$COMPLETE" != "true" ]; then
+        elif [ "$HM" -ge 820 ] && [ "$HM" -le 1359 ] && [ "$COMPLETE" != "true" ]; then
           # Scraping is incremental and idempotent, so the completeness check
           # is the real guard — any slot landing in the window may retry.
-          # Before 10:00 menus may not be published (or still show yesterday's);
-          # after 13:59 lunch is over.
+          # Before ~08:30 menus may not be published (or still show
+          # yesterday's); after 13:59 lunch is over.
           SHOULD_RUN=true
         fi
         echo "should_run=$SHOULD_RUN" >> $GITHUB_OUTPUT

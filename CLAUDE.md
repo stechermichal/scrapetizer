@@ -117,9 +117,8 @@ export class NewRestaurantScraper extends BaseScraper {
 ## GitHub Actions Automation
 
 - **Workflow**: `.github/workflows/scrape-menus.yml`
-- **Schedule**: Runs at 10:00 AM Prague time on weekdays (Mon-Fri)
-  - Additional run at 11:00 AM if menus are incomplete
-  - Uses UTC cron with runtime timezone conversion
+- **Schedule**: Runs from ~8:30 AM Prague time on weekdays (Mon-Fri), retrying every ~30 min until menus are complete or 14:00
+  - Uses redundant UTC cron slots with a runtime Prague-time gate (GitHub cron fires late or drops runs)
 - **Incremental**: Checks completeness before running (compares restaurant config vs. data file)
 - **Auto-commit**: Commits menu data changes with message "🍽️ Update restaurant menus [skip ci]"
 - **Manual trigger**: Can be triggered via workflow_dispatch
