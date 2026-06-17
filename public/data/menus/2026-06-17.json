@@ -219,5 +219,37 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-06-17T08:18:37.137Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-06-17",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Zelná polévka s klobásou",
+        "price": 59
+      },
+      {
+        "name": "Teres major steak se salsou chimichurri, kukuřice na másle, rozmarýnové grenaille",
+        "price": 249
+      },
+      {
+        "name": "Kuřecí řízečky v bylinkové strouhance, bramborová kaše, hanácký salát",
+        "price": 189,
+        "description": "1,3,6,7,8,9,10,11,12"
+      },
+      {
+        "name": "Telecí játra na majoránce se sázeným vejcem, dušená rýže",
+        "price": 189
+      },
+      {
+        "name": "Salát s krůtím masem, rajčaty, šalotkou, asijským dresinkem a sezamem",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-06-17T10:08:40.231Z",
+    "isAvailable": true
   }
 ]
