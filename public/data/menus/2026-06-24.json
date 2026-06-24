@@ -211,5 +211,36 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-06-24T07:40:35.952Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-06-24",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Rajská polévka s těstovinami",
+        "price": 59
+      },
+      {
+        "name": "Hovězí brisket s pepřovou omáčkou, listový špenát na másle, krémová polenta s bylinkami",
+        "price": 249
+      },
+      {
+        "name": "Kuřecí řízečky v sýrové strouhance, bramborová kaše, mesclun",
+        "price": 189
+      },
+      {
+        "name": "Halušky s uzeným masem a kysaným zelím, vídeňská cibulka",
+        "price": 189
+      },
+      {
+        "name": "Krůtí prsa s gorgonzolovou omáčkou, jasmínová rýže",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-06-24T08:53:51.878Z",
+    "isAvailable": true
   }
 ]
