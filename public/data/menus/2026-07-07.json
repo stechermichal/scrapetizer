@@ -212,5 +212,36 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-07-07T09:16:24.281Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-07-07",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Cuketový krém se smaženým hráškem",
+        "price": 59
+      },
+      {
+        "name": "Hovězí teres major steak se salsou chimichurri, kukuřice na másle, brambory grenaille",
+        "price": 249
+      },
+      {
+        "name": "Holandský řízek se sýrem gouda, bramborová kaše, okurkový salát",
+        "price": 189
+      },
+      {
+        "name": "Telecí maso na paprice s kysanou smetanou, tarhoňa",
+        "price": 189
+      },
+      {
+        "name": "Francouzské brambory s uzeným masem a vejci, nakládaná okurka",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-07-07T10:03:46.636Z",
+    "isAvailable": true
   }
 ]
