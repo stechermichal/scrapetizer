@@ -1,0 +1,216 @@
+[
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2026-07-07",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Frankfurtská polévka",
+        "price": 45,
+        "description": "S opečeným párkem, mletou paprikou a bramborem"
+      },
+      {
+        "name": "Kuřecí vývar s játrovým kapáním",
+        "price": 45,
+        "description": "Kuřecí polévka se zeleninou a játrovým kapáním"
+      },
+      {
+        "name": "Francouzské brambory",
+        "price": 144,
+        "description": "Vařené brambory s pečenou cibulí a uzeným masem, zapečené se šlehanými vejci, podávané s hanáckým zelným salátem"
+      },
+      {
+        "name": "Divočák na česneku",
+        "price": 175,
+        "description": "Krkovice z divočáka na česneku a cibuli, podávaná se špenátem a bramborovými haluškami"
+      },
+      {
+        "name": "Smažený vepřový řízek",
+        "price": 159,
+        "description": "Z vepřové pečeně s bramborovou kaší a kyselou okurkou"
+      },
+      {
+        "name": "Kuře s asijským lilkem",
+        "price": 154,
+        "description": "Kousky kuřecích prsou s kokosovou chilli omáčkou, koriandrem, asijským lilkem se sezamem, pečená jasmínová rýže"
+      },
+      {
+        "name": "Chilli con carne",
+        "price": 154,
+        "description": "Mleté hovězí s červeným vínem, fazolemi, kořenovou zeleninou, rajčaty, s pečenými bramborovými čtvrtkami a tzatziki"
+      },
+      {
+        "name": "Hovězí na houbách",
+        "price": 165,
+        "description": "Dušená hovězí plec na cibuli, slanině a houbách, podávané s houskovým knedlíkem"
+      },
+      {
+        "name": "Vepřová líčka na pivu",
+        "price": 165,
+        "description": "Dušená vepřová líčka se zeleninou, černým pivem, podávaná s hranolkami, majonézou z pečeného česneku a listovým salátem"
+      },
+      {
+        "name": "Nasi goreng",
+        "price": 219,
+        "description": "Smažená rýže, kuřecí maso, krevety, mladá cibulka, chilli, vejce, mrkev, sojová omáčka"
+      },
+      {
+        "name": "Krupicová kaše",
+        "price": 49,
+        "description": "S máslem a kakaem"
+      }
+    ],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
+    "scrapedAt": "2026-07-07T09:13:38.937Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "meatbeer",
+    "restaurantName": "Meat Beer",
+    "date": "2026-07-07",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Cuketová s gorgonzolou",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Segedínský guláš z vepřového bůčku, náš houskový knedlík",
+        "price": 100
+      },
+      {
+        "name": "Špagety aglio olio e pepperoncino se sýrem grana padano",
+        "price": 189
+      },
+      {
+        "name": "Řízek juráš plněný šunkou a nivou, coleslaw s jablky",
+        "price": 199
+      }
+    ],
+    "sourceUrl": "https://www.meatbeer.cz/menu/",
+    "scrapedAt": "2026-07-07T09:16:02.385Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2026-07-07",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Francouzská cibulačka se sýrovým toastem",
+        "price": 50,
+        "description": "Polévka"
+      },
+      {
+        "name": "Grilovaný pstruh na risottu z červené řepy s kozím sýrem a koprovým olejem",
+        "price": 190
+      },
+      {
+        "name": "Aglio olio e peperoncino",
+        "price": 175
+      },
+      {
+        "name": "Mag smash burger podávaný se steakovými hranolky a dipem",
+        "price": 249
+      }
+    ],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2026-07-07T09:16:08.119Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "saporevero",
+    "restaurantName": "Sapore Vero",
+    "date": "2026-07-07",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Fazolová polévka s klobásou",
+        "price": 65
+      },
+      {
+        "name": "Čerstvý zeleninový salát s mozzarellou a mátou",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, salamem a provolou",
+        "price": 219
+      },
+      {
+        "name": "Špagety s pestem a cherry rajčátky",
+        "price": 219
+      },
+      {
+        "name": "Rigatoni s italskou klobásou,, rajčatovou omáčkou a chilli",
+        "price": 229
+      },
+      {
+        "name": "Grilovaný losos s fazolkami",
+        "price": 269
+      }
+    ],
+    "sourceUrl": "https://www.saporevero.cz/",
+    "scrapedAt": "2026-07-07T09:16:14.408Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "nekazanka",
+    "restaurantName": "Bistro Nekázanka",
+    "date": "2026-07-07",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Hovězí vývar",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Restovaná cuketa s mozzarellou",
+        "price": 199
+      },
+      {
+        "name": "Spaghetti s masovými kuličkami a tomatovou omáčkou",
+        "price": 229
+      },
+      {
+        "name": "Steak z krkovice se salátem coleslaw",
+        "price": 239
+      },
+      {
+        "name": "Fish & chips",
+        "price": 249
+      },
+      {
+        "name": "Tatarka",
+        "price": 30
+      }
+    ],
+    "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
+    "scrapedAt": "2026-07-07T09:16:21.552Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "kantyna",
+    "restaurantName": "Kantýna",
+    "date": "2026-07-07",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Frankfurtská polévka",
+        "price": 108
+      },
+      {
+        "name": "Čevabčiči",
+        "price": 258,
+        "description": "Vařené brambory, hořcice"
+      }
+    ],
+    "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
+    "scrapedAt": "2026-07-07T09:16:24.281Z",
+    "isAvailable": true
+  }
+]
