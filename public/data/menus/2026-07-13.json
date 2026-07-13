@@ -207,5 +207,36 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-07-13T08:52:32.606Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-07-13",
+    "dayOfWeek": "pondělí",
+    "items": [
+      {
+        "name": "Kuřecí vývar s masem a nudlemi",
+        "price": 59
+      },
+      {
+        "name": "Hovězí cheeseburger se sýrem gouda a slaninou, koktejlovou majonézou a nakládanou cibulkou",
+        "price": 249
+      },
+      {
+        "name": "Kuřecí špíz se slaninou, bramborové krokety, tatarská omáčka",
+        "price": 189
+      },
+      {
+        "name": "Hovězí na filipínský způsob s rajčaty a karotkou, jasmínová rýže",
+        "price": 189
+      },
+      {
+        "name": "Masová musaka s lilkem, zapečená balkánským sýrem, listové saláty",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-07-13T09:50:49.555Z",
+    "isAvailable": true
   }
 ]
