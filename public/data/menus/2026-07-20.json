@@ -226,14 +226,17 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Bramborová polévka",
+        "price": 98
+      },
+      {
+        "name": "Hovězí líčka na víně",
+        "price": 345,
+        "description": "Bramborová kaše"
       }
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
-    "scrapedAt": "2026-07-20T07:58:43.456Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-07-20T09:19:40.983Z",
+    "isAvailable": true
   }
 ]
