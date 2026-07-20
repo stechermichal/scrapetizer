@@ -159,27 +159,27 @@
     "dayOfWeek": "čtvrtek",
     "items": [
       {
-        "name": "Zeleninová polévka s hovězím masem a těstovinou fregola",
+        "name": "Parmazánová polévka s hovězím masem",
         "price": 65
       },
       {
-        "name": "Svěží listový salát s chapadly z chobotnice a cherry rajčaty",
-        "price": 199
+        "name": "Míchaný salát s tuňákem",
+        "price": 189
       },
       {
-        "name": "Pinsa s mozzarellou a mortadellou",
-        "price": 209
-      },
-      {
-        "name": "Tagliatelle s boloňským ragú a smetanou",
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, salámem a uzeným sýrem",
         "price": 219
       },
       {
-        "name": "Rizoto s rajčatovou omáčkou, sýrem stracciatella a ndujou",
+        "name": "Gnocchi s hovězím ragú",
         "price": 229
       },
       {
-        "name": "Grilovaná kuřecí prsa s hříbkovou omáčkou a hranolkami",
+        "name": "Rigatoni s houbami a smetanou",
+        "price": 219
+      },
+      {
+        "name": "Hovězí roštěná s pečenými bramborami a krémovou pepřovou omáčkou",
         "price": 269
       }
     ],
