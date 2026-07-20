@@ -159,7 +159,7 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Pórkový krém",
+        "name": "Parmazánová polévka s hovězím masem",
         "price": 65
       },
       {
@@ -167,24 +167,24 @@
         "price": 189
       },
       {
-        "name": "Pinsa s rajčatovým základem, mozzarellou, salámem a sýrem provola",
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, salámem a uzeným sýrem",
         "price": 219
       },
       {
-        "name": "Krémové tagliatelle s vepřovou panenkou, gorgonzolou, žampiony a smetanou",
+        "name": "Gnocchi s hovězím ragú",
         "price": 229
       },
       {
-        "name": "Špagety s česnekem, chilli a krevetami",
-        "price": 229
+        "name": "Rigatoni s houbami a smetanou",
+        "price": 219
       },
       {
-        "name": "Grilovaná salsiccia s selským bramborem",
-        "price": 249
+        "name": "Hovězí roštěná s pečenými bramborami a krémovou pepřovou omáčkou",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-07-20T07:58:18.980Z",
+    "scrapedAt": "2026-07-20T11:33:23.269Z",
     "isAvailable": true
   },
   {
