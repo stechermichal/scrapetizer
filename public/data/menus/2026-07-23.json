@@ -159,15 +159,33 @@
     "dayOfWeek": "čtvrtek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Krémová zeleninová polévka",
+        "price": 65
+      },
+      {
+        "name": "Salát s marinovanými paprikami a sýrem feta",
+        "price": 189
+      },
+      {
+        "name": "Bílá pinsa s mozzarellou, mortadellou a stracciatellou",
+        "price": 219
+      },
+      {
+        "name": "Rigatoni s hříbky a smetanou",
+        "price": 219
+      },
+      {
+        "name": "Gnocchi s vepřovou panenkou, sušenými rajčaty a cibulí",
+        "price": 219
+      },
+      {
+        "name": "Filety z mořského vlka s dušenou zeleninou",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-07-23T08:19:07.270Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-07-23T08:48:24.969Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
