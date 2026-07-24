@@ -207,5 +207,42 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-07-24T08:49:32.852Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-07-24",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Bramboračka s houbami",
+        "price": 59
+      },
+      {
+        "name": "Hovězí kulatá plec se svíčkovou omáčkou, nakládané brusinky, domácí houskové knedlíky",
+        "price": 249
+      },
+      {
+        "name": "Pikantní katův šleh se zeleninou, americké brambory",
+        "price": 189
+      },
+      {
+        "name": "Gratinovaný lilek s masovým ragú a mozzarellou, pšeničný bulgur",
+        "price": 189
+      },
+      {
+        "name": "Smažené žampióny, brambory vařené v páře, tatarská omáčka",
+        "price": 179,
+        "description": "1,3,6,7,8,9,10,11,12"
+      },
+      {
+        "name": "Objednávky online",
+        "price": 0,
+        "description": "Na vašem soukromí nám záleží"
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-07-24T10:50:42.134Z",
+    "isAvailable": true
   }
 ]
