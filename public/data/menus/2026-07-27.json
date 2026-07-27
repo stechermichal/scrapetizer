@@ -227,14 +227,17 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Brokolicová polévka",
+        "price": 115
+      },
+      {
+        "name": "Hovězí krk na kmíně",
+        "price": 298,
+        "description": "Rýže"
       }
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
-    "scrapedAt": "2026-07-27T09:02:13.332Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-07-27T10:13:11.341Z",
+    "isAvailable": true
   }
 ]
