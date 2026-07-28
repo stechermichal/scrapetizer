@@ -128,15 +128,33 @@
     "dayOfWeek": "úterý",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Rajčatový krém",
+        "price": 65
+      },
+      {
+        "name": "Míchaný salát s kuřecím masem",
+        "price": 189
+      },
+      {
+        "name": "Pinsa se čtyřmi sýry",
+        "price": 219
+      },
+      {
+        "name": "Rigatoni alla puttanesca (rajčatová omáčka, ančovičky, česnek a kapary)",
+        "price": 219
+      },
+      {
+        "name": "Gnocchi se sicilským pestem (z cherry rajčat a ricotty) a stracciatellou",
+        "price": 219
+      },
+      {
+        "name": "Grilovaný losos s grenaille bramborami a bylinkovým máslem",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-07-28T07:36:17.975Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-07-28T08:41:43.979Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
@@ -192,6 +210,37 @@
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-07-28T07:36:26.751Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-07-28",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Česnekový krém s hermelínem",
+        "price": 59
+      },
+      {
+        "name": "Steak z vepřové krkovice s hořčičnou omáčkou, fazolky s česnekem, pečené batáty se sezamem",
+        "price": 229
+      },
+      {
+        "name": "Kuřecí nudličky s kukuřicí na pečených bramborách, zakysaná smetana",
+        "price": 189
+      },
+      {
+        "name": "Lasagne se špenátem, mozzarellou a sýrem gran biraghi, listové saláty",
+        "price": 189
+      },
+      {
+        "name": "Špekové knedlíky s uzeným masem a cibulkou, dušené kysané zelí",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-07-28T08:41:40.572Z",
     "isAvailable": true
   }
 ]
