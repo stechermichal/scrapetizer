@@ -124,15 +124,33 @@
     "dayOfWeek": "pátek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Rajčatový krem",
+        "price": 65
+      },
+      {
+        "name": "Míchaný salát s grilovanou zeleninou",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a pálivým salámem",
+        "price": 219
+      },
+      {
+        "name": "Gnocchi s čtyřmi druhy sýrů",
+        "price": 219
+      },
+      {
+        "name": "Tagliatelle s krevetami, cuketou a rajčatovou omáčkou",
+        "price": 229
+      },
+      {
+        "name": "Grilovaná klobása s hranolky a bbq omáčkou",
+        "price": 259
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-08-07T07:49:35.727Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-08-07T08:41:41.997Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
@@ -188,6 +206,42 @@
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-08-07T07:49:44.593Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-08-07",
+    "dayOfWeek": "pátek",
+    "items": [
+      {
+        "name": "Hovězí vývar s celestýnskými nudlemi",
+        "price": 59
+      },
+      {
+        "name": "Hovězí cheeseburger se sýrem gouda a slaninou, koktejlovou majonézou a nakládanou cibulí, salát mesclun",
+        "price": 249
+      },
+      {
+        "name": "Pečené kuře na másle, bramborová kaše, šopský salát",
+        "price": 189
+      },
+      {
+        "name": "Rajská omáčka s vařeným hovězím masem, domácí houskové knedlíky",
+        "price": 189
+      },
+      {
+        "name": "Burrito papriky plněné cheddarem a fazolemi, tortilla chips, salsa",
+        "price": 179
+      },
+      {
+        "name": "Objednávky online",
+        "price": 0,
+        "description": "Na vašem soukromí nám záleží"
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-08-07T08:41:38.500Z",
     "isAvailable": true
   }
 ]
