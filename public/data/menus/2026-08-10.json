@@ -226,14 +226,17 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Frankfurtská polévka",
+        "price": 108
+      },
+      {
+        "name": "Hovězí srdce na slanině",
+        "price": 258,
+        "description": "Rýže"
       }
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
-    "scrapedAt": "2026-08-10T07:02:26.829Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-08-10T09:52:37.913Z",
+    "isAvailable": true
   }
 ]
