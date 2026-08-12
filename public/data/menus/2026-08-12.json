@@ -155,15 +155,33 @@
     "dayOfWeek": "středa",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Krevetová polévka",
+        "price": 65
+      },
+      {
+        "name": "Míchaný salát s telecími plátky",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s čtyřmi druhy sýra",
+        "price": 219
+      },
+      {
+        "name": "Penne s bazalkovým pestem a smetanou",
+        "price": 219
+      },
+      {
+        "name": "Tagliatelle s hovězím masem, česnekem a chilli",
+        "price": 229
+      },
+      {
+        "name": "Kuřecí prsa s restovanou zeleninou",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-08-12T07:56:31.684Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-08-12T08:29:14.700Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
