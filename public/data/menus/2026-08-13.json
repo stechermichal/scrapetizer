@@ -128,15 +128,33 @@
     "dayOfWeek": "čtvrtek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Fazolová polévka s klobásou",
+        "price": 65
+      },
+      {
+        "name": "Míchaný salát s broskvemi, burratou a parmskou šunkou",
+        "price": 199
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a šunkou",
+        "price": 219
+      },
+      {
+        "name": "Gnocchi s rajčatovým pestem a stracciatellou",
+        "price": 219
+      },
+      {
+        "name": "Rigatoni s boloňským ragú, smetanou a hráškem",
+        "price": 229
+      },
+      {
+        "name": "Grilovaný losos s dušenou zeleninou",
+        "price": 259
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-08-13T08:00:13.371Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-08-13T09:16:30.926Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
@@ -196,6 +214,37 @@
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-08-13T08:00:23.360Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-08-13",
+    "dayOfWeek": "čtvrtek",
+    "items": [
+      {
+        "name": "Hovězí vývar s játrovými knedlíčky",
+        "price": 59
+      },
+      {
+        "name": "Krůtí prsa plněná kozím sýrem a sušenými rajčaty, pečená karotka s pastinákem, restované brambory, omáčka demi - glacè",
+        "price": 239
+      },
+      {
+        "name": "Lasagne bolognese s mozzarellou, listové saláty s octem balsamico",
+        "price": 189
+      },
+      {
+        "name": "Libové vepřové výpečky, dušené hlávkové zelí, bramborové knedlíky",
+        "price": 189
+      },
+      {
+        "name": "Rybí prsty v panko strouhance, bramborová kaše s pažitkou, mesclun",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-08-13T09:16:25.170Z",
     "isAvailable": true
   }
 ]
