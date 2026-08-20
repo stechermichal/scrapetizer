@@ -193,5 +193,36 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-08-20T07:13:39.252Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-08-20",
+    "dayOfWeek": "čtvrtek",
+    "items": [
+      {
+        "name": "Žampiónový krém s petrželí",
+        "price": 59
+      },
+      {
+        "name": "1/4 pečené kachny na kmíně, červené vinné zelí, kynuté houskové knedlíky",
+        "price": 249
+      },
+      {
+        "name": "Grilovaný camembert v anglické slanině, pažitkové brambory, brusinky",
+        "price": 189
+      },
+      {
+        "name": "Falešná hovězí svíčková alà pražská pečeně, hrášková rýže",
+        "price": 189
+      },
+      {
+        "name": "Kuřecí rizoto z bulguru s uzeným sýrem a zeleninou, kyselá okurka",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-08-20T07:53:31.801Z",
+    "isAvailable": true
   }
 ]
