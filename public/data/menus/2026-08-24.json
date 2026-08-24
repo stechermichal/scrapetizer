@@ -159,15 +159,33 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Brokolicový krém",
+        "price": 65
+      },
+      {
+        "name": "Míchaný salát s fetou",
+        "price": 189
+      },
+      {
+        "name": "Pinsa se čtyřmi druhy sýrů",
+        "price": 219
+      },
+      {
+        "name": "Rizoto s mrkvovým krémem a stracciatellou",
+        "price": 219
+      },
+      {
+        "name": "Penne s rajčatovou omáčkou, guanciale, pecorinem a chilli",
+        "price": 229
+      },
+      {
+        "name": "Pečené vepřové maso se zeleninou a bramborovým pyré",
+        "price": 259
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-08-24T07:33:19.496Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-08-24T08:30:48.287Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
