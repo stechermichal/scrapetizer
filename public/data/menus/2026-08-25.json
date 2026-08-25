@@ -160,15 +160,33 @@
     "dayOfWeek": "úterý",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Fazolová polévka s klobásou",
+        "price": 65
+      },
+      {
+        "name": "Míchaný salát s mozzarellou",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, salamem a provolou",
+        "price": 219
+      },
+      {
+        "name": "Gnocchi s houbami a smetanou",
+        "price": 219
+      },
+      {
+        "name": "Rigatoni s krevetami, cuketou a rajčatovou omáčkou",
+        "price": 229
+      },
+      {
+        "name": "Grilovaný losos se zelenými fazolkami",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-08-25T07:13:03.435Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-08-25T08:02:19.719Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
