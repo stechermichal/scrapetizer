@@ -98,11 +98,24 @@
     "restaurantName": "Meet&Greet",
     "date": "2026-08-26",
     "dayOfWeek": "středa",
-    "items": [],
+    "items": [
+      {
+        "name": "Bujabéza",
+        "price": 50,
+        "description": "Polévka"
+      },
+      {
+        "name": "Španělský ptáček s jasmínovou rýží a křupavou cibulkou",
+        "price": 190
+      },
+      {
+        "name": "Hovězí blue cheese burger s blue cheese majonézou, bylinkovou majonézou, baby špenátem, sýrem ementál, grilovaným portobellem a lilkem, podávaný s batátovými hranolky a dipem",
+        "price": 249
+      }
+    ],
     "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
-    "scrapedAt": "2026-08-26T05:51:44.472Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-08-26T10:54:44.567Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "saporevero",
