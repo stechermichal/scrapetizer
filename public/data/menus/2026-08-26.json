@@ -176,5 +176,32 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-08-26T05:51:58.173Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-08-26",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Sekaný hovězí steak s omáčkou bèarnaise, míchaná zelenina na másle, pečené rozmarýnové grenaille",
+        "price": 249
+      },
+      {
+        "name": "Kuře na másle, brambory s libečkem a petrželí, šopský salát",
+        "price": 189
+      },
+      {
+        "name": "Pikantní krůtí ragú s hráškem a smetanou, jasmínová rýže",
+        "price": 189
+      },
+      {
+        "name": "Šunkafleky zapečené s vejci, kyselá zelenina",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-08-26T07:12:49.870Z",
+    "isAvailable": true
   }
 ]
