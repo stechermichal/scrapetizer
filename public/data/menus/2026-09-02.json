@@ -156,15 +156,33 @@
     "dayOfWeek": "středa",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Hříbkový krém",
+        "price": 65
+      },
+      {
+        "name": "Caesar salát",
+        "price": 199
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a prosciuttem",
+        "price": 219
+      },
+      {
+        "name": "Špagety s ’ndujou a stracciatellou",
+        "price": 229
+      },
+      {
+        "name": "Rigatoni s čerstvým tuňákem a lilkem",
+        "price": 229
+      },
+      {
+        "name": "Grilovaná hovězí roštěná s restovanými fazolkami a omáčkou z černého pepře",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-09-02T08:03:44.284Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-09-02T11:28:22.395Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
