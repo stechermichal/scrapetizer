@@ -128,15 +128,33 @@
     "dayOfWeek": "středa",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Fazolová polévka",
+        "price": 65
+      },
+      {
+        "name": "Míchání salát se sýrem feta",
+        "price": 189
+      },
+      {
+        "name": "Bílá pinsa s mozzarellou, hříbky a klobásou",
+        "price": 219
+      },
+      {
+        "name": "Tagliatelle se špenátem, ricottou a citronem",
+        "price": 219
+      },
+      {
+        "name": "Krémové rizoto s mořskými plody",
+        "price": 219
+      },
+      {
+        "name": "Filátka z mořského s grilovanou zeleninou",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-09-09T08:14:05.199Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-09-09T11:33:22.016Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
@@ -190,5 +208,36 @@
     "scrapedAt": "2026-09-09T08:14:30.279Z",
     "isAvailable": false,
     "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-09-09",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Středomořská rajčatová polévka s rybou",
+        "price": 59
+      },
+      {
+        "name": "Vepřová líčka na červeném víně, restované žampióny a cibulky, bramborové pyré",
+        "price": 239
+      },
+      {
+        "name": "Kuřecí prsa v bylinkovém těstíčku, bramborový salát s majonézou",
+        "price": 189
+      },
+      {
+        "name": "Veg dýňové risotto z rýže arborio se sýrem provolone piccante",
+        "price": 189
+      },
+      {
+        "name": "Masové kuličky v rajské omáčce, těstoviny kolínka",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-09-09T11:33:18.987Z",
+    "isAvailable": true
   }
 ]
