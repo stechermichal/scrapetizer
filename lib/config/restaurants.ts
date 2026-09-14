@@ -36,6 +36,7 @@ export const restaurants: Restaurant[] = [
     id: 'meatbeer',
     name: 'Meat Beer',
     url: 'https://www.meatbeer.cz/',
+    instagramUrl: 'https://www.instagram.com/stories/_meatbeer_/',
     menuUrl: 'https://www.meatbeer.cz/menu/',
     scrapeConfig: {
       type: 'static'
