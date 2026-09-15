@@ -157,15 +157,33 @@
     "dayOfWeek": "úterý",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Špenátový krém",
+        "price": 65
+      },
+      {
+        "name": "Rukolový salát s melounem, mozzarellou a cizrnou",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, salámem a chilli",
+        "price": 219
+      },
+      {
+        "name": "Špagety s restovanou zeleninou a rajčatovou omáčkou",
+        "price": 219
+      },
+      {
+        "name": "Tagliatelle s vepřovou panenkou a gorgonzolou",
+        "price": 229
+      },
+      {
+        "name": "Hovězí roštěná s bramborovým salátem a pepřovou omáčkou",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-09-15T07:57:34.059Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-09-15T09:33:17.376Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
