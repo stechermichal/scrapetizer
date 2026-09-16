@@ -1,0 +1,198 @@
+[
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2026-09-16",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Krémová polévka z bílých fazolí",
+        "price": 45,
+        "description": "Podávaná s pečeným pastinákem a parmazánem"
+      },
+      {
+        "name": "Kuřecí vývar s drobením",
+        "price": 45,
+        "description": "Kuřecí polévka s masem, zeleninou a vaječným drobením"
+      },
+      {
+        "name": "Vepřová roláda s medvědím česnekem",
+        "price": 154,
+        "description": "Se šťávou z výpeku, pečenými bramborami s pestem a pečenou kořenovou zeleninou s medem a dobromyslem"
+      },
+      {
+        "name": "Smažený sýrový špíz se šunkou",
+        "price": 154,
+        "description": "Špíz ze sýra eidam, gouda a šunky od kosti, podávaný s vařeným bramborem, šnitlíkem a koktejlovou majonézou"
+      },
+      {
+        "name": "Pečený paprikový lusk",
+        "price": 149,
+        "description": "Plněný mletým vepřovým masem, s rajskou omáčkou a pečenou jasmínovou rýží"
+      },
+      {
+        "name": "Trhané vepřové koleno",
+        "price": 159,
+        "description": "Pečené vepřové koleno s česnekem, pivem, šťáva z výpeku, dušeným hlávkovým zelím, bramborovým knedlíkem a křupavou cibulkou"
+      },
+      {
+        "name": "Sekaná podle rettigové",
+        "price": 149,
+        "description": "Sekaná pečeně z mletého vepřového masa s vařeným vejcem, uzeným bokem, mléčnou bramborovou kaší a okurkovým salátem"
+      },
+      {
+        "name": "Cibulový quiche",
+        "price": 149,
+        "description": "Tradiční francouzský slaný koláč s cibulí a slaninou, zapečený se smetanou, vejci a sýrem cheddar, podávaný s listovým salátem"
+      },
+      {
+        "name": "Poke bowl",
+        "price": 215,
+        "description": "Pečená jasmínová rýže, hovězí flank steak, listový salát, okurka, karotka, ředkvička, avokádo, jarní cibulka, sezam, teriyaki omáčka a pikantní majonéza"
+      },
+      {
+        "name": "Sicilské arancini s trhaným hovězím",
+        "price": 219,
+        "description": "Smažené koule z rýže arborio, plněné trhaným hovězím, česnekem, červeným vínem s omáčkou z pečených paprik, rukolou a parmazánovým aioli"
+      },
+      {
+        "name": "Makový šáteček",
+        "price": 49
+      }
+    ],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
+    "scrapedAt": "2026-09-16T07:31:23.182Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "meatbeer",
+    "restaurantName": "Meat Beer",
+    "date": "2026-09-16",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Kukuřičná s koriandrem a chilli",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Segedínský guláš z vepřového bůčku s houskovým knedlíkem",
+        "price": 100
+      },
+      {
+        "name": "Tvarohové knedlíky s meruňkami, tvarohem, moučkovým cukrem a přepuštěným máslem",
+        "price": 189
+      },
+      {
+        "name": "Steak z vepřové kotlety s bylinkovou omáčkou, pečené brambory",
+        "price": 199
+      }
+    ],
+    "sourceUrl": "https://www.meatbeer.cz/menu/",
+    "instagramUrl": "https://www.instagram.com/stories/_meatbeer_/",
+    "scrapedAt": "2026-09-16T07:33:43.859Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2026-09-16",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Rajčatová polévka s bazalkovým pestem a parmazánem",
+        "price": 50,
+        "description": "Polévka"
+      },
+      {
+        "name": "Trhané hovězí na česneku se špenátovými gnocchi",
+        "price": 185
+      },
+      {
+        "name": "Domácí kebab v tortille se zeleninou a bylinkovou omáčkou, podávaný s domácími lupínky a dipem",
+        "price": 180
+      },
+      {
+        "name": "M&g smash burger podávaný s bylinkovými hranolky a dipem",
+        "price": 269
+      }
+    ],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2026-09-16T07:33:49.379Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "saporevero",
+    "restaurantName": "Sapore Vero",
+    "date": "2026-09-16",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Menu not posted yet",
+        "price": 0,
+        "description": "Check back later"
+      }
+    ],
+    "sourceUrl": "https://www.saporevero.cz/",
+    "scrapedAt": "2026-09-16T07:33:52.092Z",
+    "isAvailable": false,
+    "errorMessage": "No valid menu items found"
+  },
+  {
+    "restaurantId": "nekazanka",
+    "restaurantName": "Bistro Nekázanka",
+    "date": "2026-09-16",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Srbská chorba ( vepřovové maso, kořenová zelenina, rajčata, fazole )",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Salát s kuřecím masem a caesar dresinkem",
+        "price": 239
+      },
+      {
+        "name": "Gnocchi s parmskou šunkou a smetanou",
+        "price": 219
+      },
+      {
+        "name": "Spaghetti puttanesca",
+        "price": 219
+      },
+      {
+        "name": "Langoš s trhaným kachním masem",
+        "price": 249
+      },
+      {
+        "name": "Telecí na červeném víně a kořenové zelenině s šafránovým risottem",
+        "price": 349
+      }
+    ],
+    "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
+    "scrapedAt": "2026-09-16T07:33:58.647Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "kantyna",
+    "restaurantName": "Kantýna",
+    "date": "2026-09-16",
+    "dayOfWeek": "středa",
+    "items": [
+      {
+        "name": "Boršč",
+        "price": 112
+      },
+      {
+        "name": "Hovězí na smetaně",
+        "price": 298,
+        "description": "Karlovarský knedlík"
+      }
+    ],
+    "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
+    "scrapedAt": "2026-09-16T07:34:01.359Z",
+    "isAvailable": true
+  }
+]
