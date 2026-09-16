@@ -129,15 +129,29 @@
     "dayOfWeek": "středa",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Míchaný salát s cherry rajčátky, mini mozzarellkami a pestem",
+        "price": 189
+      },
+      {
+        "name": "Pinsa se čtyřmi druhy sýrů",
+        "price": 219
+      },
+      {
+        "name": "Rizoto se špenátovým krémem a stracciatellou",
+        "price": 219
+      },
+      {
+        "name": "Tagliatelle s krevetami, cherry rajčátky a cuketou",
+        "price": 229
+      },
+      {
+        "name": "Grilovaný losos s květákovým pyré a citronovo",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-09-16T07:33:52.092Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-09-16T11:09:25.815Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
