@@ -1,0 +1,216 @@
+[
+  {
+    "restaurantId": "hybernska",
+    "restaurantName": "Restaurace Hybernská",
+    "date": "2026-09-22",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Kulajda",
+        "price": 45,
+        "description": "Krémová polévka s houbami, bramborem, čerstvým koprem a vařeným vejcem"
+      },
+      {
+        "name": "Kuřecí vývar s fritátovými nudlemi",
+        "price": 45,
+        "description": "Se zeleninou, masem a fritátovými nudlemi"
+      },
+      {
+        "name": "Bryndzové halušky",
+        "price": 154,
+        "description": "Z bramborového těsta se škvařeným špekem, křupavou cibulkou a pažitkou"
+      },
+      {
+        "name": "Krůta v panko strouhance",
+        "price": 159,
+        "description": "Smažená krůtí prsa v panko strouhance, tradiční bramborový salát, rajčatový salát"
+      },
+      {
+        "name": "Plzeňský guláš",
+        "price": 175,
+        "description": "Guláš z hovězího karabáčku s mletou paprikou a česnekem, variací našich knedlíků a opečeným špekáčkem s cibulí a kapií"
+      },
+      {
+        "name": "Kuře na pomerančích",
+        "price": 149,
+        "description": "Pečené kuřecí stehno s medem, pomerančem, chilli, šťáva z výpeku, cizrnové pyré, máslová baby karotka"
+      },
+      {
+        "name": "Špíz z vepřové panenky",
+        "price": 159,
+        "description": "S cibulí, paprikou, paprikovou omáčkou, gratinované brambory, brokolice"
+      },
+      {
+        "name": "Kuřecí roláda se šunkou a sýrem",
+        "price": 154,
+        "description": "Pečená s máslem a kořením, šťáva z výpeku, bramborová kaše, černý kořen s bylinkami"
+      },
+      {
+        "name": "Lutyšské koule",
+        "price": 154,
+        "description": "Z mletého vepřového a telecího masa se smetanou, tymiánem, cibulovou omáčkou z belgického piva se sirupem z jablek a hrušek, hranolkami a trhaným salátem s majonézovým dresinkem"
+      },
+      {
+        "name": "Vepřová kotleta od kloudy",
+        "price": 197,
+        "description": "Krémová houbová omáčka, bramborová kaše s medvědím česnekem a pečená dýně s hnědým máslem, šalvějí a parmazánem"
+      },
+      {
+        "name": "Créme brulée s ovocem",
+        "price": 49
+      }
+    ],
+    "sourceUrl": "https://www.restauracehybernska.cz/",
+    "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
+    "scrapedAt": "2026-09-22T08:19:48.823Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "meatbeer",
+    "restaurantName": "Meat Beer",
+    "date": "2026-09-22",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Rajská s těstovinou",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Smažený hermelín s hranolky, brusinkami a naší tatarkou",
+        "price": 100
+      },
+      {
+        "name": "Krůtí guláš s nakládanými rajčaty a jasmínovou rýží",
+        "price": 189
+      },
+      {
+        "name": "Hovězí smash burger, jalapeños, slanina, hořčičná majonéza, hranolky",
+        "price": 199
+      }
+    ],
+    "sourceUrl": "https://www.meatbeer.cz/menu/",
+    "instagramUrl": "https://www.instagram.com/stories/_meatbeer_/",
+    "scrapedAt": "2026-09-22T08:22:11.085Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "magburger",
+    "restaurantName": "Meet&Greet",
+    "date": "2026-09-22",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Marocká polévka s červenou čočkou a rajčaty",
+        "price": 50,
+        "description": "Polévka"
+      },
+      {
+        "name": "Quesadilla s kuřecími stripsy, bbq omáčkou, cheddarem a slaninou podávaná se steakovými hranolky",
+        "price": 190
+      },
+      {
+        "name": "Hovězí guláš s houskovým knedlíkem a červenou cibulkou",
+        "price": 185
+      },
+      {
+        "name": "M&g smash burger podávaný s bylinkovými hranolky a dipem",
+        "price": 269
+      }
+    ],
+    "sourceUrl": "https://www.magburgerhouse.cz/poledni-menu",
+    "scrapedAt": "2026-09-22T08:22:16.916Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "saporevero",
+    "restaurantName": "Sapore Vero",
+    "date": "2026-09-22",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Míchaný salát s parmskou šunkou a medovo",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, houbami, šunkou a olivami",
+        "price": 219
+      },
+      {
+        "name": "Gnocchi s hovězím ragú",
+        "price": 229
+      },
+      {
+        "name": "Penne s bazalkovým pestem a cherry rajčátky",
+        "price": 229
+      },
+      {
+        "name": "Telecí brisket s pečeným bramborem",
+        "price": 279
+      }
+    ],
+    "sourceUrl": "https://www.saporevero.cz/",
+    "scrapedAt": "2026-09-22T08:22:20.231Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "nekazanka",
+    "restaurantName": "Bistro Nekázanka",
+    "date": "2026-09-22",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Dýňová se slaninou",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Salát nicoise",
+        "price": 239
+      },
+      {
+        "name": "Lasagne s masovým ragú",
+        "price": 229
+      },
+      {
+        "name": "Vejce s koprovou omáčkou a pečeným bramborem",
+        "price": 239
+      },
+      {
+        "name": "Hovězí cheeseburger",
+        "price": 249
+      },
+      {
+        "name": "Hranolky",
+        "price": 49
+      },
+      {
+        "name": "Tatarka",
+        "price": 30
+      }
+    ],
+    "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
+    "scrapedAt": "2026-09-22T08:22:27.235Z",
+    "isAvailable": true
+  },
+  {
+    "restaurantId": "kantyna",
+    "restaurantName": "Kantýna",
+    "date": "2026-09-22",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Zelná polévka s klobásou",
+        "price": 115
+      },
+      {
+        "name": "Hovězí stroganov",
+        "price": 298,
+        "description": "Rýže"
+      }
+    ],
+    "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
+    "scrapedAt": "2026-09-22T08:22:30.386Z",
+    "isAvailable": true
+  }
+]
