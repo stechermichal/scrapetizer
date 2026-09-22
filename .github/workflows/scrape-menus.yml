@@ -49,25 +49,12 @@ jobs:
       env:
         DATE: ${{ steps.time.outputs.prague_date }}
       run: |
-        python3 - <<'PY'
-        import re, json, os
-        from pathlib import Path
-        gh_out = os.environ['GITHUB_OUTPUT']
-        date = os.environ['DATE']
-        file = Path(f'public/data/menus/{date}.json')
-        txt = Path('lib/config/restaurants.ts').read_text(encoding='utf-8')
-        ids = re.findall(r"id:\s*'([^']+)'", txt)
-        if not file.exists():
-            open(gh_out,'a').write(f"complete=false\nmissing={json.dumps(ids)}\n")
-            raise SystemExit(0)
-        data = json.loads(file.read_text(encoding='utf-8'))
-        by_id = {m.get('restaurantId'): m for m in data}
-        def has_real_items(m):
-            items = (m or {}).get('items') or []
-            return any((i.get('price') or 0) > 0 for i in items)
-        missing = [rid for rid in ids if rid not in by_id or not has_real_items(by_id.get(rid))]
-        open(gh_out,'a').write(f"complete={'true' if not missing else 'false'}\nmissing={json.dumps(missing)}\n")
-        PY
+        set +e
+        python3 .github/scripts/check-complete.py "$DATE"
+        rc=$?
+        set -e
+        [ $rc -gt 1 ] && exit 1
+        echo "complete=$([ $rc -eq 0 ] && echo true || echo false)" >> $GITHUB_OUTPUT
 
     - name: Decide whether to run scrapers now
       id: decide
@@ -104,31 +91,47 @@ jobs:
       if: steps.decide.outputs.should_run == 'true'
       run: npx playwright install --with-deps chromium
 
-    - name: Run scrapers
+    - name: Scrape until complete
       if: steps.decide.outputs.should_run == 'true'
-      run: npm run scrape
+      # One delivered trigger has to cover the whole day: GitHub's scheduler
+      # drops most cron events for this repo (community discussion 207346),
+      # so retry in-process rather than relying on a later run arriving.
+      timeout-minutes: 345
       env:
         NODE_ENV: production
-
-    - name: Check if menu data changed
-      if: steps.decide.outputs.should_run == 'true'
-      id: check_changes
-      run: |
-        if [[ -n $(git status --porcelain public/data/menus/) ]]; then
-          echo "changed=true" >> $GITHUB_OUTPUT
-        else
-          echo "changed=false" >> $GITHUB_OUTPUT
-        fi
-
-    - name: Commit and push if changed
-      if: steps.decide.outputs.should_run == 'true' && steps.check_changes.outputs.changed == 'true'
+        DATE: ${{ steps.time.outputs.prague_date }}
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add public/data/menus/
-        git commit -m "🍽️ Update restaurant menus [skip ci]
+
+        while true; do
+          npm run scrape || echo "scrape pass failed, retrying later"
+
+          if [[ -n $(git status --porcelain public/data/menus/) ]]; then
+            git add public/data/menus/
+            git commit -m "🍽️ Update restaurant menus [skip ci]
 
         Automated menu update from GitHub Actions
-        Time: $(date +'%Y-%m-%d %H:%M:%S')"
-        git pull --rebase origin master
-        git push
+        Time: $(TZ=Europe/Prague date +'%Y-%m-%d %H:%M:%S %Z')"
+            git pull --rebase origin master
+            git push
+          fi
+
+          set +e
+          MISSING=$(python3 .github/scripts/check-complete.py "$DATE")
+          rc=$?
+          set -e
+          [ $rc -eq 0 ] && echo "every restaurant has priced items" && break
+          [ $rc -gt 1 ] && exit 1
+          echo "still missing: $MISSING"
+
+          HM=$(TZ=Europe/Prague date +%-H%M)
+          if [ "$HM" -ge 1359 ]; then
+            echo "13:59 Prague reached, stopping for today"
+            break
+          fi
+
+          sleep 900
+          # a manual run may have filled menus in the meantime
+          git pull --rebase origin master || true
+        done
