@@ -212,5 +212,32 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-09-22T08:22:30.386Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-09-22",
+    "dayOfWeek": "úterý",
+    "items": [
+      {
+        "name": "Steak z vepřové krkovice s hořčičnou omáčkou, fazolky s česnekem, pečené batáty se sezamem",
+        "price": 229
+      },
+      {
+        "name": "Kuřecí nudličky s kukuřicí na pečených bramborách, zakysaná smetana",
+        "price": 189
+      },
+      {
+        "name": "Penne s tuňákem a cherry rajčaty, grilovaný citrón",
+        "price": 189
+      },
+      {
+        "name": "Špekové knedlíky s uzeným masem a cibulkou, dušené kysané zelí",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-09-22T09:34:09.631Z",
+    "isAvailable": true
   }
 ]
