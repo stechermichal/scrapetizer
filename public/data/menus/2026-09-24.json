@@ -209,5 +209,36 @@
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
     "scrapedAt": "2026-09-24T05:48:37.218Z",
     "isAvailable": true
+  },
+  {
+    "restaurantId": "tiskarna",
+    "restaurantName": "Restaurace Tiskárna",
+    "date": "2026-09-24",
+    "dayOfWeek": "čtvrtek",
+    "items": [
+      {
+        "name": "Hovězí vývar s nudlemi",
+        "price": 59
+      },
+      {
+        "name": "Caesar salát s anglickým roastbeefem, vařeným vejcem, sýrem gran biraghi a česnekovými krutóny",
+        "price": 249
+      },
+      {
+        "name": "Pečená krůtí prsa s omáčkou choron, americké brambory s karotkou",
+        "price": 189
+      },
+      {
+        "name": "Chilli con carne s kysanou smetanou, pšeničná tortilla",
+        "price": 189
+      },
+      {
+        "name": "Rybí prsty v panko strouhance, bramborová kaše s pažitkou, mesclun",
+        "price": 179
+      }
+    ],
+    "sourceUrl": "https://www.restauracetiskarna.cz/jindrisska/obedy/",
+    "scrapedAt": "2026-09-24T09:05:14.969Z",
+    "isAvailable": true
   }
 ]
