@@ -161,15 +161,29 @@
     "dayOfWeek": "pátek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Salát s rukolou, mozzarellou a cherry rajčátky",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a ventrčinou",
+        "price": 219
+      },
+      {
+        "name": "Tagliatelle s hříbky, žampiony a smetanou",
+        "price": 229
+      },
+      {
+        "name": "Rigatoni alla carbonara",
+        "price": 229
+      },
+      {
+        "name": "Uzená klobása s pečenými bramborami a redukcí z cherry rajčátek",
+        "price": 259
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-09-25T05:46:10.911Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-09-25T08:17:09.268Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
