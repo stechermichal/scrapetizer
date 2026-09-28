@@ -85,14 +85,17 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Dršťková polévka",
+        "price": 115
+      },
+      {
+        "name": "Konfitované kachní stehno/prso",
+        "price": 345,
+        "description": "Červené zelí, houskové knedlíky"
       }
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
-    "scrapedAt": "2026-09-28T05:46:40.830Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-09-28T07:21:03.123Z",
+    "isAvailable": true
   }
 ]
