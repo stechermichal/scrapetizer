@@ -156,15 +156,29 @@
     "dayOfWeek": "čtvrtek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Salát caprese",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, šunkou, žampiony a olivami",
+        "price": 219
+      },
+      {
+        "name": "Dýňové risotto se stracciatellou",
+        "price": 229
+      },
+      {
+        "name": "Tagliatelle s česnekem, chilli, rajčatovou omáčkou a kalamáry",
+        "price": 229
+      },
+      {
+        "name": "Hovězí líčka na červeném víně s bramborovým pyré",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-10-01T05:46:24.591Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-10-01T07:47:21.283Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
