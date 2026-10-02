@@ -129,15 +129,29 @@
     "dayOfWeek": "pátek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Míchaný salát s tuňákem a cibulí",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, šunkou a paprikami",
+        "price": 219
+      },
+      {
+        "name": "Penne s hřiby a smetanou",
+        "price": 219
+      },
+      {
+        "name": "Špagety s rajčatovou omáčkou, žloutkem, italskou klobásou, guanciale a pecorinem",
+        "price": 229
+      },
+      {
+        "name": "Vepřová krkovice s hranolky a bbq omáčkou",
+        "price": 259
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-10-02T05:48:28.730Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-10-02T08:42:01.672Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
