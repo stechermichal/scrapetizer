@@ -161,15 +161,29 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Caesar salát",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a milánským salámem",
+        "price": 219
+      },
+      {
+        "name": "Gnocchi se sicilským pestem (pesto z cherry rajčátek) a stracciatellou",
+        "price": 219
+      },
+      {
+        "name": "Rigatoni s vepřovou panenkou a cuketou",
+        "price": 229
+      },
+      {
+        "name": "Kuřecí stehno s stouhany bramborami a houbovou omáčkou",
+        "price": 259
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-10-05T05:47:20.293Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-10-05T08:21:13.480Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
