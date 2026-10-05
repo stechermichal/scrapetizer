@@ -176,11 +176,32 @@
     "restaurantName": "Bistro Nekázanka",
     "date": "2026-10-05",
     "dayOfWeek": "pondělí",
-    "items": [],
+    "items": [
+      {
+        "name": "Hovězí vývar",
+        "price": 59,
+        "description": "Polévka"
+      },
+      {
+        "name": "Cizrnový salát s mangem a rajčaty",
+        "price": 199
+      },
+      {
+        "name": "Orecchiette se šunkou a hráškem",
+        "price": 209
+      },
+      {
+        "name": "Kuřecí piccata s kuskusem",
+        "price": 239
+      },
+      {
+        "name": "Moravský vrabec se zelím a bramborovým knedlíkem",
+        "price": 239
+      }
+    ],
     "sourceUrl": "https://www.prazskejrej.cz/menu-na-web/bistro-nekazanka-11",
-    "scrapedAt": "2026-10-05T05:47:25.567Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-10-05T06:02:54.155Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "kantyna",
