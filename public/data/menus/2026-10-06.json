@@ -156,15 +156,29 @@
     "dayOfWeek": "úterý",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Salát s rukolou, mozzarellou, parmskou šunkou a cherry rajčátky",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, ančovičkami, česnekem a olivami",
+        "price": 219
+      },
+      {
+        "name": "Tagliatelle s máslem a parmazánem",
+        "price": 219
+      },
+      {
+        "name": "Penne bolognese s jemným nádechem smetany",
+        "price": 229
+      },
+      {
+        "name": "Grilovaný hovězí steak nakrájený na plátky s grilovanou cuketou",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-10-06T05:47:07.984Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-10-06T08:02:58.486Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
