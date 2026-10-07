@@ -129,15 +129,29 @@
     "dayOfWeek": "středa",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Salát s grilovanou zeleninou",
+        "price": 189
+      },
+      {
+        "name": "Pinsa se čtyřmi druhy sýra",
+        "price": 219
+      },
+      {
+        "name": "Penne s rajčatovou omáčkou a lilkem",
+        "price": 219
+      },
+      {
+        "name": "Krémové rizoto s cuketovým krémem a krevetami",
+        "price": 229
+      },
+      {
+        "name": "Grilovaná salsiccia s křupavými hranolkami a kouřovou bbq",
+        "price": 259
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-10-07T05:49:29.584Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-10-07T08:08:24.320Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
