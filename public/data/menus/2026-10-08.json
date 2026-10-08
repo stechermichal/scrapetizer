@@ -130,15 +130,29 @@
     "dayOfWeek": "čtvrtek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Míchaný salát s mozzarellou fior di latte",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, prosciuttem a paprikou",
+        "price": 219
+      },
+      {
+        "name": "Gnocchi s špenátovou omáčkou a ricottou",
+        "price": 219
+      },
+      {
+        "name": "Penne s hovězím masem, guanciale, cibulí, chilli a rajčatovou omáčkou",
+        "price": 229
+      },
+      {
+        "name": "Vepřové medailonky s bramborem a redukovanou omáčkou z červeného vína",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-10-08T05:49:37.387Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-10-08T08:08:30.609Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
