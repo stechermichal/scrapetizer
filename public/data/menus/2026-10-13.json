@@ -160,15 +160,29 @@
     "dayOfWeek": "úterý",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Míchaný salát s kuřecím masem",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, šunkou a žampiony",
+        "price": 219
+      },
+      {
+        "name": "Ravioli plněné ricottou a špenátem se šafránem",
+        "price": 219
+      },
+      {
+        "name": "Penne s lososem a rajčatovou omáčkou",
+        "price": 229
+      },
+      {
+        "name": "Směs ryb se zelenými fazolkami",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-10-13T05:47:17.867Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-10-13T08:48:18.116Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
