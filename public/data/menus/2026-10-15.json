@@ -129,15 +129,29 @@
     "dayOfWeek": "čtvrtek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Salát s roastbeefem",
+        "price": 189
+      },
+      {
+        "name": "Pinsa rajčatovou omáčkou, mozzarellou a čerstvou bazalkou",
+        "price": 219
+      },
+      {
+        "name": "Rigatoni s rajčatovou omáčkou, česnekem a chilli",
+        "price": 219
+      },
+      {
+        "name": "Tagliatelle s lososem a smetanou",
+        "price": 229
+      },
+      {
+        "name": "Hovězí maso s pečenými paprikami a pečenými bramborami",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-10-15T05:49:22.986Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-10-15T08:08:17.089Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
