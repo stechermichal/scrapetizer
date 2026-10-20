@@ -161,15 +161,29 @@
     "dayOfWeek": "úterý",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Míchaný salát s fetou a krutony",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a žampiony",
+        "price": 219
+      },
+      {
+        "name": "Ravioli s máslem a šalvějí",
+        "price": 219
+      },
+      {
+        "name": "Tagliatelle s boloňskou omáčkou",
+        "price": 219
+      },
+      {
+        "name": "Lasagnetta s lososem a špenátem",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-10-20T05:46:49.368Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-10-20T08:32:47.494Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
