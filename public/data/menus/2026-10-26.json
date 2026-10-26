@@ -215,14 +215,17 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Hráškový krém s krutony",
+        "price": 115
+      },
+      {
+        "name": "Grilovaná vepřová panenka",
+        "price": 345,
+        "description": "Pepřová omáčka, šťouchané brambory"
       }
     ],
     "sourceUrl": "https://www.kantyna.ambi.cz/menu/denni-menu",
-    "scrapedAt": "2026-10-26T06:46:52.086Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-10-26T10:21:57.751Z",
+    "isAvailable": true
   }
 ]
