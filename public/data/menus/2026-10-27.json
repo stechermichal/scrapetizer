@@ -152,15 +152,29 @@
     "dayOfWeek": "úterý",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Míchaný salát s opečeným vepřovým plátkem a medovo",
+        "price": 189
+      },
+      {
+        "name": "Pinsa se čtyřmi druhy sýra",
+        "price": 219
+      },
+      {
+        "name": "Špagety s rajčatovou omáčkou a slávky",
+        "price": 229
+      },
+      {
+        "name": "Rigatoni se žampiony a smetanou",
+        "price": 219
+      },
+      {
+        "name": "Filátka z mořského vlka s restovanou zeleninou",
+        "price": 279
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-10-27T06:51:31.481Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-10-27T09:22:30.404Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
