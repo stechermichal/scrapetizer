@@ -161,15 +161,29 @@
     "dayOfWeek": "středa",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Salát z rukoly s parmskou šunkou, cherry rajčátky a parmazánem",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, šunkou a žampiony",
+        "price": 219
+      },
+      {
+        "name": "Špagety s bazalkovým pestem a cherry rajčátky",
+        "price": 219
+      },
+      {
+        "name": "Gnocchi s rajčatovou omáčkou, lososem a olivami",
+        "price": 229
+      },
+      {
+        "name": "Grilovaná kuřecí prsa s hranolkami a jemnou gorgonzolovou omáčkou",
+        "price": 259
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-11-04T06:46:30.304Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-11-04T09:32:44.634Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
