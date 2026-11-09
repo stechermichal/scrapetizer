@@ -173,15 +173,29 @@
     "dayOfWeek": "pondělí",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Míchaný salát s mozzarellou",
+        "price": 189
+      },
+      {
+        "name": "Pinsa se čtyřmi druhy sýra",
+        "price": 219
+      },
+      {
+        "name": "Krémové rigatoni s hříbky a smetanou",
+        "price": 219
+      },
+      {
+        "name": "Tagliatelle s hovězím masem, hráškem a guanciale",
+        "price": 229
+      },
+      {
+        "name": "Pečený kuřecí stehna s křupavými hranolkami",
+        "price": 259
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-11-09T06:46:21.169Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-11-09T09:35:23.896Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
