@@ -140,15 +140,29 @@
     "dayOfWeek": "úterý",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Míchaný salát s restovaným hovězím masem",
+        "price": 199
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou, prosciuttem a stracciatellou",
+        "price": 219
+      },
+      {
+        "name": "Gnocchi s rajčatovou omáčkou, stracciatellou a bazalkou",
+        "price": 219
+      },
+      {
+        "name": "Tagliatelle s čerstvým tuňákem, cuketou a cherry rajčátky",
+        "price": 229
+      },
+      {
+        "name": "Hovězí ball tip steak s restovanými fazolkami se slaninou a pepřovou omáčkou",
+        "price": 279
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-11-10T06:46:31.356Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-11-10T09:33:21.881Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
