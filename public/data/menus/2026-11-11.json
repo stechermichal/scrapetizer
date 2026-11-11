@@ -160,15 +160,29 @@
     "dayOfWeek": "středa",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Míchaný salát se šunkou, cherry rajčátky a krutony",
+        "price": 189
+      },
+      {
+        "name": "Bílá pinsa s provolou a hříbky",
+        "price": 219
+      },
+      {
+        "name": "Špagety s pestem a cherry rajčátky",
+        "price": 219
+      },
+      {
+        "name": "Tagliatelle s boloňskou omáčkou",
+        "price": 229
+      },
+      {
+        "name": "Masové kuličky v rajčatové omáčce s bramborami a špenátem",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-11-11T06:46:19.102Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-11-11T09:17:08.760Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
