@@ -96,7 +96,8 @@ jobs:
       # One delivered trigger has to cover the whole day: GitHub's scheduler
       # drops most cron events for this repo (community discussion 207346),
       # so retry in-process rather than relying on a later run arriving.
-      timeout-minutes: 345
+      # hosted jobs are killed at 360 min, so the loop stops itself at 340
+      timeout-minutes: 350
       env:
         NODE_ENV: production
         DATE: ${{ steps.time.outputs.prague_date }}
@@ -130,8 +131,13 @@ jobs:
             echo "13:59 Prague reached, stopping for today"
             break
           fi
+          if [ "$SECONDS" -ge $((340 * 60)) ]; then
+            echo "340 min elapsed, stopping before the job limit"
+            break
+          fi
 
-          sleep 900
+          # menus have to be up by 11:00 Prague, so poll faster until then
+          if [ "$HM" -lt 1100 ]; then sleep 300; else sleep 900; fi
           # a manual run may have filled menus in the meantime
           git pull --rebase origin master || true
         done
