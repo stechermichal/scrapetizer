@@ -4,12 +4,66 @@
     "restaurantName": "Restaurace Hybernská",
     "date": "2026-11-23",
     "dayOfWeek": "pondělí",
-    "items": [],
+    "items": [
+      {
+        "name": "Bramboračka",
+        "price": 45,
+        "description": "Polévka z kořenové zeleniny a hub, brambory s česnekem a majoránkou"
+      },
+      {
+        "name": "Krém z hlívy",
+        "price": 45,
+        "description": "Krémová polévka z hlívy ústřičné s opečenou houskou"
+      },
+      {
+        "name": "Smažený květák",
+        "price": 154,
+        "description": "S vařeným bramborem, máslem, pažitkou a tatarskou omáčkou"
+      },
+      {
+        "name": "Kung pao",
+        "price": 154,
+        "description": "Z kuřecích stehen s pórkem, arašídy, sojovou omáčkou a jasmínovou rýží"
+      },
+      {
+        "name": "Pečené hovězí",
+        "price": 175,
+        "description": "Hovězí plec pečená s kořením, cibulí, šťávou z výpeku, batátovým pyrém a bruselskou kapustou"
+      },
+      {
+        "name": "Kuřecí steak",
+        "price": 149,
+        "description": "Grilovaný plátek kuřecích prsou, krémová omáčka se šalvějí a bílým vínem, pečené brambory a pečená podzimní zelenina"
+      },
+      {
+        "name": "Svíčková z daňka",
+        "price": 169,
+        "description": "Dušená dančí plec, svíčková omáčka, karlovarským knedlíkem a brusinky"
+      },
+      {
+        "name": "Moravský vrabec",
+        "price": 149,
+        "description": "Z vepřové krkovice s česnekem, cibulí a kmínem, šťáva z výpeku, s dušeným zelím a bramborovým knedlíkem"
+      },
+      {
+        "name": "Vepřová líčka",
+        "price": 179,
+        "description": "Pečená vepřová líčka s kořenovou zeleninou, červeným vínem, bramborovým pyré, mesclum salátem a sýrem parmazán"
+      },
+      {
+        "name": "Vepřový steak z přeštíka",
+        "price": 218,
+        "description": "Steak z vepřové pečeně s krémovou pepřovou omáčkou, bramborovým knedlíkem plněným červeným zelím s brusinkami a videňskou cibulkou"
+      },
+      {
+        "name": "Laskonka",
+        "price": 49
+      }
+    ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
     "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
-    "scrapedAt": "2026-11-23T06:46:35.853Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-11-23T10:30:19.897Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "tiskarna",
