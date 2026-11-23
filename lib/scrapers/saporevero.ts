@@ -1,9 +1,10 @@
 import { BaseScraper } from './base';
 import { MenuItem } from '../types';
-import { formatInTimeZone } from 'date-fns-tz';
-import { PRAGUE_TZ } from '../utils/date';
+import { getPragueDateString } from '../utils/date';
+import { loadMenuData } from '../utils/storage';
 
-const API_BASE = 'https://api.saporevero.dev.waitergo.it/api';
+const MENUS_API = 'https://www.saporevero.cz/api/menus?lang=cs';
+const LOOKBACK_DAYS = 10;
 
 export class SaporeveroScraper extends BaseScraper {
   protected getMenuUrl(): string {
@@ -11,21 +12,11 @@ export class SaporeveroScraper extends BaseScraper {
   }
 
   /**
-   * Sapore Vero serves its daily menu from a Strapi CMS, not from the page DOM.
-   * There is a single "Menu del Giorno" record that the restaurant edits in
-   * place each day. We read it directly from the API and, crucially, only
-   * accept it once it has actually been (re)published TODAY.
-   *
-   * Why the freshness gate matters: the restaurant publishes the day's menu
-   * late in the morning (~10:00 Prague). Our scraper starts at ~08:30 and the
-   * incremental logic freezes the first result with a valid price and never
-   * retries. Without a gate we'd lock in YESTERDAY's still-valid menu for the
-   * whole day. Reporting "not posted yet" (price 0) keeps the scheduled job
-   * retrying until the real menu lands.
-   *
-   * Note the record's own `date` field is unreliable (it lags several days
-   * behind the actual menu), so freshness is judged by `updatedAt`/`publishedAt`,
-   * which bump every time the menu is saved.
+   * The site's own /api/menus returns a single "Menu del Giorno" record that the
+   * restaurant edits in place, usually around 10:00 Prague. It carries no edit
+   * timestamp and its `date` field lags days behind, so a menu identical to the
+   * last one we stored is treated as yesterday's and reported as "not posted
+   * yet" (price 0), which keeps the scheduled job retrying.
    */
   protected async extractMenuItems(): Promise<MenuItem[]> {
     const notPosted = (): MenuItem[] => [
@@ -37,52 +28,21 @@ export class SaporeveroScraper extends BaseScraper {
     ];
 
     try {
-      const req = this.page!.request;
-
-      // 1) List the daily-menu record(s); pick the most recently updated one.
-      const listRes = await req.get(`${API_BASE}/daily-menus?locale=cs`, {
+      const res = await this.page!.request.get(MENUS_API, {
         headers: { Accept: 'application/json' },
       });
-      if (!listRes.ok()) {
-        console.log(`Sapore Vero daily-menus list returned ${listRes.status()}`);
+      if (!res.ok()) {
+        console.log(`Sapore Vero /api/menus returned ${res.status()}`);
         return notPosted();
       }
-      const list = await listRes.json();
-      const records: any[] = Array.isArray(list?.data) ? list.data : [];
-      const stamp = (r: any) => new Date(r?.updatedAt || r?.publishedAt || 0).getTime();
-      const record = records.slice().sort((a, b) => stamp(b) - stamp(a))[0];
-      if (!record?.documentId) {
-        console.log('Sapore Vero: no daily-menu record found');
+      const body = await res.json();
+      if (body?.settings?.is_daily_menu_displayed === false || !body?.dailyMenu) {
+        console.log('Sapore Vero: no daily menu displayed');
         return notPosted();
       }
-
-      // 2) Freshness gate — only accept a menu (re)published on today's Prague date.
-      const today = formatInTimeZone(new Date(), PRAGUE_TZ, 'yyyy-MM-dd');
-      const lastEdited = record.updatedAt || record.publishedAt;
-      const editedPragueDate = lastEdited
-        ? formatInTimeZone(new Date(lastEdited), PRAGUE_TZ, 'yyyy-MM-dd')
-        : null;
-      if (editedPragueDate !== today) {
-        console.log(
-          `📅 Sapore Vero menu is stale (last updated ${editedPragueDate ?? 'unknown'}, today ${today}) - not posted yet`
-        );
-        return notPosted();
-      }
-
-      // 3) Fetch the products for that record.
-      const detailRes = await req.get(
-        `${API_BASE}/daily-menus/${record.documentId}?locale=cs&populate[sections][populate]=products`,
-        { headers: { Accept: 'application/json' } }
-      );
-      if (!detailRes.ok()) {
-        console.log(`Sapore Vero daily-menu detail returned ${detailRes.status()}`);
-        return notPosted();
-      }
-      const detail = await detailRes.json();
-      const sections: any[] = detail?.data?.sections ?? [];
 
       const items: MenuItem[] = [];
-      for (const section of sections) {
+      for (const section of body.dailyMenu.sections ?? []) {
         for (const product of section?.products ?? []) {
           if (product?.displayed === false || product?.availability === false) continue;
 
@@ -92,7 +52,7 @@ export class SaporeveroScraper extends BaseScraper {
               : this.parsePrice(String(product?.price ?? ''));
           if (!price || price <= 0) continue;
 
-          // Description is "Czech name -\nEnglish name"; keep the Czech part.
+          // description is "Czech name -\nEnglish name"; keep the Czech part
           const raw = String(product?.description || product?.name || '');
           const name = raw.split('-')[0].trim() || String(product?.name || '').trim();
           if (!name) continue;
@@ -102,7 +62,13 @@ export class SaporeveroScraper extends BaseScraper {
       }
 
       if (items.length === 0) {
-        console.log('Sapore Vero: daily menu record has no usable products');
+        console.log('Sapore Vero: daily menu has no usable products');
+        return notPosted();
+      }
+
+      const previous = await this.lastStoredMenu();
+      if (previous && sameMenu(previous, items)) {
+        console.log('📅 Sapore Vero menu matches the last stored day - not posted yet');
         return notPosted();
       }
 
@@ -113,4 +79,21 @@ export class SaporeveroScraper extends BaseScraper {
       return notPosted();
     }
   }
+
+  private async lastStoredMenu(): Promise<MenuItem[] | null> {
+    const today = new Date(`${getPragueDateString()}T12:00:00Z`).getTime();
+    for (let n = 1; n <= LOOKBACK_DAYS; n++) {
+      const date = new Date(today - n * 86_400_000).toISOString().slice(0, 10);
+      const menus = await loadMenuData(date);
+      const entry = menus.find(m => m.restaurantId === this.restaurant.id);
+      const priced = entry?.items.filter(i => i.price > 0) ?? [];
+      if (priced.length > 0) return priced;
+    }
+    return null;
+  }
+}
+
+function sameMenu(a: MenuItem[], b: MenuItem[]): boolean {
+  const key = (items: MenuItem[]) => items.map(i => `${i.name}|${i.price}`).sort().join('\n');
+  return key(a) === key(b);
 }
