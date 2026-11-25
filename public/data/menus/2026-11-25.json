@@ -4,12 +4,66 @@
     "restaurantName": "Restaurace Hybernská",
     "date": "2026-11-25",
     "dayOfWeek": "středa",
-    "items": [],
+    "items": [
+      {
+        "name": "Fazolová polévka s uzeným",
+        "price": 45,
+        "description": "Polévka z fazolí s uzeným masem, česnekem a majoránkou"
+      },
+      {
+        "name": "Kuřecí vývar s těstovinou",
+        "price": 45,
+        "description": "Se zeleninou, masem a těstovinovou"
+      },
+      {
+        "name": "Vepřová roláda s medvědím česnekem",
+        "price": 154,
+        "description": "Se šťávou z výpeku, pečenými bramborami s pestem a pečenou kořenovou zeleninou s medem a dobromyslem"
+      },
+      {
+        "name": "Smažený hermelín se šunkou",
+        "price": 154,
+        "description": "S vařeným bramborem, máslem, pažitkou a tatarskou omáčkou"
+      },
+      {
+        "name": "Pečený paprikový lusk",
+        "price": 149,
+        "description": "Plněný mletým vepřovým masem, s rajskou omáčkou a pečenou jasmínovou rýží"
+      },
+      {
+        "name": "Trhané vepřové koleno",
+        "price": 159,
+        "description": "Pečené vepřové koleno s česnekem, pivem, šťáva z výpeku, dušeným hlávkovým zelím, bramborovým knedlíkem a křupavou cibulkou"
+      },
+      {
+        "name": "Sekaná podle rettigové",
+        "price": 154,
+        "description": "Sekaná pečeně z mletého vepřového masa s vařeným vejcem, uzeným bokem, mléčnou bramborovou kaší a kyselou okurkou"
+      },
+      {
+        "name": "Hummus s pečenou zeleninou",
+        "price": 149,
+        "description": "Hummus z cizrny, česnekem, římským kmínem, tahini pastou, pečenou kořenovou zeleninou, drobeným kozím sýrem a listovým salát"
+      },
+      {
+        "name": "Poke bowl",
+        "price": 185,
+        "description": "Pečená jasmínová rýže, sous vide hovězí flank steak, listový salát, okurka, karotka, ředkvička, avokádo, jarní cibulka, sezam, hoi sin omáčka a pikantní majonéza"
+      },
+      {
+        "name": "Vepřový steak z přeštíka",
+        "price": 218,
+        "description": "Steak z vepřové pečeně s krémovou pepřovou omáčkou, bramborovým knedlíkem plněným červeným zelím s brusinkami a videňskou cibulkou"
+      },
+      {
+        "name": "Čokoládový věneček",
+        "price": 49
+      }
+    ],
     "sourceUrl": "https://www.restauracehybernska.cz/",
     "instagramUrl": "https://www.instagram.com/stories/hybernska_/",
-    "scrapedAt": "2026-11-25T06:46:14.115Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-11-25T10:30:25.019Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "tiskarna",
