@@ -102,15 +102,33 @@
     "dayOfWeek": "středa",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Fazolový krém",
+        "price": 65
+      },
+      {
+        "name": "Míchaný salát s burratou",
+        "price": 199
+      },
+      {
+        "name": "Pinsa se čtyřmi druhy sýrů",
+        "price": 219
+      },
+      {
+        "name": "Špagety s pecorinem a pepřem",
+        "price": 219
+      },
+      {
+        "name": "Rigatoni s klobásou na pikantní rajčatové omáčce",
+        "price": 229
+      },
+      {
+        "name": "Vepřová panenka se zelenými fazolkami a omáčkou z černého pepře",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-11-25T06:46:32.980Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-11-25T08:48:59.227Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
