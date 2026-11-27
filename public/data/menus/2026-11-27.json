@@ -111,15 +111,33 @@
     "dayOfWeek": "pátek",
     "items": [
       {
-        "name": "Menu not posted yet",
-        "price": 0,
-        "description": "Check back later"
+        "name": "Brokolicový krém",
+        "price": 65
+      },
+      {
+        "name": "Míchaný salát s mozzarellou fior di latte",
+        "price": 189
+      },
+      {
+        "name": "Pinsa s rajčatovou omáčkou, mozzarellou a zeleninou",
+        "price": 219
+      },
+      {
+        "name": "Tagliatelle s lososem, kalamáry a cherry rajčaty v rajčatové omáčce",
+        "price": 229
+      },
+      {
+        "name": "Rizoto s hruškou a gorgonzolou",
+        "price": 229
+      },
+      {
+        "name": "Hovězí soté s rýží",
+        "price": 269
       }
     ],
     "sourceUrl": "https://www.saporevero.cz/",
-    "scrapedAt": "2026-11-27T06:46:39.365Z",
-    "isAvailable": false,
-    "errorMessage": "No valid menu items found"
+    "scrapedAt": "2026-11-27T09:35:00.427Z",
+    "isAvailable": true
   },
   {
     "restaurantId": "nekazanka",
